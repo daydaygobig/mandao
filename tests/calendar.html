@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<title>漫道日历回归测试</title>
+<h1>漫道日历回归测试</h1>
+<p>在仓库根目录启动 HTTP 服务，再打开 tests/calendar.html。测试加载完整主页，以固定日期和模拟 HEAD 响应验证交互，不请求或修改线上日报。</p>
+<pre id="results">测试中…</pre>
+<iframe id="page" title="被测漫道主页" style="width:100%;height:500px"></iframe>
+<script>
+(async () => {
+    const output = document.getElementById('results');
+    const frame = document.getElementById('page');
+    const source = await (await fetch('../site/index.html')).text();
+    const results = [];
+    function assert(ok, message) {
+        if (!ok) throw new Error(message);
+        results.push('通过：' + message);
+        output.textContent = results.join('\n');
+    }
+    async function load(date, responses = {}) {
+        const setup = `
+            const NativeDate = Date;
+            window.Date = class extends NativeDate {
+                constructor(...args) { super(...(args.length ? args : [${JSON.stringify(date)}])); }
+                static now() { return new NativeDate(${JSON.stringify(date)}).getTime(); }
+            };
+            window.testRequests = [];
+            window.testOpens = [];
+            window.open = (...args) => window.testOpens.push(args);
+            window.fetch = (url, options) => new Promise((resolve, reject) => {
+                window.testRequests.push({url, method: options?.method});
+                const date = url.match(/(\\d{4}-\\d{2}-\\d{2})/)[1];
+                const status = ${JSON.stringify(responses)}[date] ?? 404;
+                window.setTimeout(() => status === 'error' ? reject(new Error('offline')) : resolve(new Response(null, {status})), 80);
+            });
+        `;
+        // 只移除外部 CDN 脚本；主页自身逻辑及本地日期清单保持原样。
+        const html = source.replace(/<script\b[^>]*src="https:[^"]*"[^>]*><\/script>/g, '');
+        await new Promise(resolve => {
+            frame.onload = resolve;
+            frame.srcdoc = html.replace('<head>', '<head><base href="' + new URL('../site/', location.href) + '"><script>' + setup + '<\/script>');
+        });
+        await settle();
+    }
+    function settle() { return new Promise(resolve => setTimeout(resolve, 150)); }
+    const doc = () => frame.contentDocument;
+    const win = () => frame.contentWindow;
+    const day = n => [...doc().querySelectorAll('.calendar-day:not(.empty)')].find(el => el.textContent === String(n));
+    const disabled = n => day(n).classList.contains('disabled');
+    const requested = date => win().testRequests.some(r => r.url.includes(date));
+    const prev = () => doc().getElementById('prev-month').click();
+    const next = () => doc().getElementById('next-month').click();
+    try {
+        await load('2026-09-06T12:00:00', {'2026-09-05': 200, '2026-09-03': 'error'});
+        assert(!disabled(5), '日期清单之外的新日报通过 HEAD 后可点');
+        day(5).click();
+        assert(win().testOpens[0][0] === 'https://md.xinjianhub.cn/漫道日报_2026-09-05.html' && win().testOpens[0][1] === '_blank', '点击打开对应漫道日报，保留新标签页行为');
+        assert(disabled(4), '即使日期清单中存在，HEAD 404 仍禁用');
+        assert(disabled(3), '网络失败保持禁用');
+        day(4).click(); day(3).click();
+        assert(win().testOpens.length === 1, '缺失或请求失败的日期点击不会跳转');
+        assert(disabled(6) && day(6).title === '今日日报将于次日更新', '今天未发布时保留提示');
+        assert(disabled(7) && !requested('2026-09-07'), '未来日期禁用且不探测');
+        assert(doc().getElementById('latest-report-btn').href.endsWith('2026-09-04.html'), '阅读最新日报仍依赖原来的清单');
+        prev(); await settle();
+        assert(disabled(29) && !requested('2026-08-29') && requested('2026-08-30'), '起始日期仍是 2026-08-30');
+        next();
+        assert(disabled(5) && day(5).title === '检测中...', '重新渲染时先禁用并显示检测中');
+        prev(); next(); await settle();
+        assert(doc().getElementById('current-date-display').textContent === '2026.09' && !disabled(5), '快速跨月切换后状态正确');
+        assert(win().testRequests.every(r => r.method === 'HEAD'), '日历只使用 HEAD 请求');
+
+        await load('2026-10-01T12:00:00', {'2026-09-01': 200, '2026-10-01': 200});
+        assert(!disabled(1), '今天已发布时允许点击');
+        prev(); await settle();
+        assert(requested('2026-09-01') && !disabled(1), '距今天恰好30天仍需探测');
+        prev(); await settle();
+        assert(!requested('2026-08-31') && !disabled(31), '距今天31天默认可点且不探测');
+        assert(!disabled(30) && disabled(29), '历史日期仍遵守首份日报边界');
+        day(31).click();
+        assert(win().testOpens[0][0].endsWith('2026-08-31.html'), '历史日期打开对应日报');
+
+        await load('2027-01-01T12:00:00');
+        prev(); await settle();
+        assert(doc().getElementById('current-date-display').textContent === '2026.12', '跨年切换到上一年');
+        next(); await settle();
+        assert(doc().getElementById('current-date-display').textContent === '2027.01', '跨年切换回当前年');
+        output.textContent += '\n全部 ' + results.length + ' 项通过（模拟日期和网络响应）。';
+    } catch (error) {
+        output.textContent += '\n失败：' + error.stack;
+    }
+})().catch(error => document.getElementById('results').textContent = '失败：' + error.stack);
+</script>
+</html>

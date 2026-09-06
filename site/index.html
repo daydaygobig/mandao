@@ -615,6 +615,15 @@
                 return REPORT_BASE + '/漫道日报_' + dateStr + '.html';
             }
 
+            async function checkCalendarReportExists(dateStr) {
+                try {
+                    const response = await fetch(reportUrl(dateStr), { method: 'HEAD' });
+                    return response.ok;
+                } catch (error) {
+                    return false;
+                }
+            }
+
             function renderCalendar(year, month) {
                 calendarDays.innerHTML = '';
                 currentDateDisplay.textContent = year + '.' + String(month + 1).padStart(2, '0');
@@ -638,14 +647,17 @@
                     const isFuture = thisDate > today;
                     const isBeforeStart = thisDate < startDate;
                     const dateStr = year + '-' + String(month + 1).padStart(2, '0') + '-' + String(day).padStart(2, '0');
+                    const diffDays = Math.round((today - thisDate) / (1000 * 60 * 60 * 24));
+                    const isWithin30Days = diffDays >= 0 && diffDays <= 30;
 
                     if (isToday) dayDiv.classList.add('today');
 
                     if (isFuture || isBeforeStart) {
                         dayDiv.classList.add('disabled');
-                    } else {
+                    } else if (isWithin30Days) {
                         dayDiv.classList.add('disabled');
-                        checkReportExists(dateStr).then(ok => {
+                        dayDiv.title = isToday ? '今日日报将于次日更新' : '检测中...';
+                        checkCalendarReportExists(dateStr).then(ok => {
                             if (ok) {
                                 dayDiv.classList.remove('disabled');
                                 dayDiv.classList.add('has-report');
@@ -656,6 +668,12 @@
                             } else {
                                 dayDiv.title = isToday ? '今日日报将于次日更新' : dateStr + ' 日报尚未上传';
                             }
+                        });
+                    } else {
+                        dayDiv.classList.add('has-report');
+                        dayDiv.title = '阅读 ' + dateStr + ' 日报';
+                        dayDiv.addEventListener('click', () => {
+                            window.open(reportUrl(dateStr), '_blank');
                         });
                     }
                     calendarDays.appendChild(dayDiv);
