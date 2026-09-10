@@ -1,0 +1,2684 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>漫道日报 2026-09-10</title>
+    
+    <!-- SEO 元数据 -->
+    <meta name="description" content="漫道日报 2026年9月10日 - 别替不听话的新人擦屁股，让她自己踩坑等精华讨论">
+    <meta name="keywords" content="职场,漫道日报,向上管理,外企外包,AI替代,自媒体变现">
+    <meta name="author" content="漫道">
+    
+    <!-- Open Graph / 社交媒体分享标签 -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="漫道日报 2026-09-10">
+    <meta property="og:description" content="别替新人擦屁股、外企外包死局、职场不看性格等今日群内精华讨论">
+    <meta property="og:site_name" content="漫道">
+    <meta property="og:locale" content="zh_CN">
+    
+    <!-- Twitter Card 标签 -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="漫道日报 2026-09-10">
+    <meta name="twitter:description" content="别替不听话的新人擦屁股，让她自己踩坑等精华讨论">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6C9T7FPDT2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-6C9T7FPDT2');
+    </script>
+    
+    <!-- 深色模式预加载脚本 - 终极防闪烁方案 -->
+    <script>
+        // 在DOM解析前立即执行，最大程度避免闪烁
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                // 方案1：为html元素添加类
+                document.documentElement.classList.add('dark-mode-preload');
+                
+                // 方案2：直接设置body的内联样式（更早生效）
+                const style = document.createElement('style');
+                style.textContent = `
+                    html, body { background-color: #1a1a1a !important; color: #e5e5e5 !important; }
+                `;
+                document.head.appendChild(style);
+            }
+        })();
+    </script>
+    
+    <!-- 正常标题格式应为：漫道日报 yyyy-mm-dd，以便外部链接查看时了解日报日期 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        * {
+            font-family: 'Inter', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .bento-card {
+            background-color: #ffffff;
+            border: 1px solid #e9e9eb;
+            border-radius: 1rem; /* 16px */
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -2px rgba(0,0,0,0.05);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .bento-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.07), 0 4px 6px -4px rgba(0,0,0,0.05);
+            transform: translateY(-3px);
+        }
+
+        .number-display {
+            font-weight: 900; /* black */
+            font-size: 4rem;
+            line-height: 1;
+            /* Color will be set by Tailwind, e.g., text-[#4D6BFE] or text-black */
+        }
+
+        .section-title {
+            font-weight: 800; /* extrabold */
+            font-size: 2.25rem; /* 36px */
+            color: #000000;
+            margin-bottom: 2rem; /* 32px, consistent with Tailwind mb-8 */
+            white-space: nowrap; /* 防止标题换行 */
+        }
+
+        /* 手机端响应式调整 */
+        @media (max-width: 640px) {
+            .section-title {
+                font-size: 1.5rem; /* 24px，手机上使用更小的字体 */
+                margin-bottom: 1.5rem;
+            }
+            
+            /* 大数字显示在手机上缩小 */
+            .number-display {
+                font-size: 3rem; /* 手机上从64px缩小到48px */
+            }
+            
+            /* 卡片内边距在手机上缩小，节省空间 */
+            .bento-card.p-8 {
+                padding: 1.25rem !important; /* 从32px缩小到20px */
+            }
+            
+            .bento-card.p-6 {
+                padding: 1rem !important; /* 从24px缩小到16px */
+            }
+            
+            .bento-card.p-5 {
+                padding: 0.875rem !important; /* 从20px缩小到14px */
+            }
+            
+            /* 主标题在手机上缩小 */
+            h1.text-5xl {
+                font-size: 2rem !important; /* 从48px缩小到32px */
+                margin-bottom: 1.25rem !important;
+            }
+            
+            /* 话题标题在手机上缩小 */
+            h4.text-xl {
+                font-size: 1.125rem !important; /* 从20px缩小到18px */
+            }
+            
+            /* 总消息数量文字在手机上缩小 */
+            p.text-xl {
+                font-size: 1rem !important; /* 从20px缩小到16px */
+            }
+        }
+
+        .tag-item {
+            background-color: rgba(16, 185, 129, 0.10); /* green-500 @ 10% */
+            color: #10b981; /* green-500 */
+            padding: 0.25rem 0.75rem; /* py-1 px-3 */
+            border-radius: 9999px; /* rounded-full */
+            font-size: 0.75rem; /* text-xs */
+            font-weight: 500; /* medium */
+        }
+
+
+        /* HTML注释: 展开功能相关样式 */
+        .expandable-content {
+            position: relative;
+        }
+
+        .content-preview.collapsed {
+            max-height: 11rem; /* 控制预览高度，结合渐变遮罩更紧凑 */
+            overflow: hidden;
+            position: relative;
+        }
+
+        .content-preview.collapsed::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 30px;
+            background: linear-gradient(transparent, rgba(255, 255, 255, 0.9));
+            pointer-events: none;
+        }
+
+        /* 收起态样式优化：收紧段间距，弱化多余换行，避免空白过大 */
+        .content-preview.collapsed p,
+        .content-preview.collapsed ul,
+        .content-preview.collapsed ol,
+        .content-preview.collapsed li,
+        .content-preview.collapsed h1,
+        .content-preview.collapsed h2,
+        .content-preview.collapsed h3,
+        .content-preview.collapsed h4,
+        .content-preview.collapsed h5,
+        .content-preview.collapsed h6 {
+            margin-top: 0.25rem !important;
+            margin-bottom: 0.25rem !important;
+            line-height: 1.5 !important;
+        }
+        /* 多重 <br> 在收起态容易拉大间距，这里统一弱化 */
+        .content-preview.collapsed br {
+            display: none;
+        }
+        /* 允许小标题<b>后的首个换行保留，确保分行 */
+        .content-preview.collapsed b + br {
+            display: inline;
+        }
+
+        .expand-btn {
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            background: none;
+            padding: 0;
+        }
+
+        .expand-btn:hover {
+            transform: translateY(-1px);
+        }
+
+        .expand-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .expand-btn.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+
+        /* === 绿色主题统一样式 === */
+        /* 绿色主题统一样式 */
+        .text-\[\#4D6BFE\] { color: #10b981 !important; }              /* green-500 */
+        .border-\[\#4D6BFE\] { border-color: #10b981 !important; }
+        .border-\[\#93c5fd\] { border-color: #6ee7b7 !important; }    /* green-300 */
+        
+        /* 渐变色统一为绿色 */
+        .from-\[\#4D6BFE\]\/20 { --tw-gradient-from: rgb(16 185 129 / 0.20) !important; }
+        .via-\[\#4D6BFE\]\/10 { --tw-gradient-stops: var(--tw-gradient-from), rgb(16 185 129 / 0.10), var(--tw-gradient-to) !important; }
+        .to-\[\#4D6BFE\]\/5 { --tw-gradient-to: rgb(16 185 129 / 0.05) !important; }
+
+        /* 紫色块（爬楼关键词）替换为绿色 */
+        .bg-purple-50   { background-color: #ecfdf5 !important; }     /* green-50 */
+        .border-purple-200 { border-color: #a7f3d0 !important; }      /* green-200 */
+        .text-purple-700   { color: #047857 !important; }             /* green-700 */
+        .text-purple-600   { color: #059669 !important; }             /* green-600 */
+        
+        /* 交互与背景色 */
+        .hover\:text-blue-700:hover { color: #047857 !important; }
+        .bg-blue-50 { background-color: #ecfdf5 !important; }
+
+        /* HTML注释: 历史日报链接样式，采用绿色主题与整体设计保持统一 */
+        .history-link {
+            background: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .history-link:hover {
+            background: rgba(16, 185, 129, 0.15);
+            transform: translateY(-1px);
+        }
+
+        /* HTML注释: 返回主页按钮样式，链接固定指向漫道主页，样式与整体设计保持统一 */
+        .back-home-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            background: #f8fafc; /* slate-50 */
+            color: #475569; /* slate-600 */
+            border: 1px solid #e2e8f0; /* slate-200 */
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        .back-home-link:hover {
+            background: #f1f5f9; /* slate-100 */
+            color: #10b981;
+            border-color: rgba(16, 185, 129, 0.3);
+            transform: translateY(-1px);
+        }
+
+        /* === 新增功能样式 === */
+        
+        /* 悬浮操作按钮栈 */
+        .floating-action-stack {
+            position: fixed;
+            right: 2rem;
+            bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 0.75rem;
+            z-index: 1000;
+        }
+        
+        .toc-floating-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 0.75rem;
+        }
+        
+        .toc-floating-button {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 9999px;
+            background: #10b981;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .toc-floating-button:hover {
+            background: #059669;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+        }
+        
+        .toc-floating-button.active {
+            background: #059669;
+        }
+        
+        .toc-panel {
+            position: absolute;
+            right: 0;
+            bottom: calc(100% + 0.75rem);
+            width: 20rem;
+            max-width: calc(100vw - 2.5rem);
+            max-height: 70vh;
+            overflow-y: auto;
+            background-color: #ffffff;
+            border: 1px solid #e9e9eb;
+            border-radius: 1rem;
+            box-shadow: 0 12px 30px rgba(16, 185, 129, 0.25);
+            padding: 1.25rem;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .toc-panel.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .toc-panel-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+        
+        .toc-panel-title {
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #000000;
+        }
+        
+        .toc-panel-title i {
+            margin-right: 0.5rem;
+            color: #10b981;
+        }
+        
+        .toc-close {
+            background: transparent;
+            border: none;
+            padding: 0.25rem;
+            border-radius: 0.5rem;
+            color: #9ca3af;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .toc-close:hover {
+            color: #10b981;
+            background: rgba(16, 185, 129, 0.1);
+        }
+        
+        .toc-items {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .toc-link {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.5rem 0.75rem;
+            color: #6b7280;
+            text-decoration: none;
+            font-size: 0.875rem;
+            border-radius: 0.75rem;
+            transition: all 0.2s ease;
+        }
+        
+        .toc-link i {
+            width: 1rem;
+            text-align: center;
+            color: #10b981;
+        }
+        
+        .toc-link:hover {
+            color: #10b981;
+            background-color: #ecfdf5;
+            box-shadow: inset 2px 0 0 0 #10b981;
+        }
+        
+        .toc-link.active {
+            color: #10b981;
+            font-weight: 600;
+            background-color: #ecfdf5;
+            box-shadow: inset 2px 0 0 0 #10b981;
+        }
+
+        /* v3.7: 二级子话题目录样式 */
+        .toc-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.375rem;
+        }
+
+        .toc-sublist {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            margin-left: 1.5rem;
+            padding-left: 0.75rem;
+            border-left: 2px solid rgba(16, 185, 129, 0.25);
+        }
+
+        .toc-sublink {
+            display: block;
+            padding: 0.4rem 0.6rem;
+            color: #6b7280;
+            text-decoration: none;
+            font-size: 0.8125rem;
+            line-height: 1.4;
+            border-radius: 0.5rem;
+            transition: all 0.2s ease;
+        }
+
+        .toc-sublink:hover {
+            color: #10b981;
+            background-color: #ecfdf5;
+            box-shadow: inset 2px 0 0 0 #10b981;
+        }
+
+        .toc-sublink.active {
+            color: #10b981;
+            font-weight: 600;
+            background-color: #ecfdf5;
+            box-shadow: inset 2px 0 0 0 #10b981;
+        }
+
+        /* v3.7: 话题卡片锚点跳转偏移，避免跳转后标题贴顶 */
+        .anchor-target {
+            scroll-margin-top: 5rem;
+        }
+        
+        body.dark-mode .floating-action-stack {
+            gap: 0.75rem;
+        }
+        
+        body.dark-mode .toc-panel {
+            background-color: #2a2a2a;
+            border-color: #3a3a3a;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+        }
+        
+        body.dark-mode .toc-panel-title {
+            color: #f5f5f5;
+        }
+        
+        body.dark-mode .toc-panel-title i {
+            color: #34d399;
+        }
+        
+        body.dark-mode .toc-close {
+            color: #d1d5db;
+        }
+        
+        body.dark-mode .toc-close:hover {
+            background: rgba(16, 185, 129, 0.2);
+            color: #34d399;
+        }
+        
+        body.dark-mode .toc-link {
+            color: #d1d5db !important;
+        }
+        
+        body.dark-mode .toc-link i {
+            color: #34d399;
+        }
+        
+        body.dark-mode .toc-link:hover,
+        body.dark-mode .toc-link.active {
+            color: #34d399 !important;
+            background-color: rgba(16, 185, 129, 0.18) !important;
+            box-shadow: inset 2px 0 0 0 rgba(16, 185, 129, 0.6);
+        }
+
+        /* v3.7: 深色模式下的二级子话题目录 */
+        body.dark-mode .toc-sublist {
+            border-left-color: rgba(16, 185, 129, 0.4);
+        }
+
+        body.dark-mode .toc-sublink {
+            color: #d1d5db !important;
+        }
+
+        body.dark-mode .toc-sublink:hover,
+        body.dark-mode .toc-sublink.active {
+            color: #34d399 !important;
+            background-color: rgba(16, 185, 129, 0.18) !important;
+            box-shadow: inset 2px 0 0 0 rgba(16, 185, 129, 0.6);
+        }
+        
+        /* 返回顶部按钮样式 */
+        .back-to-top {
+            width: 3rem;
+            height: 3rem;
+            background: #10b981;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: #059669;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+        }
+        
+        /* 复制按钮样式 */
+        .copy-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.25rem 0.5rem;
+            background: transparent;
+            color: #10b981;
+            border: 1px solid #10b981;
+            border-radius: 0.375rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .copy-btn:hover {
+            background: #10b981;
+            color: white;
+        }
+        
+        .copy-btn.copied {
+            background: #10b981;
+            border-color: #10b981;
+            color: white;
+        }
+        
+        /* 暗色模式样式 */
+        /* 预加载类：在JavaScript执行前就应用深色模式 */
+        html.dark-mode-preload,
+        html.dark-mode-preload body,
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #e5e5e5;
+        }
+        
+        html.dark-mode-preload .bento-card,
+        body.dark-mode .bento-card {
+            background-color: #2a2a2a;
+            border-color: #3a3a3a;
+        }
+        
+        body.dark-mode .section-title {
+            color: #f5f5f5;
+        }
+        
+        body.dark-mode .text-black {
+            color: #e5e5e5 !important;
+        }
+        
+        body.dark-mode .text-gray-700 {
+            color: #a0a0a0 !important;
+        }
+        
+        body.dark-mode .text-gray-600 {
+            color: #909090 !important;
+        }
+        
+        body.dark-mode .text-gray-800 {
+            color: #c0c0c0 !important;
+        }
+        
+        body.dark-mode .bg-slate-50 {
+            background-color: #2f2f2f !important;
+        }
+        
+        body.dark-mode .bg-gray-50 {
+            background-color: #2f2f2f !important;
+        }
+        
+        body.dark-mode .bg-gray-100 {
+            background-color: #333333 !important;
+        }
+        
+        body.dark-mode .bg-purple-50 {
+            background-color: #1a3d2e !important;
+        }
+        
+        body.dark-mode .bg-amber-50 {
+            background-color: #3d3420 !important;
+        }
+        
+        body.dark-mode .border-gray-200 {
+            border-color: #3a3a3a !important;
+        }
+        
+        body.dark-mode .border-purple-200 {
+            border-color: #2d5a44 !important;
+        }
+        
+        body.dark-mode .bg-blue-50 {
+            background-color: #1a3d2e !important;
+        }
+        
+        body.dark-mode .border-amber-400 {
+            border-color: #d97706 !important;
+        }
+        
+        /* 深色模式下的渐变遮罩 */
+        body.dark-mode .content-preview.collapsed::after {
+            background: linear-gradient(transparent, rgba(26, 26, 26, 0.95));
+        }
+        
+        /* 深色模式下的加粗文字增强 */
+        body.dark-mode b,
+        body.dark-mode strong {
+            color: #f5f5f5 !important;
+            font-weight: 700;
+            text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.3);
+        }
+        
+        /* 深色模式下的链接样式 */
+        body.dark-mode a {
+            color: #6ee7b7;
+        }
+        
+        body.dark-mode a:hover {
+            color: #a7f3d0;
+        }
+        
+        /* 深色模式下的标签样式 */
+        body.dark-mode .tag-item {
+            background-color: rgba(16, 185, 129, 0.2);
+            color: #6ee7b7;
+        }
+        
+        /* 深色模式下的按钮文字 */
+        body.dark-mode .text-green-600 {
+            color: #6ee7b7 !important;
+        }
+        
+        body.dark-mode .text-green-700 {
+            color: #a7f3d0 !important;
+        }
+        
+        body.dark-mode .text-green-700 {
+            color: #86efac !important;
+        }
+        
+        body.dark-mode .text-green-600 {
+            color: #4ade80 !important;
+        }
+        
+        /* 深色模式下的h标签 */
+        body.dark-mode h1,
+        body.dark-mode h2,
+        body.dark-mode h3,
+        body.dark-mode h4,
+        body.dark-mode h5 {
+            color: #f5f5f5 !important;
+        }
+        
+        /* 深色模式下的边框和分隔线 */
+        body.dark-mode .border-l-4 {
+            opacity: 0.8;
+        }
+        
+        /* 深色模式下复制按钮 */
+        body.dark-mode .copy-btn {
+            border-color: #6ee7b7;
+            color: #6ee7b7;
+        }
+        
+        body.dark-mode .copy-btn:hover {
+            background: #6ee7b7;
+            color: #1a1a1a;
+        }
+        
+        /* 深色模式下历史日报链接 */
+        body.dark-mode .history-link {
+            background: rgba(16, 185, 129, 0.18);
+            color: #6ee7b7;
+            border-color: rgba(16, 185, 129, 0.35);
+        }
+        
+        body.dark-mode .history-link:hover {
+            background: rgba(16, 185, 129, 0.28);
+        }
+
+        /* 深色模式下返回主页按钮 */
+        body.dark-mode .back-home-link {
+            background: #2f2f2f;
+            color: #a0a0a0;
+            border-color: #3a3a3a;
+            box-shadow: none;
+        }
+
+        body.dark-mode .back-home-link:hover {
+            background: #333333;
+            color: #34d399;
+            border-color: rgba(16, 185, 129, 0.4);
+        }
+        
+        /* 主题切换按钮 */
+        .theme-toggle {
+            width: 3rem;
+            height: 3rem;
+            background: #10b981;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+        
+        .theme-toggle:hover {
+            background: #059669;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+        }
+        
+        /* === 截图模块样式 === */
+
+        /* HTML注释: 截图快捷按钮样式 */
+        .screenshot-btn {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            width: 28px;
+            height: 28px;
+            line-height: 28px;
+            border-radius: 0.5rem;
+            background: rgba(16, 185, 129, 0.08);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            color: #10b981;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            font-size: 0.78rem;
+        }
+
+        .screenshot-has-time > div:first-of-type {
+            padding-right: 3rem;
+        }
+
+        .screenshot-title-safe > h4:first-of-type,
+        .screenshot-title-safe > h5:first-of-type {
+            padding-right: 3.5rem;
+            box-sizing: border-box;
+        }
+
+        .screenshot-title-safe > div:first-of-type > h4:first-of-type {
+            display: block !important;
+            padding-right: 3.5rem;
+            box-sizing: border-box;
+            line-height: 1.4;
+        }
+
+        .screenshot-title-safe > div:first-of-type > h4:first-of-type > i:first-child {
+            display: inline-block;
+            margin-right: 0.625rem;
+            vertical-align: baseline;
+        }
+
+        .topic-time-badge {
+            display: inline-flex !important;
+            align-items: center !important;
+            height: 28px !important;
+            padding: 0 0.75rem !important;
+            line-height: 28px !important;
+            box-sizing: border-box !important;
+        }
+
+        .topic-time-icon {
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: 1rem;
+            height: 28px;
+            line-height: 28px !important;
+            margin-right: 0.375rem !important;
+            position: relative;
+            top: -1px;
+        }
+
+        .screenshot-btn:hover {
+            background: rgba(16, 185, 129, 0.15);
+            border-color: rgba(16, 185, 129, 0.4);
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+        }
+
+        .screenshot-btn:focus {
+            outline: none;
+        }
+
+        .screenshot-btn:active {
+            transform: scale(0.95);
+        }
+
+        .screenshot-btn.capturing {
+            animation: pulse-capture 1s infinite;
+        }
+
+        @keyframes pulse-capture {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* 截图时的临时容器样式 */
+        .screenshot-wrapper {
+            padding: 40px 40px 32px;
+            background: linear-gradient(160deg, #ffffff 0%, #f6fef9 40%, #ecfdf5 100%);
+            border-radius: 24px;
+            border: 1.5px solid rgba(16, 185, 129, 0.1);
+            box-shadow: 0 12px 40px rgba(16, 185, 129, 0.06);
+            box-sizing: border-box;
+        }
+
+        .screenshot-wrapper,
+        .screenshot-wrapper * {
+            -webkit-text-size-adjust: 100% !important;
+            text-size-adjust: 100% !important;
+        }
+
+        .screenshot-wrapper .screenshot-brand {
+            position: relative;
+            width: 100%;
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(16, 185, 129, 0.08);
+            box-sizing: border-box;
+        }
+
+        .screenshot-wrapper .screenshot-brand-main {
+            position: relative;
+            height: 44px;
+        }
+
+        .screenshot-wrapper .screenshot-brand-left {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 36px;
+            text-align: left;
+        }
+
+        .screenshot-wrapper .screenshot-brand-logo {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 7px;
+            background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+            display: block;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 3px 8px rgba(16, 185, 129, 0.25);
+        }
+
+        .screenshot-wrapper .screenshot-brand-logo span {
+            position: absolute;
+            left: 10px;
+            right: 10px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 2px;
+        }
+
+        .screenshot-wrapper .screenshot-brand-logo span:nth-child(1) {
+            top: 11px;
+        }
+
+        .screenshot-wrapper .screenshot-brand-logo span:nth-child(2) {
+            top: 19px;
+        }
+
+        .screenshot-wrapper .screenshot-brand-logo span:nth-child(3) {
+            top: 27px;
+            right: 16px;
+        }
+
+        .screenshot-wrapper .screenshot-brand-name {
+            font-size: 26px;
+            font-weight: 800;
+            color: #1a1a2e;
+            letter-spacing: 0;
+            display: block;
+            position: absolute;
+            left: 56px;
+            top: -18px;
+            height: 52px;
+            line-height: 52px;
+            white-space: nowrap;
+        }
+
+        .screenshot-wrapper .screenshot-brand-date {
+            position: absolute;
+            right: 0;
+            top: -15px;
+            height: 52px;
+            line-height: 52px;
+            text-align: right;
+            font-size: 18px;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .screenshot-wrapper .screenshot-module-title {
+            margin-top: 12px;
+            height: 26px;
+            line-height: 26px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #6b7280;
+        }
+
+        .screenshot-wrapper .screenshot-footer {
+            margin-top: 18px;
+            padding: 20px 24px;
+            padding-right: 152px;
+            background: rgba(16, 185, 129, 0.06);
+            border: 1px solid rgba(16, 185, 129, 0.12);
+            border-radius: 12px;
+            position: relative;
+            min-height: 140px;
+            box-sizing: border-box;
+        }
+
+        .screenshot-wrapper .screenshot-footer-text {
+            display: block;
+            padding-top: 25px;
+        }
+
+        .screenshot-wrapper .screenshot-footer-title {
+            font-size: 20px;
+            line-height: 28px;
+            font-weight: 800;
+            color: #1f2937;
+        }
+
+        .screenshot-wrapper .screenshot-footer-url {
+            margin-top: 2px;
+            font-size: 11px;
+            line-height: 16px;
+            color: #6b7280;
+            word-break: break-all;
+            display: none;
+        }
+
+        .screenshot-wrapper .screenshot-footer-qr-cell {
+            position: absolute;
+            right: 16px;
+            top: 14px;
+            width: 112px;
+            height: 112px;
+            padding: 8px;
+            background: #ffffff;
+            border: 1px solid rgba(16, 185, 129, 0.14);
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .screenshot-wrapper .screenshot-footer-qr {
+            display: block;
+            width: 94px;
+            height: auto;
+            min-height: 0;
+            padding: 0;
+            background: transparent;
+            border: 0;
+            border-radius: 0;
+            box-sizing: border-box;
+        }
+
+        .screenshot-wrapper .screenshot-footer-qr canvas,
+        .screenshot-wrapper .screenshot-footer-qr img,
+        .screenshot-wrapper .screenshot-footer-qr svg,
+        .screenshot-wrapper .screenshot-footer-qr table {
+            display: block;
+            width: 94px !important;
+            height: 94px !important;
+        }
+
+        /* 截图失败降级：图片浮层（移动端长按保存） */
+        .screenshot-fallback-mask {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(15, 23, 42, 0.7);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            box-sizing: border-box;
+        }
+
+        .screenshot-fallback-hint {
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .screenshot-fallback-img {
+            max-width: min(90vw, 600px);
+            max-height: 70vh;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            background: #ffffff;
+        }
+
+        .screenshot-fallback-close {
+            margin-top: 20px;
+            padding: 10px 28px;
+            border-radius: 8px;
+            border: none;
+            background: #ffffff;
+            color: #1f2937;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* 打印样式 */
+        @media print {
+            .floating-action-stack, nav, .copy-btn, .expand-btn, .screenshot-btn, .screenshot-fallback-mask {
+                display: none !important;
+            }
+            
+            body {
+                background: white;
+                color: black;
+            }
+            
+            .bento-card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                page-break-inside: avoid;
+            }
+            
+            .content-preview.collapsed {
+                max-height: none !important;
+            }
+            
+            .content-preview.collapsed::after {
+                display: none;
+            }
+        }
+        
+        /* 移动端优化 */
+        @media (max-width: 640px) {
+            .floating-action-stack {
+                right: 1rem;
+                bottom: 1rem;
+                gap: 0.5rem;
+            }
+
+            .floating-action-stack .toc-floating-button,
+            .floating-action-stack .theme-toggle,
+            .floating-action-stack .back-to-top {
+                width: 2.75rem;
+                height: 2.75rem;
+            }
+
+            .toc-panel {
+                width: calc(100vw - 2rem);
+                max-width: calc(100vw - 2rem);
+                max-height: 60vh;
+                padding: 1rem;
+            }
+
+            /* v3.7: 移动端二级子话题字号 */
+            .toc-sublink {
+                font-size: 0.75rem;
+            }
+        }
+
+        /* 页面淡入效果 - 让切换更平滑 */
+        body {
+            animation: fadeIn 0.3s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body class="bg-white text-black min-h-screen">
+    <!-- HTML注释: 整体宽度通过 max-w-4xl 控制，实现日报宽度调小并保持响应式。-->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+        <!-- === 返回主页按钮 === -->
+        <!-- HTML注释: 返回主页按钮，链接固定指向漫道主页 https://md.xinjianhub.cn/ ，直接写死在 href 中，不得修改或省略 -->
+        <div class="w-full mb-4 flex justify-start">
+            <a href="https://md.xinjianhub.cn/" class="back-home-link">
+                <i class="fas fa-arrow-left text-xs"></i> 返回漫道主页
+            </a>
+        </div>
+
+        <!-- === "群聊日报" 文件头区域 开始 === -->
+        <!-- HTML注释: 此模块作为单独一行，占据整行宽度。包含日报主标题、报告日期和时间范围。 -->
+        <!-- HTML注释: 新增了"群聊历史日报"链接，样式与整体设计保持统一协调 -->
+        <header class="w-full mb-8" role="banner">
+            <div class="bento-card p-8">
+                <div class="text-center">
+                    <h1 class="text-5xl font-black text-black mb-6">
+                        漫道
+                    </h1>
+                    <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-lg mb-4">
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-calendar-alt mr-2 text-[#4D6BFE]"></i>
+                            <span id="report-date">2026年9月10日</span>
+                        </div>
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-clock mr-2 text-[#4D6BFE]"></i>
+                            <span>02:43 - 00:51(次日)</span>
+                        </div>
+                    </div>
+                    <!-- HTML注释: 漫道历史日报链接，样式与绿色主题统一，链接固定指向历史日报汇总页，不得修改或省略 -->
+                    <div class="flex justify-center">
+                        <a id="history-link" href="https://md.xinjianhub.cn/" class="history-link">
+                            <i class="fas fa-history"></i>
+                            漫道历史日报
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- 导航与历史入口 -->
+        <nav class="w-full mb-8" aria-label="日期导航">
+            <div class="bento-card p-5">
+                <!-- 日期导航 -->
+                <div class="flex items-center justify-between mb-4">
+                    <button id="prev-day" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg shadow disabled:bg-gray-200 disabled:text-gray-400 transition-all" aria-label="查看前一天日报">
+                        <i class="fas fa-chevron-left"></i>
+                        <span class="hidden sm:inline">上一天</span>
+                        <span class="sm:hidden">上一天</span>
+                    </button>
+                    <button id="next-day" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg shadow disabled:bg-gray-200 disabled:text-gray-400 transition-all" aria-label="查看后一天日报">
+                        <span class="hidden sm:inline">下一天</span>
+                        <span class="sm:hidden">下一天</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <!-- === "群聊日报" 文件头区域 结束 === -->
+
+        <!-- === 内容目录导航（通过右下角悬浮按钮呈现） === -->
+
+        <!-- === 模块一：总消息概览 开始 === -->
+        <!-- HTML注释: 此模块作为单独一行，占据整行宽度。显示当日群聊总消息数量。 -->
+        <section id="section-overview" class="w-full mb-12" aria-labelledby="section-overview-title">
+            <h2 id="section-overview-title" class="section-title">
+                一、今日群聊速览
+            </h2>
+            <div class="bento-card p-8 bg-gradient-to-br from-[#10b981]/20 via-[#10b981]/10 to-[#10b981]/5 text-center rounded-2xl">
+                <div class="number-display text-[#4D6BFE]">
+                    256
+                </div>
+                <p class="text-xl font-semibold text-black mt-3">总消息数量</p>
+            </div>
+        </section>
+        <!-- === 模块一：总消息概览 结束 === -->
+
+        <!-- === 模块二：职通时刻・深度话题 开始 === -->
+        <!-- HTML注释: 此模块作为单独一行，占据整行宽度。承载全部深度内容：深度讨论、小会专题、有问必答、每日精选四类，统一为深度话题卡片呈现，不增设其他模块。 -->
+        <section id="section-topics" class="w-full mb-12" aria-labelledby="section-topics-title">
+            <h2 id="section-topics-title" class="section-title">
+                二、职通时刻・深度话题
+            </h2>
+            <!-- 列表容器: 讨论话题 -->
+            <div class="space-y-8">
+
+                <!-- 热点话题卡片 开始 -->
+                <div class="bento-card p-6 rounded-xl"> 
+                    <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
+                        <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
+                            别替不听话的新人擦屁股，让她自己踩坑
+                        </h4>
+                        <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
+                            <i class="fas fa-clock mr-1.5 text-gray-500"></i>
+                            10:05 - 12:00
+                        </span>
+                    </div>
+
+                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
+                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
+                        <p class="text-sm text-purple-600 italic">
+                            亮晶晶：今早和带的新人直接撕破脸了，反思我自己是不是多管闲事了。
+                        </p>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag-item">向上管理</span>
+                            <span class="tag-item">责任边界</span>
+                            <span class="tag-item">职场甩锅</span>
+                            <span class="tag-item">沟通留痕</span>
+                            <span class="tag-item">新人带教</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">详细内容</p>
+                        <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
+                            <div class="expandable-content" data-char-limit="200">
+                                <div class="content-preview">
+                                    <b>一、话题背景与起因</b><br><b>亮晶晶</b>在群内分享了一次让她极其郁闷的职场冲突：她提醒带教的新人去催促销售改善某项监控指标，新人却嫌麻烦顶嘴敷衍。由于该报表上仍挂着<b>亮晶晶</b>的名字，她一气之下越俎代庖，自己去部门群艾特了销售，随后将整个对话截图发给了+1领导，宣告“后面这个指标出问题与我无关”。随后，她向群友发问：“我这是不是多管闲事了？”<br><br><b>二、核心焦点与深层议题挖掘</b><br>表面上看，这是一个“老员工与刺头新人”的沟通矛盾，但随着群友的剖析，真正的焦点浮出水面：<b>职场中，越俎代庖的边界感缺失与向上沟通的策略失效</b>。<b>亮晶晶</b>的行为看似在“解决业务问题”，实则是在用情绪替对方的工作托底。更深层的议题是：当经办人是新人，但责任背书还是老人时，老人如何在不接手烂摊子的前提下，让问题安全地暴露在领导视野中。<br><br><b>三、多方观点与讨论详情</b><br>群内的讨论直击要害，迅速拆解了这波操作的危险性，观点可汇总为以下几类：<br>1. <b>没有留痕的“甩锅”，约等于上赶着被裁</b>：<b>转念</b>一针见血地指出，遇到事别扑上去就干，核心是“留痕”与SOP。你替新人把活儿干了，在领导眼里并没有明确的责任转移。<b>二壮</b>更是剖析了+1可能的视角：“这工作这么长时间了，连个新人都带不出来？责任边界划不清楚。”<b>阿戒</b>也补充道：“你现在事儿也替她做了，搞了这么一堆，在+1眼里还不一定落好。”<br>2. <b>别去擦没拉出来的屎</b>：<b>糕</b>从自己做过+1的视角给出了“王炸”策略。她建议，遇到不配合的新人，不如直接给她立KPI，让她独立负责，并向+1汇报“她觉得不需要我帮助”。随后的剧本就是：“新人因为急于表现出了纰漏，而老人撇开关系不用背锅。挖坑给她跳，她跳进去以后，再出来扮演好人的角色来补救。”你越是主动擦屁股，对方越觉得理所当然：“她说我没屎，你擦什么？”<br>3. <b>把情绪剥离，回归业务风险</b>：<b>橙子</b>指出，情绪问题根本不是真问题，“业务排期要出篓子了才是真问题”。频繁的情绪化表达只会掩盖事情的本质。多位群友建议，向上反馈时不能带情绪，而是要带着解决方案去，明确告知领导：这部分工作流程存在风险，为了避免出篓子，我建议做某某调整。<br><br><b>四、解决方案与启发</b><br>这场讨论沉淀了一套对付“不听话新人”的实操指南：第一步，立刻变更报表与流程的负责人名字，完成物理切割；第二步，如果对方不配合，停止“越俎代庖”，让子弹飞一会儿，甚至主动放开一些不致命的坑让她踩；第三步，通过邮件或群聊以“对齐业务风险”的名义抄送+1，完成合规留痕。深层的思维模型是<b>“补锅法”的逆向应用</b>：作为带教者，你的角色是预告问题、揭示风险的人，而不是主动去填平风险的冤大头。职场里，让烂人烂事自然爆雷，远比你强行替她遮掩来得高效。
+                                </div>
+                                <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
+                                    <span class="expand-text">展开全文</span>
+                                    <i class="fas fa-chevron-down ml-1 expand-icon"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
+                        <div class="space-y-6">
+                            <!-- 关键结论 1 开始 -->
+                            <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                                <div class="mb-4">
+                                    <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
+                                    <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
+                                        <p class="text-black text-base">
+                                            <b>别做问题的掩盖者</b>：遇到不配合的平级或新人，强行替对方擦屁股不仅换不来感恩，还会让领导觉得你缺乏带教能力；放开手让她自己去踩坑爆雷，才是最快划清边界的办法。<br>
+                                            <b>留痕是保护自己的铠甲</b>：一切沟通和责任移交必须落到纸面或邮件抄送+1，没有留痕的越俎代庖，在领导眼里就是你在抢活干还没干好。
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-700 mb-2"><strong>金句时刻</strong></p>
+                                    <div class="space-y-2">
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    你说没屎，你擦什么
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '你说没屎，你擦什么 - 糕（全职自媒体人）')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>糕（全职自媒体人）</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    你给她擦屁股背锅都 OK，但是🉐让领导知道。因为那是另外的价钱。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '你给她擦屁股背锅都 OK，但是🉐让领导知道。因为那是另外的价钱。 - 转念-通信-营销-猛猛搞副业')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>转念-通信-营销-猛猛搞副业</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    情绪问题不是问题。业务排期要出篓子了才是真问题。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '情绪问题不是问题。业务排期要出篓子了才是真问题。 - 橙子 硕7游戏文案4编剧7')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>橙子 硕7游戏文案4编剧7</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 关键结论 1 结束 -->
+                        </div>
+                    </div>
+                </div>
+                <!-- 热点话题卡片 结束 -->
+                
+                <!-- 热点话题卡片 开始 -->
+                <div class="bento-card p-6 rounded-xl"> 
+                    <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
+                        <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
+                            外企＋外包还想转正？别在必死之局里挣扎
+                        </h4>
+                        <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
+                            <i class="fas fa-clock mr-1.5 text-gray-500"></i>
+                            17:02 - 17:55
+                        </span>
+                    </div>
+
+                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
+                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
+                        <p class="text-sm text-purple-600 italic">
+                            Cathy WXia：部门业务下滑，外包岗位的涨薪/转正机会越来越小。后面怎么办？
+                        </p>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag-item">职业规划</span>
+                            <span class="tag-item">外企降本</span>
+                            <span class="tag-item">底线思维</span>
+                            <span class="tag-item">AI替代</span>
+                            <span class="tag-item">机会成本</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">详细内容</p>
+                        <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
+                            <div class="expandable-content" data-char-limit="200">
+                                <div class="content-preview">
+                                    <b>一、话题背景与起因</b><br>群友<b>Cathy WXia</b>是一名在上海做外企电商运营的外包人员（月薪16K，存款40W）。由于部门业务下滑，她发现转正和涨薪的机会越来越渺茫。在面对未来时，她纠结于两个方向：一是继续在内部运作争取拿到甲方的转正名额（期望起薪上涨30%），二是直接跳槽，但又担忧自己在自有系统内积累的经验难以平移到主流电商平台。于是向群友求诊断。<br><br><b>二、核心焦点与深层议题挖掘</b><br>表面上看，这是“跳槽还是内部苟着”的选择题，本质上却暴露了职场人对<b>宏观行业大势与自我处境的严重误判</b>。核心焦点在于：在外企退潮、外包降本、基础运营岗位被AI疯狂替代的三重绞杀下，耗费时间追求一个虚无缥缈的“转正名额”，是否值得？深层议题是，当你在一个缺乏增长逻辑的死局中，最大的成本不是眼前的薪资涨跌，而是你被锁死的“机会成本”和逐渐生锈的竞争力。<br><br><b>三、多方观点与讨论详情</b><br>这一求助犹如在群里投下了一枚深水炸弹，众人迅速以底线思维帮她撕开了幻想的滤镜：<br>1. <b>外企+外包是绝对的负面BUFF</b>：<b>宝鹅</b>和<b>蚂蚁窝</b>毫不留情地指出，这简直是debuff叠满了。<b>前PM</b>戳穿了外企的底层逻辑：“中国生产力太发达，外企在价格上已经完全没有竞争力了。且大厂找外包就是为了人力便宜，随时可以开，为什么要同意外包员工转正呢？”<br>2. <b>AI时代的运营已成死亡赛道</b>：针对<b>Cathy</b>认为“AI替代不了跨系统操作”的侥幸心理，<b>阿南</b>以亲身经历现身说法：“我听你写的内容，AI都能做。别自欺欺人了，现在直接上AI替代人力，我们组这两年一直做的就是业务AI化。正编都在裁，外包凭什么留下来？”<b>李工</b>也表示，觉得AI难处理说明公司技术已经太落后，数据处理恰恰是AI的第一刀。<br>3. <b>机会成本才是真正的成本</b>：对于<b>Cathy</b>仍想借转正谋求30%涨薪的执念，<b>子蟹</b>给出了极其犀利的判断：“你想去哪儿，就直接去，时间很重要，浪费时间折腾转入外企，不如早点从必死之局里脱身。在死路里先折腾半年，终于要走的时候AI更发达了，这才是真正的成本。”<br><br><b>四、解决方案与启发</b><br>基于残酷的现实分析，群友们给出了非常明确的行动指南。<b>战术上</b>：立刻停止在内部谋求转正的内耗，启动外部求职，利用iMA等AI工具提炼以往的工作流来重塑简历，重点投递国内电商与出海跨境类岗位。<b>战略上</b>：<b>不渡</b>祭出了经典的“底线+二分法”决策模型（先翻过来找死路，再切开看活路）——与其期待一个虚幻的转正加薪，不如现在就去市场上试水温。其普适启发在于：<b>当身处下行周期和被边缘化的岗位时，原地不动就是最大的冒险。别把正在沉没的船，当成你的避风港。</b>
+                                </div>
+                                <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
+                                    <span class="expand-text">展开全文</span>
+                                    <i class="fas fa-chevron-down ml-1 expand-icon"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
+                        <div class="space-y-6">
+                            <!-- 关键结论 1 开始 -->
+                            <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                                <div class="mb-4">
+                                    <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
+                                    <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
+                                        <p class="text-black text-base">
+                                            <b>放弃外包转正的幻想</b>：外包的底层逻辑是廉价耗材与降本增效，在行业下行期，即使是正编都在缩水，追求转正无异于缘木求鱼。<br>
+                                            <b>跳出沉没成本的陷阱</b>：如果你去了一条有发展的赛道，即使短期平薪，长期也是活路越走越宽；如果在必死之局里耗费半年，机会成本才是你不可承受之重。
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-700 mb-2"><strong>金句时刻</strong></p>
+                                    <div class="space-y-2">
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    机会成本才是真正的成本，反之，在死路里先折腾半年，这才是真正的成本。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '机会成本才是真正的成本，反之，在死路里先折腾半年，这才是真正的成本。 - 子蟹 半退休 游戏.产品 硕 6')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>子蟹 半退休 游戏.产品 硕 6</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    大厂为什么要找外包，就是为了人力便宜，随时可以开，为什么要同意外包员工转正呢？
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '大厂为什么要找外包，就是为了人力便宜，随时可以开，为什么要同意外包员工转正呢？ - 前PM年100退休十年')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>前PM年100退休十年</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    外企不是什么好地方，外企的工作本来干的就是外包的活，决策不在中国。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '外企不是什么好地方，外企的工作本来干的就是外包的活，决策不在中国。 - 阿南 互联网运营 本 10')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>阿南 互联网运营 本 10</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 关键结论 1 结束 -->
+                        </div>
+                    </div>
+                </div>
+                <!-- 热点话题卡片 结束 -->
+
+                <!-- 热点话题卡片 开始 -->
+                <div class="bento-card p-6 rounded-xl"> 
+                    <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
+                        <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
+                            “不好意思麻烦同事”，只会憋出职场大雷
+                        </h4>
+                        <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
+                            <i class="fas fa-clock mr-1.5 text-gray-500"></i>
+                            02:43 - 09:51
+                        </span>
+                    </div>
+
+                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
+                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
+                        <p class="text-sm text-purple-600 italic">
+                            前PM年100退休十年：以这个当例子，可以很形象的说明为什么在职场上遇到问题，不要把它归咎于性格因素。
+                        </p>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag-item">职场沟通</span>
+                            <span class="tag-item">标准流程</span>
+                            <span class="tag-item">责任意识</span>
+                            <span class="tag-item">拒绝内耗</span>
+                            <span class="tag-item">性格陷阱</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">详细内容</p>
+                        <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
+                            <div class="expandable-content" data-char-limit="200">
+                                <div class="content-preview">
+                                    <b>一、话题背景与起因</b><br>凌晨，<b>前PM</b>在群内分享了一篇分析心理学效应的文章，文章将职场中“不敢给人添麻烦、遇到问题不好意思请教同事”的现象归因为童年创伤和“回避型依恋”。然而，<b>前PM</b>借此发出了强烈的批判，直言在职场上这种归因纯属“狗屁”，由此引发了大家关于职场性格误区与SOP工作法的探讨。<br><br><b>二、核心焦点与深层议题挖掘</b><br>讨论的焦点直指当代职场人常犯的错误——<b>用“性格内向/社恐”来掩饰职业素养的匮乏</b>。所谓的“不敢麻烦别人”，表面上是懂事、内耗，深层议题却是在破坏协作的规则。职场是一台精密咬合的机器，你卡住了齿轮却不发声，最终导致项目崩盘。在这里，没有人有义务共情你的心理阴影，大家只看结果和进度是否如期交付。<br><br><b>三、多方观点与讨论详情</b><br>在<b>前PM</b>开炮后，群友们纷纷结合自身经历表达了高度共鸣：<br>1. <b>职场只认SOP，不认心理分析</b>：<b>前PM</b>犀利地指出，遇到不懂的按流程去问就行了，没必要抱着童年创伤大哭。作为带过新人的管理者：“如果对方有什么事明明不会做，一直憋着憋到最后憋一个大雷出来，把整个项目炸烂了，你会关心对方是童年阴影吗？你只想让他赶紧滚。”<br>2. <b>“大包大揽”是另一种失职</b>：正在向管理岗过渡的<b>小黔子</b>感同身受，坦言自己正经历因为内心恐惧不敢找人帮忙，结果自己累得半死还做不好工作。“完全是自己的内心恐惧，和别人无关，自己大包大揽反而破坏了该有的流程。”<br>3. <b>“请教”的职场心理学逆向应用</b>：<b>胡山元</b>提供了一个极佳的破局视角，他认为向别人请教并不是示弱，而是一种高明的职场策略。主动示弱可以“让别人建立心理优势，从而主动做出对你有利的事，因为人性就是好为人师的”。<br>4. <b>知识在迭代，责任需分担</b>：<b>葛二小</b>补充，哪怕你完全懂怎么做，有时也必须分配给别人。不仅因为实践经验一直在变，更是为了进行合理的责任切割。<br><br><b>四、解决方案与启发</b><br>这番讨论给纠结的职场新人打了一剂清醒针。解决方案非常简单粗暴：扔掉所有性格测试和心理分析的包袱，在职场里，你就是一个执行SOP的节点。遇到卡点立马求援，不要让工作烂在自己手里。深层的思维模型是：<b>把协作当成物理定律而非人情往来</b>。每一次“不好意思”背后，都是在为未来积攒一颗可能炸掉你饭碗的地雷；相反，利用“好为人师”的人性去推进任务，才是真正成熟的职场生存术。
+                                </div>
+                                <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
+                                    <span class="expand-text">展开全文</span>
+                                    <i class="fas fa-chevron-down ml-1 expand-icon"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
+                        <div class="space-y-6">
+                            <!-- 关键结论 1 开始 -->
+                            <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                                <div class="mb-4">
+                                    <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
+                                    <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
+                                        <p class="text-black text-base">
+                                            <b>收起脆弱的性格论</b>：职场只看SOP的执行和结果交付，把延误归咎于“害怕添麻烦”，是对协作规则的严重破坏。<br>
+                                            <b>逆用人性推进工作</b>：向他人请教不是欠人情，而是主动赋予对方心理优势的职场干预手段，善用人性的“好为人师”来达成你的工作目的。
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-700 mb-2"><strong>金句时刻</strong></p>
+                                    <div class="space-y-2">
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    你会关心对方是tmd童年阴影，还是回避型依恋人格吗？你只想把对方赶紧开掉，让他滚得越远越好。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '你会关心对方是tmd童年阴影，还是回避型依恋人格吗？你只想把对方赶紧开掉，让他滚得越远越好。 - 前PM年100退休十年')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>前PM年100退休十年</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    自己大包大揽反而破坏了该有的流程。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '自己大包大揽反而破坏了该有的流程。 - 小黔子 建筑国企 本5 贵阳')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>小黔子 建筑国企 本5 贵阳</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    向别人请教是一种主动让别人建立心理优势的方法，人性就是好为人师的。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '向别人请教是一种主动让别人建立心理优势的方法，人性就是好为人师的。 - 胡山元 技术支持 深圳')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>胡山元 技术支持 深圳</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 关键结论 1 结束 -->
+                        </div>
+                    </div>
+                </div>
+                <!-- 热点话题卡片 结束 -->
+
+                <!-- 热点话题卡片 开始 -->
+                <div class="bento-card p-6 rounded-xl"> 
+                    <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
+                        <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
+                            做实验总忘步骤？用AI搞SOP顺便起个号
+                        </h4>
+                        <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
+                            <i class="fas fa-clock mr-1.5 text-gray-500"></i>
+                            19:13 - 19:32
+                        </span>
+                    </div>
+
+                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
+                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
+                        <p class="text-sm text-purple-600 italic">
+                            鱼皮：请教各位前辈一个问题：如何借助ai工具自动化跟进多线程任务？
+                        </p>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag-item">流程管理</span>
+                            <span class="tag-item">自动化SOP</span>
+                            <span class="tag-item">AI提效</span>
+                            <span class="tag-item">内容变现</span>
+                            <span class="tag-item">主副业飞轮</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">详细内容</p>
+                        <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
+                            <div class="expandable-content" data-char-limit="200">
+                                <div class="content-preview">
+                                    <b>一、话题背景与起因</b><br>在读博士生<b>鱼皮</b>在群里发起求助。他的日常工作涉及大量长周期的动物实验（做手术、取标本、标本处理等，单环节跨度长达2-4周）。因为缺乏系统的工作流管理，他在多线程处理实验时极易遗忘进度。他尝试过笔记本、微信碎片化记录、Excel手动整理等方法，效果都不佳。于是他希望找到一种像助理一样的AI工具，能自动识别步骤耗时，到期通过微信自动推送提醒。<br><br><b>二、核心焦点与深层议题挖掘</b><br>问题表面是“求推荐一款AI日程管理软件”，本质上却涉及如何将冗长、枯燥的物理世界工作实现数字化“资产沉淀”。而随着群友讨论的深入，议题被彻底升维：你眼中的痛苦重复劳动（处理标本），在普通大众眼中却是极具猎奇感和专业感的内容。因此，问题的焦点从“如何通过AI排期”跃迁到了“如何将主业的SOP直接变现为自媒体流量”。<br><br><b>三、多方观点与讨论详情</b><br>群里的极客与副业大神们从两条战线给出了碾压式的解法：<br>1. <b>工具流解法（解决痛点）</b>：<b>李工</b>和<b>阿南</b>给出了具体的AI落地方案。不需要去全网找神仙软件，直接利用现有的Excel台账或过往的实验日记，喂给iMA建知识库，让AI分析出各步骤的时长逻辑；接着把工作流封装成Skill设置定时任务，利用腾讯生态的便利性直接打通微信提醒。<b>熊熊</b>则补充了更丝滑的输入法：别用手记，占着手做实验时直接“语音口述录入”，后台让大模型自动转录提取台账信息。<br>2. <b>变现流解法（挖掘资产）</b>：<b>糕</b>和<b>黄云</b>敏锐地捕捉到了这项枯燥实验的商业价值。<b>糕</b>直呼“这个标本处理的过程好适合做自媒体起号呀！稀缺赛道！没人能抢”。<b>黄云</b>进一步拆解了流量密码：“这种大众不了解的看着让人好有好奇心。甚至一句话都不用说，打几个文字，把过程拍了剪出来，让大家享受这种专注过程模拟出的‘心流’体验。”这不仅不用额外耗时，反而直接复用了工作场景。<br><br><b>四、解决方案与启发</b><br>讨论最终成型了一套极具实操性的“博士生实验管理兼自媒体飞轮”方案。操作执行上：实验时架设手机进行第一视角录像，一边做一边口述进度。口述的录音丢给DeepSeek提取出结构化的SOP进度并同步到自动提醒表单中（完成主业提效）；录像的视频剪去敏感画面，加上白噪音配乐，作为“沉浸式标本制作”内容投放到自媒体平台（完成副业起号）。深层启发在于：<b>不要单向消耗精力去“管理”你的工作，而是要将你的工作过程直接封装成可变现的内容产品</b>。在AI时代，最笨的方法是找工具去适应你，最高效的方法是用大模型改造你的信息流转方式。
+                                </div>
+                                <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
+                                    <span class="expand-text">展开全文</span>
+                                    <i class="fas fa-chevron-down ml-1 expand-icon"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
+                        <div class="space-y-6">
+                            <!-- 关键结论 1 开始 -->
+                            <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                                <div class="mb-4">
+                                    <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
+                                    <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
+                                        <p class="text-black text-base">
+                                            <b>打通工具的输入革命</b>：双手忙碌时，放弃键盘打字，直接边干边录音，让AI为你整理文字台账，才是最高效的SOP沉淀方式。<br>
+                                            <b>痛苦即素材，日常即稀缺</b>：你觉得枯燥晦涩的专业实验，对圈外人就是自带“心流”滤镜的猎奇爽文，把过程拍下来，主业的内耗就能变成副业的流量。
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-700 mb-2"><strong>金句时刻</strong></p>
+                                    <div class="space-y-2">
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    这种大众不了解的看着让人好有好奇心，让大家享受有成就的时刻。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '这种大众不了解的看着让人好有好奇心，让大家享受有成就的时刻。 - 黄云 自媒体生意')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>黄云 自媒体生意</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    记录我觉得可以从写改成说，就变干边说边录，后面给AI去整理。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '记录我觉得可以从写改成说，就变干边说边录，后面给AI去整理。 - 熊熊 AI应用 北京 博 4')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>熊熊 AI应用 北京 博 4</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    稀缺赛道，没人能抢。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '稀缺赛道，没人能抢。 - 糕（全职自媒体人）')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>糕（全职自媒体人）</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 关键结论 1 结束 -->
+                        </div>
+                    </div>
+                </div>
+                <!-- 热点话题卡片 结束 -->
+
+            </div>
+            <!-- 列表容器结束: 讨论话题 -->
+        </section>
+        <!-- === 模块二：职通时刻・深度话题 结束 === -->
+
+        <!-- 底部日期导航 -->
+        <nav class="w-full mt-12" aria-label="日期导航（底部）">
+            <div class="bento-card p-5">
+                <div class="flex items-center justify-between mb-4">
+                    <button id="prev-day-bottom" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg shadow disabled:bg-gray-200 disabled:text-gray-400 transition-all" aria-label="查看前一天日报">
+                        <i class="fas fa-chevron-left"></i>
+                        <span class="hidden sm:inline">上一天</span>
+                        <span class="sm:hidden">上一天</span>
+                    </button>
+                    <button id="next-day-bottom" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg shadow disabled:bg-gray-200 disabled:text-gray-400 transition-all" aria-label="查看后一天日报">
+                        <span class="hidden sm:inline">下一天</span>
+                        <span class="sm:hidden">下一天</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- === 文件底部 开始 === -->
+        <footer class="w-full mt-16" role="contentinfo">
+            <div class="bento-card p-8">
+                <div class="text-center text-gray-700 space-y-3">
+                    <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-base">
+                        <div class="flex items-center">
+                            <i class="fas fa-database mr-2 text-[#4D6BFE]"></i>
+                            <span>微信群聊记录 - 新茧</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-robot mr-2 text-[#4D6BFE]"></i>
+                            <span>报告生成于 2026-09-10 12:00:00</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-500 max-w-2xl mx-auto leading-relaxed">
+                        本报告基于群聊数据自动生成，仅供参考。内容可能包含个人观点，不代表群组官方立场。数据处理过程中已尽量匿名化处理敏感信息。
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <!-- === 文件底部 结束 === -->
+    </div>
+
+    <!-- 页面右下角悬浮按钮集 -->
+    <div class="floating-action-stack" aria-label="页面快捷操作">
+        <div class="toc-floating-container" aria-label="内容导航">
+            <button id="toc-toggle" class="toc-floating-button" onclick="toggleToc(event)" aria-label="打开目录" aria-expanded="false" title="内容导航">
+                <i class="fas fa-list"></i>
+            </button>
+            <div id="toc-panel" class="toc-panel" aria-hidden="true">
+                <div class="toc-panel-header">
+                    <h3 class="toc-panel-title">
+                        <i class="fas fa-list text-green-500"></i>
+                        <span>内容导航</span>
+                    </h3>
+                    <button class="toc-close" onclick="toggleToc(event)" aria-label="关闭目录">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <!-- v3.7: 目录条目（含二级子话题）由 buildToc() 脚本动态生成，请勿在此手写目录链接 -->
+                <nav class="toc-items" id="toc-items" aria-label="内容导航"></nav>
+            </div>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="切换主题" title="切换深色/浅色模式">
+            <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <button class="back-to-top" id="backToTop" aria-label="返回顶部" title="返回顶部">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <script>
+        // 漫道日报：历史汇总与导航
+        // 🔴 漫道日报的线上地址（二维码与上一天/下一天导航都依赖它），必须与实际部署域名一致
+        const GJ_BASE_URL = 'https://md.xinjianhub.cn';
+        const GJ_FILE_PREFIX = '漫道日报_';
+        const GJ_SUFFIX = '.html';
+
+
+        // 页面加载时滚动到顶部（避免保留上一页的滚动位置）
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+        
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始化所有新功能（buildToc 必须先于 initTocHighlight 调用，先为话题卡片分配锚点 id）
+            buildToc();
+            initBackToTop();
+            initThemeToggle();
+            initTocHighlight();
+            
+            // Bento card hover effect is handled by CSS :hover pseudo-class
+
+            // Number animation effect
+            const numberElements = document.querySelectorAll('.number-display');
+            numberElements.forEach(element => {
+                const finalValueText = element.textContent.replace(/,/g, '');
+                const finalValue = parseInt(finalValueText, 10);
+
+                if (isNaN(finalValue)) return;
+
+                let currentValue = 0;
+                const duration = 1500; // Animation duration in ms
+                const frameRate = 1000 / 60; // 60fps
+                const totalFrames = Math.round(duration / frameRate);
+                const increment = finalValue / totalFrames;
+
+                let currentFrame = 0;
+                const timer = setInterval(() => {
+                    currentFrame++;
+                    currentValue += increment;
+
+                    if (currentFrame >= totalFrames) {
+                        currentValue = finalValue;
+                        clearInterval(timer);
+                    }
+                    // Format number with commas for display
+                    element.textContent = Math.floor(currentValue).toLocaleString('en-US');
+                }, frameRate);
+            });
+
+
+            // HTML注释: 初始化展开功能
+            initExpandableContent();
+            
+            // 初始化日报导航
+            try {
+                initDailyNavigation();
+            } catch (e) {
+                console.warn('初始化导航失败', e);
+            }
+        });
+
+        function initDailyNavigation() {
+            const currentDateStr = getCurrentDateFromPage();
+            if (!currentDateStr) return;
+
+            const dt = new Date(currentDateStr);
+            const prev = new Date(dt); prev.setDate(prev.getDate() - 1);
+            const next = new Date(dt); next.setDate(next.getDate() + 1);
+
+            const prevStr = formatDate(prev);
+            const nextStr = formatDate(next);
+
+            const prevButtons = ['prev-day', 'prev-day-bottom']
+                .map(id => document.getElementById(id))
+                .filter(Boolean);
+            const nextButtons = ['next-day', 'next-day-bottom']
+                .map(id => document.getElementById(id))
+                .filter(Boolean);
+
+            if (!prevButtons.length && !nextButtons.length) {
+                return;
+            }
+
+            const updateButtons = (buttons, enabled, handler) => {
+                buttons.forEach(btn => {
+                    btn.disabled = !enabled;
+                    btn.onclick = enabled ? handler : null;
+                });
+            };
+
+            const isLocalFile = window.location.protocol === 'file:';
+            
+            if (isLocalFile) {
+                const prevHandler = () => {
+                    const [year, month] = prevStr.split('-');
+                    window.location.href = `../${year}年${parseInt(month, 10)}月/${GJ_FILE_PREFIX}${prevStr}${GJ_SUFFIX}`;
+                };
+                const nextHandler = () => {
+                    const [year, month] = nextStr.split('-');
+                    window.location.href = `../${year}年${parseInt(month, 10)}月/${GJ_FILE_PREFIX}${nextStr}${GJ_SUFFIX}`;
+                };
+
+                if (prevButtons.length) {
+                    updateButtons(prevButtons, true, prevHandler);
+                }
+                if (nextButtons.length) {
+                    updateButtons(nextButtons, true, nextHandler);
+                }
+            } else {
+                // 线上模式：使用fetch检查文件是否存在
+                Promise.all([checkExists(prevStr), checkExists(nextStr)]).then(([pe, ne]) => {
+                    const prevHandler = () => window.location.href = pe.url;
+                    const nextHandler = () => window.location.href = ne.url;
+
+                    updateButtons(prevButtons, !!pe.ok, prevHandler);
+                    updateButtons(nextButtons, !!ne.ok, nextHandler);
+                }).catch(()=>{
+                    updateButtons(prevButtons, false, null);
+                    updateButtons(nextButtons, false, null);
+                });
+            }
+        }
+
+        function checkExists(dateStr) {
+            // 线上为扁平结构：漫道日报_YYYY-MM-DD.html 直接位于域名根目录
+            const url = `${GJ_BASE_URL}/${GJ_FILE_PREFIX}${dateStr}${GJ_SUFFIX}`;
+            
+            return fetch(url, { method: 'HEAD', cache: 'no-store' })
+                .then(r => r.ok ? { ok: true, url: url } : 
+                    fetch(url, { method: 'GET', cache: 'no-store' })
+                        .then(r2 => r2.ok ? { ok: true, url: url } : { ok: false })
+                )
+                .catch(() => ({ ok: false }));
+        }
+
+        function pad2(value) {
+            const str = String(value);
+            return str.length < 2 ? '0' + str : str;
+        }
+
+        function getCurrentDateFromPage() {
+            // 1) 从报告日期
+            const el = document.getElementById('report-date');
+            if (el) {
+                const m = el.textContent.match(/(\d{4})年(\d{1,2})月(\d{1,2})日/);
+                if (m) return `${m[1]}-${pad2(m[2])}-${pad2(m[3])}`;
+            }
+            // 2) 从 URL 文件名
+            const fn = window.location.pathname.match(/漫道日报_(\d{4}-\d{2}-\d{2})\.html/);
+            if (fn) return fn[1];
+            // 3) 从标题
+            const tm = document.title.match(/(\d{4}-\d{2}-\d{2})/);
+            if (tm) return tm[1];
+            return null;
+        }
+
+        function formatDate(d) {
+            const y = d.getFullYear();
+            const m = pad2(d.getMonth()+1);
+            const dd = pad2(d.getDate());
+            return `${y}-${m}-${dd}`;
+        }
+
+        // === 新增功能函数 ===
+        
+        // 目录浮动按钮展开/收起
+        function toggleToc(event) {
+            if (event) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            const panel = document.getElementById('toc-panel');
+            const button = document.getElementById('toc-toggle');
+            if (!panel || !button) return;
+
+            if (panel.classList.contains('active')) {
+                closeTocPanel();
+            } else {
+                panel.classList.add('active');
+                button.classList.add('active');
+                button.setAttribute('aria-expanded', 'true');
+                panel.setAttribute('aria-hidden', 'false');
+                setTimeout(() => {
+                    document.addEventListener('click', handleTocOutsideClick);
+                }, 0);
+            }
+        }
+
+        function closeTocPanel() {
+            const panel = document.getElementById('toc-panel');
+            const button = document.getElementById('toc-toggle');
+            if (!panel || !button) return;
+
+            panel.classList.remove('active');
+            panel.setAttribute('aria-hidden', 'true');
+            button.classList.remove('active');
+            button.setAttribute('aria-expanded', 'false');
+            document.removeEventListener('click', handleTocOutsideClick);
+        }
+
+        function handleTocOutsideClick(event) {
+            const panel = document.getElementById('toc-panel');
+            const button = document.getElementById('toc-toggle');
+            if (!panel || !button) return;
+
+            if (!panel.contains(event.target) && !button.contains(event.target)) {
+                closeTocPanel();
+            }
+        }
+        
+        // v3.7: 构建二级内容目录（一级为模块，二级为模块下每张深度话题卡片标题，全部由脚本自动生成）
+        function buildToc() {
+            const tocItems = document.getElementById('toc-items');
+            if (!tocItems) return;
+
+            const tocConfigs = [
+                { id: 'section-overview', icon: 'fa-chart-line' },
+                { id: 'section-topics', icon: 'fa-fire' }
+            ];
+
+            tocItems.innerHTML = '';
+
+            tocConfigs.forEach(config => {
+                const section = document.getElementById(config.id);
+                if (!section) return;
+
+                const sectionTitleEl = section.querySelector('.section-title');
+                let sectionTitle = sectionTitleEl ? sectionTitleEl.textContent.trim() : config.id;
+                // 模块标题自带中文序号（如"一、"），目录一级条目去掉序号，与原目录样式保持一致
+                sectionTitle = sectionTitle.replace(/^[一二三四五六七八九十]+、\s*/, '');
+
+                const group = document.createElement('div');
+                group.className = 'toc-group';
+
+                const mainLink = document.createElement('a');
+                mainLink.href = '#' + config.id;
+                mainLink.className = 'toc-link';
+                mainLink.setAttribute('onclick', "smoothScroll(event, '" + config.id + "')");
+                mainLink.innerHTML = '<i class="fas ' + config.icon + '"></i><span>' + sectionTitle + '</span>';
+                group.appendChild(mainLink);
+
+                // 二级子话题：扫描该模块下每张话题卡片的 h4 标题，自动分配锚点 id
+                const cardHeadings = section.querySelectorAll('.bento-card h4');
+                if (cardHeadings.length > 0) {
+                    const sublist = document.createElement('div');
+                    sublist.className = 'toc-sublist';
+
+                    cardHeadings.forEach((heading, index) => {
+                        const card = heading.closest('.bento-card');
+                        if (!card) return;
+
+                        if (!card.classList.contains('anchor-target')) {
+                            card.classList.add('anchor-target');
+                        }
+                        if (!card.id) {
+                            card.id = config.id + '-item-' + (index + 1);
+                        }
+
+                        const subLink = document.createElement('a');
+                        subLink.href = '#' + card.id;
+                        subLink.className = 'toc-sublink';
+                        subLink.setAttribute('onclick', "smoothScroll(event, '" + card.id + "')");
+                        subLink.textContent = heading.textContent.trim();
+                        sublist.appendChild(subLink);
+                    });
+
+                    if (sublist.children.length > 0) {
+                        group.appendChild(sublist);
+                    }
+                }
+
+                tocItems.appendChild(group);
+            });
+        }
+        
+        // 平滑滚动
+        function smoothScroll(event, targetId) {
+            event.preventDefault();
+            const target = document.getElementById(targetId);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                // 更新目录激活状态（v3.7: 同时覆盖一级模块条目与二级子话题条目）
+                document.querySelectorAll('.toc-link, .toc-sublink').forEach(link => link.classList.remove('active'));
+                if (event.currentTarget) {
+                    event.currentTarget.classList.add('active');
+                }
+                closeTocPanel();
+            }
+        }
+        
+        // 返回顶部功能
+        function initBackToTop() {
+            const btn = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+            
+            btn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+        
+        // 主题切换功能
+        function initThemeToggle() {
+            const btn = document.getElementById('themeToggle');
+            const icon = document.getElementById('themeIcon');
+            
+            // 将预加载类转换为正式的dark-mode类
+            document.documentElement.classList.remove('dark-mode-preload');
+            
+            // 检查本地存储的主题设置
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+            
+            btn.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                const isDark = document.body.classList.contains('dark-mode');
+                
+                if (isDark) {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+        }
+        
+        // 目录高亮功能（滚动时自动高亮当前章节；v3.7 起支持二级子话题高亮）
+        function initTocHighlight() {
+            // 动态收集监听目标：两个模块 + 模块下每张话题卡片（须在 buildToc 之后调用，卡片才有锚点 id）
+            const sections = [];
+            ['section-overview', 'section-topics'].forEach(sectionId => {
+                const section = document.getElementById(sectionId);
+                if (!section) return;
+                sections.push(sectionId);
+                section.querySelectorAll('.bento-card h4').forEach(heading => {
+                    const card = heading.closest('.bento-card');
+                    if (card && card.id) {
+                        sections.push(card.id);
+                    }
+                });
+            });
+            const tocLinks = document.querySelectorAll('.toc-link, .toc-sublink');
+            
+            window.addEventListener('scroll', () => {
+                let current = '';
+                
+                sections.forEach(sectionId => {
+                    const section = document.getElementById(sectionId);
+                    if (section) {
+                        const sectionTop = section.offsetTop;
+                        if (window.pageYOffset >= sectionTop - 100) {
+                            current = sectionId;
+                        }
+                    }
+                });
+                
+                // 当前阅读到某张话题卡片时，同时高亮其所属模块的一级条目
+                let currentGroup = current;
+                if (current.indexOf('-item-') !== -1) {
+                    currentGroup = current.substring(0, current.indexOf('-item-'));
+                }
+
+                tocLinks.forEach(link => {
+                    link.classList.remove('active');
+                    const href = link.getAttribute('href');
+                    if (href === '#' + current || href === '#' + currentGroup) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        }
+        
+        // 复制金句功能
+        function copyQuote(button, text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const icon = button.querySelector('i');
+                const originalClass = icon.className;
+                
+                // 更改按钮状态
+                button.classList.add('copied');
+                icon.className = 'fas fa-check';
+                
+                // 2秒后恢复
+                setTimeout(() => {
+                    button.classList.remove('copied');
+                    icon.className = originalClass;
+                }, 2000);
+            }).catch(err => {
+                console.error('复制失败:', err);
+                alert('复制失败，请手动复制');
+            });
+        }
+        
+        // HTML注释: 初始化展开功能
+        function initExpandableContent() {
+            const expandableContents = document.querySelectorAll('.expandable-content');
+            
+            expandableContents.forEach(container => {
+                const charLimit = parseInt(container.getAttribute('data-char-limit')) || 200;
+                const contentPreview = container.querySelector('.content-preview');
+                const expandBtn = container.querySelector('.expand-btn');
+                
+                if (!contentPreview || !expandBtn) return;
+                
+                const fullContent = contentPreview.innerHTML;
+                const fullText = contentPreview.textContent || contentPreview.innerText;
+                
+                // HTML注释: 如果内容长度超过限制，则显示展开按钮
+                if (fullText.length > charLimit) {
+                    // HTML注释: 创建一个临时元素来正确截取HTML内容
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = fullContent;
+                    
+                    // HTML注释: 截取文本内容到指定长度
+                    const truncatedText = fullText.substring(0, charLimit);
+                    
+                    // HTML注释: 使用更简单可靠的方法截取内容
+                    let truncatedContent = '';
+                    let charCount = 0;
+                    
+                    // HTML注释: 逐字符遍历，保持简单的HTML结构
+                    const walker = document.createTreeWalker(
+                        tempDiv,
+                        NodeFilter.SHOW_TEXT,
+                        null,
+                        false
+                    );
+                    
+                    let node;
+                    const textNodes = [];
+                    while (node = walker.nextNode()) {
+                        textNodes.push(node);
+                    }
+                    
+                    // HTML注释: 计算需要保留的文本内容
+                    for (let textNode of textNodes) {
+                        const text = textNode.textContent;
+                        if (charCount + text.length <= charLimit) {
+                            charCount += text.length;
+                        } else {
+                            const remainingChars = charLimit - charCount;
+                            textNode.textContent = text.substring(0, remainingChars) + '...';
+                            charCount = charLimit;
+                            
+                            // HTML注释: 新的、更干净的移除后续所有节点的逻辑
+                            let currentNodeToClearAfter = textNode;
+                            while (currentNodeToClearAfter && currentNodeToClearAfter !== tempDiv) {
+                                let sibling = currentNodeToClearAfter.nextSibling;
+                                while (sibling) {
+                                    const nodeToRemove = sibling;
+                                    sibling = sibling.nextSibling;
+                                    nodeToRemove.remove();
+                                }
+                                currentNodeToClearAfter = currentNodeToClearAfter.parentElement;
+                            }
+                            break; // 完成截断和清理，跳出 textNodes 循环
+                        }
+                    }
+                    
+                    const previewContent = tempDiv.innerHTML;
+                    
+                    contentPreview.innerHTML = previewContent;
+                    contentPreview.classList.add('collapsed');
+                    expandBtn.style.display = 'flex';
+                    
+                    // HTML注释: 绑定展开/收起事件
+                    expandBtn.addEventListener('click', function() {
+                        const isExpanded = expandBtn.classList.contains('expanded');
+                        
+                        if (isExpanded) {
+                            // HTML注释: 收起内容
+                            contentPreview.innerHTML = previewContent;
+                            contentPreview.classList.add('collapsed');
+                            expandBtn.querySelector('.expand-text').textContent = '展开全文';
+                            expandBtn.classList.remove('expanded');
+                        } else {
+                            // HTML注释: 展开内容
+                            contentPreview.innerHTML = fullContent;
+                            contentPreview.classList.remove('collapsed');
+                            expandBtn.querySelector('.expand-text').textContent = '收起';
+                            expandBtn.classList.add('expanded');
+                        }
+                    });
+                } else {
+                    // HTML注释: 内容较短，隐藏展开按钮
+                    expandBtn.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+    <!-- === 截图功能脚本 === -->
+    <script>
+    function initScreenshotButtons() {
+        const screenshotSections = [
+            'section-topics'
+        ];
+
+        screenshotSections.forEach(sectionId => {
+            const section = document.getElementById(sectionId);
+            if (!section) return;
+
+            section.querySelectorAll('.bento-card').forEach(card => {
+                if (card.querySelector(':scope > .screenshot-btn')) return;
+                card.classList.add('relative');
+                card.classList.add('screenshot-title-safe');
+
+                const timeBadge = card.querySelector(':scope > div:first-of-type > span');
+                if (timeBadge && /\d{1,2}:\d{2}/.test(timeBadge.textContent)) {
+                    card.classList.add('screenshot-has-time');
+                    timeBadge.classList.add('topic-time-badge');
+                    const timeIcon = timeBadge.querySelector('i');
+                    if (timeIcon) {
+                        timeIcon.classList.add('topic-time-icon');
+                    }
+                }
+
+                const button = document.createElement('button');
+                button.type = 'button';
+                button.className = 'screenshot-btn';
+                button.title = '截图此话题';
+                button.setAttribute('aria-label', button.title);
+                button.innerHTML = '<i class="fas fa-camera"></i>';
+                button.addEventListener('click', () => captureTopicCard(button));
+                card.insertBefore(button, card.firstChild);
+            });
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initScreenshotButtons);
+    } else {
+        initScreenshotButtons();
+    }
+
+    function extractReportDateIso() {
+        const titleMatch = (document.title || '').match(/(\d{4})[-_.年](\d{1,2})[-_.月](\d{1,2})/);
+        if (titleMatch) {
+            return `${titleMatch[1]}-${titleMatch[2].padStart(2, '0')}-${titleMatch[3].padStart(2, '0')}`;
+        }
+
+        const reportDateEl = document.getElementById('report-date');
+        const reportDateText = reportDateEl ? reportDateEl.textContent.trim() : '';
+        const textMatch = reportDateText.match(/(\d{4})年\s*(\d{1,2})月\s*(\d{1,2})日/);
+        if (textMatch) {
+            return `${textMatch[1]}-${textMatch[2].padStart(2, '0')}-${textMatch[3].padStart(2, '0')}`;
+        }
+
+        const decodedPath = decodeURIComponent(window.location.pathname || '');
+        const urlMatch = decodedPath.match(/(\d{4})[-_.](\d{1,2})[-_.](\d{1,2})/);
+        if (urlMatch) {
+            return `${urlMatch[1]}-${urlMatch[2].padStart(2, '0')}-${urlMatch[3].padStart(2, '0')}`;
+        }
+
+        return '';
+    }
+
+    function formatReportDateCn(dateIso) {
+        const match = (dateIso || '').match(/^(\d{4})-(\d{2})-(\d{2})$/);
+        if (!match) return '';
+        return `${match[1]}年${Number(match[2])}月${Number(match[3])}日`;
+    }
+
+    function getReportPublicUrl(dateIso = extractReportDateIso()) {
+        const baseUrl = (typeof GJ_BASE_URL !== 'undefined') ? GJ_BASE_URL : '';
+        if (!dateIso) return baseUrl;
+        const prefix = (typeof GJ_FILE_PREFIX !== 'undefined') ? GJ_FILE_PREFIX : '漫道日报_';
+        const suffix = (typeof GJ_SUFFIX !== 'undefined') ? GJ_SUFFIX : '.html';
+        // 线上为扁平结构：漫道日报_YYYY-MM-DD.html 直接位于域名根目录
+        // 🔴 中文路径必须用 encodeURI 转为纯ASCII再传给二维码库：qrcodejs 无法编码
+        //    中文路径，会抛 "code length overflow" 异常（被catch吞掉后二维码空白）
+        const path = `/${prefix}${dateIso}${suffix}`;
+        return baseUrl + encodeURI(path);
+    }
+
+    async function renderReportQr(target, url) {
+        target.innerHTML = '';
+        if (!window.QRCode) {
+            console.warn('[截图] QRCode 库未加载，尝试等待...');
+            await new Promise(resolve => setTimeout(resolve, 500));
+            if (!window.QRCode) {
+                console.error('[截图] QRCode 库加载失败，无法生成二维码');
+                return;
+            }
+        }
+        if (!url) {
+            console.warn('[截图] 无有效日报URL，跳过二维码生成。url=', url);
+            return;
+        }
+        console.log('[截图] 生成二维码，URL:', url, '目标元素尺寸:', target.offsetWidth, 'x', target.offsetHeight);
+        try {
+            new QRCode(target, {
+                text: url,
+                width: 94,
+                height: 94,
+                typeNumber: 0,
+                colorDark: '#1f2937',
+                colorLight: '#ffffff',
+                correctLevel: QRCode.CorrectLevel.L
+            });
+            // 等待 QRCode 渲染完成
+            await new Promise(resolve => setTimeout(resolve, 200));
+            const generated = target.querySelector('canvas') || target.querySelector('img');
+            if (generated) {
+                console.log('[截图] 二维码生成成功，类型:', generated.tagName);
+            } else {
+                console.warn('[截图] QRCode 调用无报错，但未生成 canvas/img 元素');
+            }
+        } catch (qrError) {
+            console.error('[截图] 二维码生成失败:', qrError);
+            target.innerHTML = '';
+        }
+    }
+
+    function showFallbackOverlay(blob, topicTitle) {
+        const oldMask = document.querySelector('.screenshot-fallback-mask');
+        if (oldMask) oldMask.remove();
+
+        // 用 data URL 代替 blob URL，解决微信 WebView 长按保存失败的问题
+        const reader = new FileReader();
+        reader.onload = function() {
+            const dataUrl = reader.result;
+            const mask = document.createElement('div');
+            mask.className = 'screenshot-fallback-mask';
+            mask.innerHTML = `
+                <div class="screenshot-fallback-hint">长按图片保存或分享</div>
+                <img class="screenshot-fallback-img" src="${dataUrl}" alt="截图">
+                <button type="button" class="screenshot-fallback-close">关闭</button>
+            `;
+
+            mask.querySelector('.screenshot-fallback-close').addEventListener('click', () => {
+                mask.remove();
+            });
+            mask.addEventListener('click', (e) => {
+                if (e.target === mask) {
+                    mask.remove();
+                }
+            });
+
+            document.body.appendChild(mask);
+        };
+        reader.readAsDataURL(blob);
+    }
+
+    async function captureTopicCard(btnElement) {
+        const card = btnElement.closest('.bento-card');
+        if (!card) return;
+        const section = btnElement.closest('section');
+        const moduleTitles = {
+            'section-topics': '深度话题'
+        };
+        const moduleTitle = section ? (moduleTitles[section.id] || '漫道日报') : '漫道日报';
+        const reportDateIso = extractReportDateIso();
+        const publicUrl = getReportPublicUrl(reportDateIso);
+
+        // 标记按钮为截取中状态
+        btnElement.classList.add('capturing');
+        const originalIcon = btnElement.innerHTML;
+        btnElement.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+
+        try {
+            // 收集要截图的内容：从标题到"关键结论与金句时刻"之前的所有内容
+            const allChildren = Array.from(card.children);
+            const captureElements = [];
+
+            for (const child of allChildren) {
+                // 跳过截图按钮本身
+                if (child.classList.contains('screenshot-btn')) continue;
+                // 遇到"关键结论与金句时刻"区域就停止
+                const conclusionLabel = child.querySelector('p.text-sm.font-semibold');
+                if (conclusionLabel && conclusionLabel.textContent.includes('关键结论')) break;
+                captureElements.push(child);
+            }
+
+            // 获取话题标题和日期
+            const titleEl = card.querySelector('h4');
+            const topicTitle = titleEl ? titleEl.textContent.trim().substring(0, 20) : '话题';
+            const reportDateEl = document.getElementById('report-date');
+            const reportDate = formatReportDateCn(reportDateIso) || (reportDateEl ? reportDateEl.textContent.trim() : '');
+
+            // 如果内容是收起状态，临时展开
+            const expandBtns = card.querySelectorAll('.expand-btn:not(.expanded)');
+            const expandedBtns = [];
+            expandBtns.forEach(btn => {
+                for (const el of captureElements) {
+                    if (el.contains(btn)) {
+                        btn.click();
+                        expandedBtns.push(btn);
+                        break;
+                    }
+                }
+            });
+
+            // 创建临时截图容器（560px 宽度，配合 scale 2 保证手机端可读性和清晰度）
+            const wrapper = document.createElement('div');
+            wrapper.className = 'screenshot-wrapper';
+            wrapper.style.position = 'absolute';
+            wrapper.style.left = '0';
+            wrapper.style.top = `${window.scrollY + window.innerHeight + 160}px`;
+            wrapper.style.width = '560px';
+            wrapper.style.zIndex = '-9999';
+            wrapper.style.pointerEvents = 'none';
+            wrapper.style.webkitTextSizeAdjust = '100%';
+            wrapper.style.textSizeAdjust = '100%';
+            wrapper.style.fontSize = '16px';
+
+            // 品牌头部
+            const brand = document.createElement('div');
+            brand.className = 'screenshot-brand';
+            brand.innerHTML = `
+                <div class="screenshot-brand-main">
+                    <div class="screenshot-brand-left">
+                        <div class="screenshot-brand-logo"><span></span><span></span><span></span></div>
+                        <span class="screenshot-brand-name">漫道</span>
+                    </div>
+                    <span class="screenshot-brand-date">${reportDate}</span>
+                </div>
+                <div class="screenshot-module-title">${moduleTitle}</div>
+            `;
+            wrapper.appendChild(brand);
+
+            // 内容区域
+            const contentArea = document.createElement('div');
+            contentArea.style.cssText = 'background:#ffffff; border-radius:12px; padding:24px; border:1px solid #e9e9eb; box-sizing:border-box;';
+
+            // 克隆要截图的元素
+            captureElements.forEach(el => {
+                const clone = el.cloneNode(true);
+
+                // 移除展开按钮
+                const cloneBtns = clone.querySelectorAll('.expand-btn');
+                cloneBtns.forEach(b => b.remove());
+                // 移除 collapsed 样式
+                const collapsedEls = clone.querySelectorAll('.collapsed');
+                collapsedEls.forEach(c => c.classList.remove('collapsed'));
+
+                // html2canvas 对 flex 垂直居中支持不稳定，截图 DOM 使用固定像素布局。
+                const cloneClass = clone.className || '';
+                const isHeaderRow = cloneClass.indexOf('flex') !== -1 && cloneClass.indexOf('flex-col') !== -1;
+                const headerRow = isHeaderRow
+                    ? clone
+                    : clone.querySelector('[class*="flex"][class*="flex-col"]');
+                if (headerRow) {
+                    headerRow.style.cssText = 'position:relative; min-height:40px; padding-right:190px; margin-bottom:16px; box-sizing:border-box;';
+                    headerRow.className = '';
+                    const h4 = headerRow.querySelector('h4');
+                    if (h4) {
+                        h4.style.cssText = 'display:block; margin:0; font-size:20px; font-weight:700; color:#000; line-height:40px;';
+                        h4.className = '';
+                    }
+                    const timeSpan = headerRow.querySelector('span');
+                    if (timeSpan) {
+                        const timeText = timeSpan.textContent.trim();
+                        const timeIcon = timeSpan.querySelector('i');
+                        const timeIconClass = timeIcon ? timeIcon.className.replace(/"/g, '') : 'fas fa-clock';
+                        const timeIconHtml = `<svg viewBox="0 0 24 24" style="width:16px;height:16px;display:inline-block;vertical-align:middle;fill:#6b7280;" aria-hidden="true">
+                                <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.2 4.2 2.5-1 1.6-5.2-3.1V6h2v6.2z"></path>
+                            </svg>`;
+                        timeSpan.innerHTML = `
+                            <span style="position:absolute;left:10px;right:10px;top:-3px;height:28px;line-height:28px;white-space:nowrap;">
+                                <span style="position:relative;top:2px;display:inline-block;width:24px;height:28px;line-height:28px;text-align:center;vertical-align:top;">${timeIconHtml}</span>
+                                <span style="position:relative;top:-4px;display:inline-block;height:28px;line-height:28px;vertical-align:top;">${timeText}</span>
+                            </span>
+                        `;
+                        timeSpan.style.cssText = 'position:absolute; right:0; top:10px; display:block; width:180px; height:28px; padding:0 10px; background:#f3f4f6; border-radius:6px; font-size:14px; line-height:0; font-weight:500; color:#4b5563; box-sizing:border-box; overflow:hidden; white-space:nowrap;';
+                        timeSpan.className = '';
+                    }
+                }
+
+                const headings = clone.querySelectorAll('h4, h5');
+                headings.forEach(heading => {
+                    if (heading.closest('[style*="position:relative"]')) return;
+                    heading.style.lineHeight = '30px';
+                    heading.style.marginTop = heading.style.marginTop || '0';
+                });
+
+                const inlineIcons = clone.querySelectorAll('h4 i, h5 i, span i, a i');
+                inlineIcons.forEach(icon => {
+                    icon.style.display = 'inline-block';
+                    icon.style.height = '30px';
+                    icon.style.lineHeight = '30px';
+                    icon.style.verticalAlign = 'top';
+                });
+
+                // 修复标签容器：固定高度和行高，避免标签底部参差不齐。
+                const tagContainers = clone.querySelectorAll('[class*="flex-wrap"]');
+                tagContainers.forEach(container => {
+                    container.style.cssText = 'font-size:0; line-height:0;';
+                    container.className = '';
+                    const tags = container.querySelectorAll('[class*="tag-item"], span');
+                    tags.forEach(tag => {
+                        const tagText = tag.textContent.trim();
+                        tag.innerHTML = `<span style="position:relative;top:-5px;display:block;height:28px;line-height:28px;">${tagText}</span>`;
+                        tag.style.cssText = 'display:inline-block; vertical-align:top; height:28px; background:rgba(16,185,129,0.10); color:#10b981; padding:0 12px; border-radius:9999px; font-size:13px; font-weight:500; margin-right:8px; margin-bottom:8px; box-sizing:border-box; overflow:hidden;';
+                        tag.className = '';
+                    });
+                });
+
+                contentArea.appendChild(clone);
+            });
+
+            wrapper.appendChild(contentArea);
+
+            const footer = document.createElement('div');
+            footer.className = 'screenshot-footer';
+            footer.innerHTML = `
+                <div class="screenshot-footer-text">
+                    <div class="screenshot-footer-title">扫码查看完整日报</div>
+                    <div class="screenshot-footer-url">${publicUrl}</div>
+                </div>
+                <div class="screenshot-footer-qr-cell">
+                    <div class="screenshot-footer-qr" aria-label="扫码打开日报"></div>
+                </div>
+            `;
+            wrapper.appendChild(footer);
+
+            document.body.appendChild(wrapper);
+
+            await renderReportQr(footer.querySelector('.screenshot-footer-qr'), publicUrl);
+            const qrTargetForDraw = footer.querySelector('.screenshot-footer-qr');
+
+            // 将 QR canvas 转换为 img，解决 html2canvas 无法渲染嵌套 canvas 的问题
+            const qrCanvas = qrTargetForDraw ? qrTargetForDraw.querySelector('canvas') : null;
+            if (qrCanvas) {
+                const qrImg = document.createElement('img');
+                const qrDataUrl = qrCanvas.toDataURL('image/png');
+                qrImg.style.display = 'block';
+                qrImg.style.width = '94px';
+                qrImg.style.height = '94px';
+                qrImg.width = 94;
+                qrImg.height = 94;
+                // 等待 img 加载完成
+                await new Promise((resolve) => {
+                    qrImg.onload = resolve;
+                    qrImg.onerror = resolve;
+                    qrImg.src = qrDataUrl;
+                });
+                // 清空容器后只放我们的 img（QRCode.js 会同时生成 canvas + img）
+                qrTargetForDraw.innerHTML = '';
+                qrTargetForDraw.appendChild(qrImg);
+                console.log('[截图] QR canvas 已转换为 img，src长度:', qrDataUrl.length);
+            } else {
+                // 如果是 table 模式生成的 QR，尝试用 table 转 canvas 再转 img
+                const qrTable = qrTargetForDraw ? qrTargetForDraw.querySelector('table') : null;
+                if (qrTable) {
+                    console.log('[截图] QR 为 table 模式，使用 html2canvas 转换');
+                }
+            }
+
+            // 等待渲染
+            await new Promise(resolve => setTimeout(resolve, 350));
+
+            // 检测环境
+            const ua = navigator.userAgent;
+            const isMobile = /iPhone|iPad|iPod|Android|Mobile/i.test(ua);
+
+            // 使用 html2canvas 生成图片
+            const canvas = await html2canvas(wrapper, {
+                scale: 2,
+                useCORS: true,
+                backgroundColor: null,
+                logging: false,
+                width: 560,
+                windowWidth: 560
+            });
+
+            // 清理临时容器
+            document.body.removeChild(wrapper);
+
+            // 恢复收起状态
+            expandedBtns.forEach(btn => btn.click());
+
+            const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
+            if (!blob) throw new Error('图片生成失败');
+
+            // 移动端（含微信）直接走浮层，桌面端尝试 clipboard
+            let copied = false;
+            if (!isMobile) {
+                try {
+                    if (navigator.clipboard && navigator.clipboard.write) {
+                        await navigator.clipboard.write([
+                            new ClipboardItem({ 'image/png': blob })
+                        ]);
+                        copied = true;
+                    }
+                } catch (clipErr) {
+                    console.warn('[截图] clipboard.write 失败:', clipErr.message);
+                }
+            }
+
+            if (copied) {
+                // 成功：按钮变绿✓
+                btnElement.innerHTML = '<i class="fas fa-check"></i>';
+                btnElement.style.color = '#10b981';
+                setTimeout(() => {
+                    btnElement.innerHTML = originalIcon;
+                    btnElement.style.color = '';
+                }, 1500);
+            } else {
+                // 移动端或 clipboard 失败：弹出图片浮层让用户长按保存
+                btnElement.innerHTML = originalIcon;
+                btnElement.style.color = '';
+                showFallbackOverlay(blob, topicTitle);
+            }
+
+        } catch (error) {
+            console.error('截图失败:', error);
+            alert('截图失败，请重试');
+            btnElement.innerHTML = originalIcon;
+            btnElement.style.color = '';
+        } finally {
+            // 恢复按钮状态
+            btnElement.classList.remove('capturing');
+        }
+    }
+    </script>
+</body>
+</html>
