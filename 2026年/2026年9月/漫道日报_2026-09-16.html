@@ -1,0 +1,2436 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>漫道日报 2026-09-16</title>
+    
+    <!-- SEO 元数据 -->
+    <meta name="description" content="漫道日报 2026年9月16日 - 放弃60万裸辞，你不是负责任而是病了、分钱就是分权，别让底下的“猴”把你架空、专家乱提意见怎么记？一张表把锅甩出去等精华讨论">
+    <meta name="keywords" content="职场,漫道日报,抑郁症,向上管理,团队管理,利益分配,体制内,会议记录">
+    <meta name="author" content="漫道">
+    
+    <!-- Open Graph / 社交媒体分享标签 -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="漫道日报 2026-09-16">
+    <meta property="og:description" content="放弃60万裸辞到底是责任心强还是自毁？给团队分钱为什么会被下属集体举报架空？——今日群内精华讨论">
+    <meta property="og:site_name" content="漫道">
+    <meta property="og:locale" content="zh_CN">
+    
+    <!-- Twitter Card 标签 -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="漫道日报 2026-09-16">
+    <meta name="twitter:description" content="放弃60万裸辞、分钱就是分权、专家意见甩锅法等精华讨论">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6C9T7FPDT2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-6C9T7FPDT2');
+    </script>
+    
+    <!-- 深色模式预加载脚本 - 终极防闪烁方案 -->
+    <script>
+        // 在DOM解析前立即执行，最大程度避免闪烁
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                // 方案1：为html元素添加类
+                document.documentElement.classList.add('dark-mode-preload');
+                
+                // 方案2：直接设置body的内联样式（更早生效）
+                const style = document.createElement('style');
+                style.textContent = `
+                    html, body { background-color: #1a1a1a !important; color: #e5e5e5 !important; }
+                `;
+                document.head.appendChild(style);
+            }
+        })();
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        * {
+            font-family: 'Inter', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .bento-card {
+            background-color: #ffffff;
+            border: 1px solid #e9e9eb;
+            border-radius: 1rem; /* 16px */
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -2px rgba(0,0,0,0.05);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .bento-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.07), 0 4px 6px -4px rgba(0,0,0,0.05);
+            transform: translateY(-3px);
+        }
+
+        .number-display {
+            font-weight: 900; /* black */
+            font-size: 4rem;
+            line-height: 1;
+        }
+
+        .section-title {
+            font-weight: 800; /* extrabold */
+            font-size: 2.25rem; /* 36px */
+            color: #000000;
+            margin-bottom: 2rem; /* 32px, consistent with Tailwind mb-8 */
+            white-space: nowrap; /* 防止标题换行 */
+        }
+
+        /* 手机端响应式调整 */
+        @media (max-width: 640px) {
+            .section-title {
+                font-size: 1.5rem; /* 24px，手机上使用更小的字体 */
+                margin-bottom: 1.5rem;
+            }
+            
+            .number-display {
+                font-size: 3rem; /* 手机上从64px缩小到48px */
+            }
+            
+            .bento-card.p-8 {
+                padding: 1.25rem !important; /* 从32px缩小到20px */
+            }
+            
+            .bento-card.p-6 {
+                padding: 1rem !important; /* 从24px缩小到16px */
+            }
+            
+            .bento-card.p-5 {
+                padding: 0.875rem !important; /* 从20px缩小到14px */
+            }
+            
+            h1.text-5xl {
+                font-size: 2rem !important; /* 从48px缩小到32px */
+                margin-bottom: 1.25rem !important;
+            }
+            
+            h4.text-xl {
+                font-size: 1.125rem !important; /* 从20px缩小到18px */
+            }
+            
+            p.text-xl {
+                font-size: 1rem !important; /* 从20px缩小到16px */
+            }
+        }
+
+        .tag-item {
+            background-color: rgba(16, 185, 129, 0.10); /* green-500 @ 10% */
+            color: #10b981; /* green-500 */
+            padding: 0.25rem 0.75rem; /* py-1 px-3 */
+            border-radius: 9999px; /* rounded-full */
+            font-size: 0.75rem; /* text-xs */
+            font-weight: 500; /* medium */
+        }
+
+        .expandable-content {
+            position: relative;
+        }
+
+        .content-preview.collapsed {
+            max-height: 11rem; /* 控制预览高度，结合渐变遮罩更紧凑 */
+            overflow: hidden;
+            position: relative;
+        }
+
+        .content-preview.collapsed::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 30px;
+            background: linear-gradient(transparent, rgba(255, 255, 255, 0.9));
+            pointer-events: none;
+        }
+
+        .content-preview.collapsed p,
+        .content-preview.collapsed ul,
+        .content-preview.collapsed ol,
+        .content-preview.collapsed li,
+        .content-preview.collapsed h1,
+        .content-preview.collapsed h2,
+        .content-preview.collapsed h3,
+        .content-preview.collapsed h4,
+        .content-preview.collapsed h5,
+        .content-preview.collapsed h6 {
+            margin-top: 0.25rem !important;
+            margin-bottom: 0.25rem !important;
+            line-height: 1.5 !important;
+        }
+        .content-preview.collapsed br {
+            display: none;
+        }
+        .content-preview.collapsed b + br {
+            display: inline;
+        }
+
+        .expand-btn {
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            background: none;
+            padding: 0;
+        }
+
+        .expand-btn:hover {
+            transform: translateY(-1px);
+        }
+
+        .expand-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .expand-btn.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+
+        /* 绿色主题统一样式 */
+        .text-\[\#4D6BFE\] { color: #10b981 !important; }              /* green-500 */
+        .border-\[\#4D6BFE\] { border-color: #10b981 !important; }
+        .border-\[\#93c5fd\] { border-color: #6ee7b7 !important; }    /* green-300 */
+        
+        .from-\[\#4D6BFE\]\/20 { --tw-gradient-from: rgb(16 185 129 / 0.20) !important; }
+        .via-\[\#4D6BFE\]\/10 { --tw-gradient-stops: var(--tw-gradient-from), rgb(16 185 129 / 0.10), var(--tw-gradient-to) !important; }
+        .to-\[\#4D6BFE\]\/5 { --tw-gradient-to: rgb(16 185 129 / 0.05) !important; }
+
+        .bg-purple-50   { background-color: #ecfdf5 !important; }     /* green-50 */
+        .border-purple-200 { border-color: #a7f3d0 !important; }      /* green-200 */
+        .text-purple-700   { color: #047857 !important; }             /* green-700 */
+        .text-purple-600   { color: #059669 !important; }             /* green-600 */
+        
+        .hover\:text-blue-700:hover { color: #047857 !important; }
+        .bg-blue-50 { background-color: #ecfdf5 !important; }
+
+        .history-link {
+            background: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .history-link:hover {
+            background: rgba(16, 185, 129, 0.15);
+            transform: translateY(-1px);
+        }
+
+        .back-home-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            background: #f8fafc; /* slate-50 */
+            color: #475569; /* slate-600 */
+            border: 1px solid #e2e8f0; /* slate-200 */
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        .back-home-link:hover {
+            background: #f1f5f9; /* slate-100 */
+            color: #10b981;
+            border-color: rgba(16, 185, 129, 0.3);
+            transform: translateY(-1px);
+        }
+
+        /* 悬浮操作按钮栈 */
+        .floating-action-stack {
+            position: fixed;
+            right: 2rem;
+            bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 0.75rem;
+            z-index: 1000;
+        }
+        
+        .toc-floating-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 0.75rem;
+        }
+        
+        .toc-floating-button {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 9999px;
+            background: #10b981;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .toc-floating-button:hover {
+            background: #059669;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+        }
+        
+        .toc-floating-button.active {
+            background: #059669;
+        }
+        
+        .toc-panel {
+            position: absolute;
+            right: 0;
+            bottom: calc(100% + 0.75rem);
+            width: 20rem;
+            max-width: calc(100vw - 2.5rem);
+            max-height: 70vh;
+            overflow-y: auto;
+            background-color: #ffffff;
+            border: 1px solid #e9e9eb;
+            border-radius: 1rem;
+            box-shadow: 0 12px 30px rgba(16, 185, 129, 0.25);
+            padding: 1.25rem;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .toc-panel.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .toc-panel-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+        
+        .toc-panel-title {
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #000000;
+        }
+        
+        .toc-panel-title i {
+            margin-right: 0.5rem;
+            color: #10b981;
+        }
+        
+        .toc-close {
+            background: transparent;
+            border: none;
+            padding: 0.25rem;
+            border-radius: 0.5rem;
+            color: #9ca3af;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .toc-close:hover {
+            color: #10b981;
+            background: rgba(16, 185, 129, 0.1);
+        }
+        
+        .toc-items {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .toc-link {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.5rem 0.75rem;
+            color: #6b7280;
+            text-decoration: none;
+            font-size: 0.875rem;
+            border-radius: 0.75rem;
+            transition: all 0.2s ease;
+        }
+        
+        .toc-link i {
+            width: 1rem;
+            text-align: center;
+            color: #10b981;
+        }
+        
+        .toc-link:hover {
+            color: #10b981;
+            background-color: #ecfdf5;
+            box-shadow: inset 2px 0 0 0 #10b981;
+        }
+        
+        .toc-link.active {
+            color: #10b981;
+            font-weight: 600;
+            background-color: #ecfdf5;
+            box-shadow: inset 2px 0 0 0 #10b981;
+        }
+
+        .toc-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.375rem;
+        }
+
+        .toc-sublist {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            margin-left: 1.5rem;
+            padding-left: 0.75rem;
+            border-left: 2px solid rgba(16, 185, 129, 0.25);
+        }
+
+        .toc-sublink {
+            display: block;
+            padding: 0.4rem 0.6rem;
+            color: #6b7280;
+            text-decoration: none;
+            font-size: 0.8125rem;
+            line-height: 1.4;
+            border-radius: 0.5rem;
+            transition: all 0.2s ease;
+        }
+
+        .toc-sublink:hover {
+            color: #10b981;
+            background-color: #ecfdf5;
+            box-shadow: inset 2px 0 0 0 #10b981;
+        }
+
+        .toc-sublink.active {
+            color: #10b981;
+            font-weight: 600;
+            background-color: #ecfdf5;
+            box-shadow: inset 2px 0 0 0 #10b981;
+        }
+
+        .anchor-target {
+            scroll-margin-top: 5rem;
+        }
+        
+        body.dark-mode .floating-action-stack {
+            gap: 0.75rem;
+        }
+        
+        body.dark-mode .toc-panel {
+            background-color: #2a2a2a;
+            border-color: #3a3a3a;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+        }
+        
+        body.dark-mode .toc-panel-title {
+            color: #f5f5f5;
+        }
+        
+        body.dark-mode .toc-panel-title i {
+            color: #34d399;
+        }
+        
+        body.dark-mode .toc-close {
+            color: #d1d5db;
+        }
+        
+        body.dark-mode .toc-close:hover {
+            background: rgba(16, 185, 129, 0.2);
+            color: #34d399;
+        }
+        
+        body.dark-mode .toc-link {
+            color: #d1d5db !important;
+        }
+        
+        body.dark-mode .toc-link i {
+            color: #34d399;
+        }
+        
+        body.dark-mode .toc-link:hover,
+        body.dark-mode .toc-link.active {
+            color: #34d399 !important;
+            background-color: rgba(16, 185, 129, 0.18) !important;
+            box-shadow: inset 2px 0 0 0 rgba(16, 185, 129, 0.6);
+        }
+
+        body.dark-mode .toc-sublist {
+            border-left-color: rgba(16, 185, 129, 0.4);
+        }
+
+        body.dark-mode .toc-sublink {
+            color: #d1d5db !important;
+        }
+
+        body.dark-mode .toc-sublink:hover,
+        body.dark-mode .toc-sublink.active {
+            color: #34d399 !important;
+            background-color: rgba(16, 185, 129, 0.18) !important;
+            box-shadow: inset 2px 0 0 0 rgba(16, 185, 129, 0.6);
+        }
+        
+        .back-to-top {
+            width: 3rem;
+            height: 3rem;
+            background: #10b981;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: #059669;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+        }
+        
+        .copy-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.25rem 0.5rem;
+            background: transparent;
+            color: #10b981;
+            border: 1px solid #10b981;
+            border-radius: 0.375rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .copy-btn:hover {
+            background: #10b981;
+            color: white;
+        }
+        
+        .copy-btn.copied {
+            background: #10b981;
+            border-color: #10b981;
+            color: white;
+        }
+        
+        html.dark-mode-preload,
+        html.dark-mode-preload body,
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #e5e5e5;
+        }
+        
+        html.dark-mode-preload .bento-card,
+        body.dark-mode .bento-card {
+            background-color: #2a2a2a;
+            border-color: #3a3a3a;
+        }
+        
+        body.dark-mode .section-title {
+            color: #f5f5f5;
+        }
+        
+        body.dark-mode .text-black {
+            color: #e5e5e5 !important;
+        }
+        
+        body.dark-mode .text-gray-700 {
+            color: #a0a0a0 !important;
+        }
+        
+        body.dark-mode .text-gray-600 {
+            color: #909090 !important;
+        }
+        
+        body.dark-mode .text-gray-800 {
+            color: #c0c0c0 !important;
+        }
+        
+        body.dark-mode .bg-slate-50 {
+            background-color: #2f2f2f !important;
+        }
+        
+        body.dark-mode .bg-gray-50 {
+            background-color: #2f2f2f !important;
+        }
+        
+        body.dark-mode .bg-gray-100 {
+            background-color: #333333 !important;
+        }
+        
+        body.dark-mode .bg-purple-50 {
+            background-color: #1a3d2e !important;
+        }
+        
+        body.dark-mode .bg-amber-50 {
+            background-color: #3d3420 !important;
+        }
+        
+        body.dark-mode .border-gray-200 {
+            border-color: #3a3a3a !important;
+        }
+        
+        body.dark-mode .border-purple-200 {
+            border-color: #2d5a44 !important;
+        }
+        
+        body.dark-mode .bg-blue-50 {
+            background-color: #1a3d2e !important;
+        }
+        
+        body.dark-mode .border-amber-400 {
+            border-color: #d97706 !important;
+        }
+        
+        body.dark-mode .content-preview.collapsed::after {
+            background: linear-gradient(transparent, rgba(26, 26, 26, 0.95));
+        }
+        
+        body.dark-mode b,
+        body.dark-mode strong {
+            color: #f5f5f5 !important;
+            font-weight: 700;
+            text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.3);
+        }
+        
+        body.dark-mode a {
+            color: #6ee7b7;
+        }
+        
+        body.dark-mode a:hover {
+            color: #a7f3d0;
+        }
+        
+        body.dark-mode .tag-item {
+            background-color: rgba(16, 185, 129, 0.2);
+            color: #6ee7b7;
+        }
+        
+        body.dark-mode .text-green-600 {
+            color: #6ee7b7 !important;
+        }
+        
+        body.dark-mode .text-green-700 {
+            color: #a7f3d0 !important;
+        }
+        
+        body.dark-mode .text-green-700 {
+            color: #86efac !important;
+        }
+        
+        body.dark-mode .text-green-600 {
+            color: #4ade80 !important;
+        }
+        
+        body.dark-mode h1,
+        body.dark-mode h2,
+        body.dark-mode h3,
+        body.dark-mode h4,
+        body.dark-mode h5 {
+            color: #f5f5f5 !important;
+        }
+        
+        body.dark-mode .border-l-4 {
+            opacity: 0.8;
+        }
+        
+        body.dark-mode .copy-btn {
+            border-color: #6ee7b7;
+            color: #6ee7b7;
+        }
+        
+        body.dark-mode .copy-btn:hover {
+            background: #6ee7b7;
+            color: #1a1a1a;
+        }
+        
+        body.dark-mode .history-link {
+            background: rgba(16, 185, 129, 0.18);
+            color: #6ee7b7;
+            border-color: rgba(16, 185, 129, 0.35);
+        }
+        
+        body.dark-mode .history-link:hover {
+            background: rgba(16, 185, 129, 0.28);
+        }
+
+        body.dark-mode .back-home-link {
+            background: #2f2f2f;
+            color: #a0a0a0;
+            border-color: #3a3a3a;
+            box-shadow: none;
+        }
+
+        body.dark-mode .back-home-link:hover {
+            background: #333333;
+            color: #34d399;
+            border-color: rgba(16, 185, 129, 0.4);
+        }
+        
+        .theme-toggle {
+            width: 3rem;
+            height: 3rem;
+            background: #10b981;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+        
+        .theme-toggle:hover {
+            background: #059669;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+        }
+        
+        /* 截图快捷按钮样式 */
+        .screenshot-btn {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            width: 28px;
+            height: 28px;
+            line-height: 28px;
+            border-radius: 0.5rem;
+            background: rgba(16, 185, 129, 0.08);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            color: #10b981;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            font-size: 0.78rem;
+        }
+
+        .screenshot-has-time > div:first-of-type {
+            padding-right: 3rem;
+        }
+
+        .screenshot-title-safe > h4:first-of-type,
+        .screenshot-title-safe > h5:first-of-type {
+            padding-right: 3.5rem;
+            box-sizing: border-box;
+        }
+
+        .screenshot-title-safe > div:first-of-type > h4:first-of-type {
+            display: block !important;
+            padding-right: 3.5rem;
+            box-sizing: border-box;
+            line-height: 1.4;
+        }
+
+        .screenshot-title-safe > div:first-of-type > h4:first-of-type > i:first-child {
+            display: inline-block;
+            margin-right: 0.625rem;
+            vertical-align: baseline;
+        }
+
+        .topic-time-badge {
+            display: inline-flex !important;
+            align-items: center !important;
+            height: 28px !important;
+            padding: 0 0.75rem !important;
+            line-height: 28px !important;
+            box-sizing: border-box !important;
+        }
+
+        .topic-time-icon {
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: 1rem;
+            height: 28px;
+            line-height: 28px !important;
+            margin-right: 0.375rem !important;
+            position: relative;
+            top: -1px;
+        }
+
+        .screenshot-btn:hover {
+            background: rgba(16, 185, 129, 0.15);
+            border-color: rgba(16, 185, 129, 0.4);
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+        }
+
+        .screenshot-btn:focus {
+            outline: none;
+        }
+
+        .screenshot-btn:active {
+            transform: scale(0.95);
+        }
+
+        .screenshot-btn.capturing {
+            animation: pulse-capture 1s infinite;
+        }
+
+        @keyframes pulse-capture {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .screenshot-wrapper {
+            padding: 40px 40px 32px;
+            background: linear-gradient(160deg, #ffffff 0%, #f6fef9 40%, #ecfdf5 100%);
+            border-radius: 24px;
+            border: 1.5px solid rgba(16, 185, 129, 0.1);
+            box-shadow: 0 12px 40px rgba(16, 185, 129, 0.06);
+            box-sizing: border-box;
+        }
+
+        .screenshot-wrapper,
+        .screenshot-wrapper * {
+            -webkit-text-size-adjust: 100% !important;
+            text-size-adjust: 100% !important;
+        }
+
+        .screenshot-wrapper .screenshot-brand {
+            position: relative;
+            width: 100%;
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(16, 185, 129, 0.08);
+            box-sizing: border-box;
+        }
+
+        .screenshot-wrapper .screenshot-brand-main {
+            position: relative;
+            height: 44px;
+        }
+
+        .screenshot-wrapper .screenshot-brand-left {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 36px;
+            text-align: left;
+        }
+
+        .screenshot-wrapper .screenshot-brand-logo {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 7px;
+            background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+            display: block;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 3px 8px rgba(16, 185, 129, 0.25);
+        }
+
+        .screenshot-wrapper .screenshot-brand-logo span {
+            position: absolute;
+            left: 10px;
+            right: 10px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 2px;
+        }
+
+        .screenshot-wrapper .screenshot-brand-logo span:nth-child(1) {
+            top: 11px;
+        }
+
+        .screenshot-wrapper .screenshot-brand-logo span:nth-child(2) {
+            top: 19px;
+        }
+
+        .screenshot-wrapper .screenshot-brand-logo span:nth-child(3) {
+            top: 27px;
+            right: 16px;
+        }
+
+        .screenshot-wrapper .screenshot-brand-name {
+            font-size: 26px;
+            font-weight: 800;
+            color: #1a1a2e;
+            letter-spacing: 0;
+            display: block;
+            position: absolute;
+            left: 56px;
+            top: -18px;
+            height: 52px;
+            line-height: 52px;
+            white-space: nowrap;
+        }
+
+        .screenshot-wrapper .screenshot-brand-date {
+            position: absolute;
+            right: 0;
+            top: -15px;
+            height: 52px;
+            line-height: 52px;
+            text-align: right;
+            font-size: 18px;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .screenshot-wrapper .screenshot-module-title {
+            margin-top: 12px;
+            height: 26px;
+            line-height: 26px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #6b7280;
+        }
+
+        .screenshot-wrapper .screenshot-footer {
+            margin-top: 18px;
+            padding: 20px 24px;
+            padding-right: 152px;
+            background: rgba(16, 185, 129, 0.06);
+            border: 1px solid rgba(16, 185, 129, 0.12);
+            border-radius: 12px;
+            position: relative;
+            min-height: 140px;
+            box-sizing: border-box;
+        }
+
+        .screenshot-wrapper .screenshot-footer-text {
+            display: block;
+            padding-top: 25px;
+        }
+
+        .screenshot-wrapper .screenshot-footer-title {
+            font-size: 20px;
+            line-height: 28px;
+            font-weight: 800;
+            color: #1f2937;
+        }
+
+        .screenshot-wrapper .screenshot-footer-url {
+            margin-top: 2px;
+            font-size: 11px;
+            line-height: 16px;
+            color: #6b7280;
+            word-break: break-all;
+            display: none;
+        }
+
+        .screenshot-wrapper .screenshot-footer-qr-cell {
+            position: absolute;
+            right: 16px;
+            top: 14px;
+            width: 112px;
+            height: 112px;
+            padding: 8px;
+            background: #ffffff;
+            border: 1px solid rgba(16, 185, 129, 0.14);
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .screenshot-wrapper .screenshot-footer-qr {
+            display: block;
+            width: 94px;
+            height: auto;
+            min-height: 0;
+            padding: 0;
+            background: transparent;
+            border: 0;
+            border-radius: 0;
+            box-sizing: border-box;
+        }
+
+        .screenshot-wrapper .screenshot-footer-qr canvas,
+        .screenshot-wrapper .screenshot-footer-qr img,
+        .screenshot-wrapper .screenshot-footer-qr svg,
+        .screenshot-wrapper .screenshot-footer-qr table {
+            display: block;
+            width: 94px !important;
+            height: 94px !important;
+        }
+
+        .screenshot-fallback-mask {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(15, 23, 42, 0.7);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            box-sizing: border-box;
+        }
+
+        .screenshot-fallback-hint {
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .screenshot-fallback-img {
+            max-width: min(90vw, 600px);
+            max-height: 70vh;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            background: #ffffff;
+        }
+
+        .screenshot-fallback-close {
+            margin-top: 20px;
+            padding: 10px 28px;
+            border-radius: 8px;
+            border: none;
+            background: #ffffff;
+            color: #1f2937;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        @media print {
+            .floating-action-stack, nav, .copy-btn, .expand-btn, .screenshot-btn, .screenshot-fallback-mask {
+                display: none !important;
+            }
+            
+            body {
+                background: white;
+                color: black;
+            }
+            
+            .bento-card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                page-break-inside: avoid;
+            }
+            
+            .content-preview.collapsed {
+                max-height: none !important;
+            }
+            
+            .content-preview.collapsed::after {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .floating-action-stack {
+                right: 1rem;
+                bottom: 1rem;
+                gap: 0.5rem;
+            }
+
+            .floating-action-stack .toc-floating-button,
+            .floating-action-stack .theme-toggle,
+            .floating-action-stack .back-to-top {
+                width: 2.75rem;
+                height: 2.75rem;
+            }
+
+            .toc-panel {
+                width: calc(100vw - 2rem);
+                max-width: calc(100vw - 2rem);
+                max-height: 60vh;
+                padding: 1rem;
+            }
+
+            .toc-sublink {
+                font-size: 0.75rem;
+            }
+        }
+
+        body {
+            animation: fadeIn 0.3s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body class="bg-white text-black min-h-screen">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+        <!-- === 返回主页按钮 === -->
+        <div class="w-full mb-4 flex justify-start">
+            <a href="https://md.xinjianhub.cn/" class="back-home-link">
+                <i class="fas fa-arrow-left text-xs"></i> 返回漫道主页
+            </a>
+        </div>
+
+        <!-- === "群聊日报" 文件头区域 开始 === -->
+        <header class="w-full mb-8" role="banner">
+            <div class="bento-card p-8">
+                <div class="text-center">
+                    <h1 class="text-5xl font-black text-black mb-6">
+                        漫道
+                    </h1>
+                    <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-lg mb-4">
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-calendar-alt mr-2 text-[#4D6BFE]"></i>
+                            <span id="report-date">2026年9月16日</span>
+                        </div>
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-clock mr-2 text-[#4D6BFE]"></i>
+                            <span>07:01 - 01:59(次日)</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <a id="history-link" href="https://md.xinjianhub.cn/" class="history-link">
+                            <i class="fas fa-history"></i>
+                            漫道历史日报
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <nav class="w-full mb-8" aria-label="日期导航">
+            <div class="bento-card p-5">
+                <div class="flex items-center justify-between mb-4">
+                    <button id="prev-day" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg shadow disabled:bg-gray-200 disabled:text-gray-400 transition-all" aria-label="查看前一天日报">
+                        <i class="fas fa-chevron-left"></i>
+                        <span class="hidden sm:inline">上一天</span>
+                        <span class="sm:hidden">上一天</span>
+                    </button>
+                    <button id="next-day" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg shadow disabled:bg-gray-200 disabled:text-gray-400 transition-all" aria-label="查看后一天日报">
+                        <span class="hidden sm:inline">下一天</span>
+                        <span class="sm:hidden">下一天</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <!-- === "群聊日报" 文件头区域 结束 === -->
+
+        <!-- === 模块一：总消息概览 开始 === -->
+        <section id="section-overview" class="w-full mb-12" aria-labelledby="section-overview-title">
+            <h2 id="section-overview-title" class="section-title">
+                一、今日群聊速览
+            </h2>
+            <div class="bento-card p-8 bg-gradient-to-br from-[#10b981]/20 via-[#10b981]/10 to-[#10b981]/5 text-center rounded-2xl">
+                <div class="number-display text-[#4D6BFE]">
+                    486
+                </div>
+                <p class="text-xl font-semibold text-black mt-3">总消息数量</p>
+            </div>
+        </section>
+        <!-- === 模块一：总消息概览 结束 === -->
+
+        <!-- === 模块二：职通时刻・深度话题 开始 === -->
+        <section id="section-topics" class="w-full mb-12" aria-labelledby="section-topics-title">
+            <h2 id="section-topics-title" class="section-title">
+                二、职通时刻・深度话题
+            </h2>
+            <div class="space-y-8">
+
+                <!-- 话题卡片1 开始 -->
+                <div class="bento-card p-6 rounded-xl"> 
+                    <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
+                        <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
+                            放弃60万裸辞，你不是负责任而是病了
+                        </h4>
+                        <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
+                            <i class="fas fa-clock mr-1.5 text-gray-500"></i>
+                            11:16 - 17:15
+                        </span>
+                    </div>
+
+                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
+                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
+                        <p class="text-sm text-purple-600 italic">
+                            九百一 计划退休 银行软开本10合肥：我目前的判断是自己的条件可以退休了，也做了一些准备，但确实是第一次辞职，想请教同志们
+                        </p>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag-item">抑郁躯体化</span>
+                            <span class="tag-item">超额责任心</span>
+                            <span class="tag-item">体制内裸辞</span>
+                            <span class="tag-item">带薪摆烂</span>
+                            <span class="tag-item">向上管理</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">详细内容</p>
+                        <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
+                            <div class="expandable-content" data-char-limit="200">
+                                <div class="content-preview">
+                                    <b>一、话题背景与起因</b><br>群友<b>九百一</b>（33岁，银行软件开发10年老兵，极度节省攒下260万）在群里发了提问卡，宣布自己准备在这周提出离职，正式“退休”。她详细列出了过去几年的身体情况：曾确诊中度抑郁焦虑，近期又因常年无休止的高压加班突发腰突住院。她认为自己钱攒够了，终于可以卸下重担，但在离职前依然一丝不苟地写文档交接，不想给任何人添麻烦。<br><br><b>二、核心焦点与深层议题挖掘</b><br>表面上看，这是一个关于“存款够不够退休”和“如何做自媒体副业”的温情探讨。但随着讨论深入，核心焦点发生剧变：大家发现九百一对“带薪摸鱼”有着极端的抗拒，她描述自己“干坏了大家的钱就没了”、“做梦都在艰难险阻地去上班：遇到路上变河要游过去，扫单车扫不开，车轮子变成三角的”。<br>深层议题被彻底揭开：<b>她想要辞职，并非出于理性的职业规划，而是由于中重度抑郁症导致的“自毁式”逃避</b>。她的“超额责任心”不是美德，而是将自己逼入绝境的病理表现。<br><br><b>三、多方观点与讨论详情</b><br>讨论中，群友意见从初期的“祝福与规划”演变为后期的“紧急干预”，主要分为三类视角：<br>1. <b>休养副业派</b>：初闻喜讯，<b>小8</b>、<b>熊熊</b>、<b>王小全</b>等人都惊叹于她极强的攒钱能力，纷纷送上祝福。<b>小8</b>用自己退休后甲状腺结节缩小的经历鼓励她先休养；<b>宝鹅</b>和<b>咖喱多</b>建议她用画画和做饭这两个爱好尝试自媒体起号。<br>2. <b>灰度摆烂与2N赔偿派</b>：<b>前PM年100退休十年</b>从职场利益最大化的角度指出，既然是国企无固定期限合同，主动辞职就是白白丢掉约60万（2N）的赔偿。他强烈建议“灰度上线”——先在公司里躺平摆烂，只做分内事，哪怕每天只发挥40%的精力，<b>“等公司清退”才是更好的心态</b>。<b>蚂蚁窝</b>和<b>子蟹</b>也分享了自己在公司带薪摸鱼甚至“切菜煮面”的经历。<br>3. <b>精神干预与紧急刹车派</b>：面对大家提供的摸鱼方案，<b>九百一</b>表现出令人心疼的抗拒：“心态上做不到”、“干坏了大家的钱就没了”、“我不辞职就还是会被各种事情约束着”。面对这份放弃60万也要立刻裸辞的决绝，<b>前PM年100退休十年</b>、<b>阿南</b>、<b>转念</b>等人敏锐察觉到危险信号——这根本不是任性，这是抑郁症从轻/中度转为重度后恢复行动力时的<b>“职场自杀”</b>冲动。<b>前PM</b>一针见血地指出，放弃60万连试都不试，这绝对是病态的，极端的责任心不过是唯心主义在折磨自己。<br><br><b>四、解决方案与启发</b><br>经过群友的接力劝导，<b>九百一</b>终于停止了立即辞职的冲动，并挂了第二天精神科的复查号。具体实操方案是：立刻请长假（拼上中秋节凑出十几天），彻底物理隔离工作，让自己的身体脱离高压环境；在此期间去医院复诊，遵医嘱治疗，绝不在身心崩溃时做任何重大职业决策。<br><b>普适启发</b>：职场中，所谓的“责任心”往往是一把双刃剑。企业是一个系统，即使你倒下了系统依然运转，<b>“你不干天就塌了”只是一种被异化的唯心错觉</b>。当你发现自己宁愿舍弃巨大现实利益（如60万）也要逃离，甚至身体出现严重躯体化症状时，首先要做的不是提离职，而是去看医生。
+                                </div>
+                                <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
+                                    <span class="expand-text">展开全文</span>
+                                    <i class="fas fa-chevron-down ml-1 expand-icon"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
+                        <div class="space-y-6">
+                            <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                                <div class="mb-4">
+                                    <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
+                                    <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
+                                        <p class="text-black text-base">
+                                            <b>不在极端负面状态下做不可逆决策</b>。当宁愿放弃巨额合法权益（如2N赔偿）也要“立刻裸辞”时，这大概率是心理疾病导致的自毁冲动，必须先刹车看病。
+                                        </p>
+                                        <br>
+                                        <p class="text-black text-base">
+                                            <b>破除“超额责任心”的异化执念</b>。公司离了谁都能转，把所有责任揽在自己身上，其实是太把自己当回事，这是一种有害的唯心主义。
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-700 mb-2"><strong>金句时刻</strong></p>
+                                    <div class="space-y-2">
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    职业生涯自杀也是一种「死」，都是想要自毁。行为不同，但心理相似。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '职业生涯自杀也是一种「死」，都是想要自毁。行为不同，但心理相似。 - 前PM年100退休十年')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>前PM年100退休十年</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    为什么同志先想到的都是“不可以”，而不是“怎么做可以”呢？就是先条件反射说不行。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '为什么同志先想到的都是“不可以”，而不是“怎么做可以”呢？就是先条件反射说不行。 - 不渡 平台部门AI应用 硕3')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>不渡 平台部门AI应用 硕3</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    天不会塌，收起你该死的超额责任心。你不上班时候，银行也没瘫痪。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '天不会塌，收起你该死的超额责任心。你不上班时候，银行也没瘫痪。 - 阿南 互联网运营 本 10')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>阿南 互联网运营 本 10</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 话题卡片1 结束 -->
+
+                <!-- 话题卡片2 开始 -->
+                <div class="bento-card p-6 rounded-xl"> 
+                    <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
+                        <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
+                            分钱就是分权，别让底下的“猴”把你架空
+                        </h4>
+                        <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
+                            <i class="fas fa-clock mr-1.5 text-gray-500"></i>
+                            23:29 - 01:51(次日)
+                        </span>
+                    </div>
+
+                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
+                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
+                        <p class="text-sm text-purple-600 italic">
+                            瓜瓜 医院&高校 博9 重庆：刚又负责分了一笔钱，感觉这种涉及利益分配的事情，就很花时间……
+                        </p>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag-item">利益分配</span>
+                            <span class="tag-item">团队博弈</span>
+                            <span class="tag-item">最后通牒游戏</span>
+                            <span class="tag-item">向上管理</span>
+                            <span class="tag-item">削权应对</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">详细内容</p>
+                        <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
+                            <div class="expandable-content" data-char-limit="200">
+                                <div class="content-preview">
+                                    <b>一、话题背景与起因</b><br><b>瓜瓜</b>在群里吐槽，自己负责科室一笔非均分经费的分配，她利用信息差没有采用在线公开填表，而是逐一收集意向，成功让一位平日贪得无厌的“伪君子”填报了超过总额一半的不合理预算。她借此向其他同事暴露了此人的嘴脸，但又隐隐担心这种“挖坑”做法是否卑鄙。这引发了群内关于“团队利益分配与权力运行”的深度剖析。<br><br><b>二、核心焦点与深层议题挖掘</b><br>在职场中，分钱从来不是一道算术题，而是一道政治题。表面上大家讨论的是“怎样分奖金才公平”，实质上触及的是<b>团队权力的动态博弈</b>：作为手握分配权的中层，如果无法驾驭下属的贪欲，或者被高层视为“功高震主”，一次看似简单的分钱就可能演变成一场下克上的权力洗牌（被下属联合举报并被高层借机削权）。<br><br><b>三、多方观点与讨论详情</b><br>对于利益分配这一极度敏感的话题，讨论中呈现出强烈的认知碰撞：<br>1. <b>手腕与“打窝”</b>：<b>葛二小</b>和<b>电饭煲</b>都非常赞同<b>瓜瓜</b>的做法。他们认为这不是卑鄙，而是“扫除障碍”、“利于生态平衡的打窝”，只要不违规，用合理的手段清理坏人，就是在保护团队。<br>2. <b>血泪教训复盘</b>：<b>糕</b>贡献了一段极其惨痛的亲身经历——她曾在27岁时负责分配100多万年终奖。当时她将部分奖金分给了一位患红斑狼疮交接了工作的亲信，结果引发其他下属联合外部门集体写信向高层举报她“吃回扣”。当时她手握160多个并行项目，权力极大，高层并未惩罚举报者，反而顺水推舟将举报者独立成组（带走资源），借机削弱了她的权力，导致团队分崩离析，她也黯然离职。<br>3. <b>降维历史规律解析</b>：<b>前PM年100退休十年</b>用历史规律对这一现象进行了降维打击。他引入“最后通牒游戏”，指出如果下属觉得分配不公掀桌子，本质是想挤走当前的管理者，拥立一个能让自己多分钱的新老大（类似于罗马禁军杀皇帝、东晋“王与马共天下”的门阀政治）。而高层之所以纵容下属造反，正是为了顺带铲除势力过大的中层山头。如果中层不具备雷霆手段提前肃清异己，等到利益节点必然崩盘。<br><br><b>四、解决方案与启发</b><br>面对分钱的权力游戏，讨论提炼出极具实操性的方法论：<b>第一</b>，必须消除儒家文化里对钱和权力的“羞耻感”和“不洁感”，负责分钱就要敢于“霸道”决策；<b>第二</b>，资源分配要用“补锅法”动态平衡，单次博弈不求绝对公平，但自己内心绝不能觉得亏欠；<b>第三</b>，团队管理必须未雨绸缪，在平日就要像“三湾改编”一样筛选和培养基本盘，提前清除刺头，绝不能等到分钱这种利益冲突爆发时才想起来“稳住不乱”。
+                                </div>
+                                <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
+                                    <span class="expand-text">展开全文</span>
+                                    <i class="fas fa-chevron-down ml-1 expand-icon"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
+                        <div class="space-y-6">
+                            <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                                <div class="mb-4">
+                                    <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
+                                    <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
+                                        <p class="text-black text-base">
+                                            <b>消除对钱的“羞耻感”</b>。作为手握分配权的人，不要害怕不公平。霸道就是“我说了算”，王道就是“我来替人人主持公平”。
+                                        </p>
+                                        <br>
+                                        <p class="text-black text-base">
+                                            <b>提前经营基本盘，防范“下克上”</b>。下属联合掀桌子，本质是为了争夺下一轮分配的话语权；高层纵容举报，往往是为了打压功高震主的中层。必须在平日就完成人员的筛选与掌控。
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-700 mb-2"><strong>金句时刻</strong></p>
+                                    <div class="space-y-2">
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    霸道就是「我说了算」，公平就是「人人说了算」，王道就是「我来替人人主持公平」。那王道里本来就包含了霸道。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '霸道就是「我说了算」，公平就是「人人说了算」，王道就是「我来替人人主持公平」。那王道里本来就包含了霸道。 - 前PM年100退休十年')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>前PM年100退休十年</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    超额完成kpi，以为是好事儿呢，后面的屎一坨接一坨。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '超额完成kpi，以为是好事儿呢，后面的屎一坨接一坨。 - 糕（全职自媒体人）')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>糕（全职自媒体人）</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    钱是资源，人也是，坏人更会浪费钱，花点钱把坏人干掉，这是节约钱。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '钱是资源，人也是，坏人更会浪费钱，花点钱把坏人干掉，这是节约钱。 - 前PM年100退休十年')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>前PM年100退休十年</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 话题卡片2 结束 -->
+
+                <!-- 话题卡片3 开始 -->
+                <div class="bento-card p-6 rounded-xl"> 
+                    <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
+                        <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
+                            专家乱提意见怎么记？一张表把锅甩出去
+                        </h4>
+                        <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
+                            <i class="fas fa-clock mr-1.5 text-gray-500"></i>
+                            08:40 - 10:42
+                        </span>
+                    </div>
+
+                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
+                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
+                        <p class="text-sm text-purple-600 italic">
+                            葛二小 国企 硕12：具体到昨天的评审，问题就是怎么快速、准确、全面收集到场人员的意见。
+                        </p>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag-item">体制内生存</span>
+                            <span class="tag-item">流程优化</span>
+                            <span class="tag-item">责任转移</span>
+                            <span class="tag-item">安全合规</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">详细内容</p>
+                        <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
+                            <div class="expandable-content" data-char-limit="200">
+                                <div class="content-preview">
+                                    <b>一、话题背景与起因</b><br>国企资深人士<b>葛二小</b>抛出了一个非常具象的工作痛点：在组织项目评审会时，如果专家人数超过5个，大家七嘴八舌提意见，报告人边记录边解释常常措手不及。如果记录不全或有歧义，会后落实整改时就会陷入极其被动甚至背锅的境地。<br><br><b>二、核心焦点与深层议题挖掘</b><br>讨论的表层是如何提高会议记录的效率，但在体制内和强合规环境的语境下，它迅速演变成一个深层议题——<b>“职场免责防御与安全底线”</b>。如何在不触碰涉密红线的前提下，将“乱提意见”的不可控风险，通过标准化动作转移回专家本人身上。<br><br><b>三、多方观点与讨论详情</b><br>针对这个执行层面的难题，群友们给出了不同位面的应对策略：<br>1. <b>书面留痕与责任具象化</b>：<b>葛二小</b>自己想到了破局点——不靠肉身硬记，而是一人发一张纸质意见表，让专家直接写在表上，事后与报告人的记录互相印证。<b>向阳</b>等同行也认同这个思路，虽然很多专家往往只写几个字，但这本身就是一种“责任确认”的流程倒逼。<br>2. <b>“偷偷摸摸”的技术外挂派</b>：<b>不知</b>和<b>阿南</b>等体制内新人和互联网人建议利用技术手段，比如手机录音转文字，或者用智能手表录音后用AI整理，“能带手机就能偷偷录”。<br>3. <b>刑律警告与红线底线派</b>：一提到带联网设备录音，体制内老兵立刻拉响了警报。<b>小8</b>极其严肃地进行劝阻：“如果是核心涉密人员就不要玩火，明令禁止不要带/做……结局都在刑法里写着。”<b>转念</b>也重磅补刀：“他这个不是原则不原则的问题，是刑不刑的问题。”这直接将试图走技术捷径的念头按死在萌芽中。<br><br><b>四、解决方案与启发</b><br>实操方案非常明确：在合规红线面前（如保密单位禁带联网设备），必须抛弃对AI和辅助工具的幻想，转向<b>“靠流程管理解题”</b>。第一，会议组织者要敢于打断并夺回主动权，变“七嘴八舌”为“挨个询问”；第二，建立“纸质表单签字”的物理留痕机制。最大的启发是：在职场中解决问题，永远不能以牺牲“基本盘的安全”（触犯刑律或合规红线）为代价；用机制去倒逼对方担责，远胜过自己加班加点地“死记硬背”。
+                                </div>
+                                <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
+                                    <span class="expand-text">展开全文</span>
+                                    <i class="fas fa-chevron-down ml-1 expand-icon"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
+                        <div class="space-y-6">
+                            <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                                <div class="mb-4">
+                                    <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
+                                    <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
+                                        <p class="text-black text-base">
+                                            <b>流程倒逼责任转移</b>。用纸质意见表让发言者亲自写下意见，是将“含糊其辞”的风险具象化、书面化的最好防御手段。
+                                        </p>
+                                        <br>
+                                        <p class="text-black text-base">
+                                            <b>不可试探合规底线</b>。在涉密等高压环境中，“为了提高工作效率而违规使用辅助工具”是绝对的禁忌，保住饭碗才是第一要务。
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-700 mb-2"><strong>金句时刻</strong></p>
+                                    <div class="space-y-2">
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    他这个不是原则不原则的问题，是刑不刑的问题。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '他这个不是原则不原则的问题，是刑不刑的问题。 - 转念-即将退休-猛猛搞副业')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>转念-即将退休-猛猛搞副业</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    真有心总结，有的是办法。离了辅助工具就做不了，那就别做了。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '真有心总结，有的是办法。离了辅助工具就做不了，那就别做了。 - 小8 退休1年 中校 硕')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>小8 退休1年 中校 硕</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    独立自主为主，争取外援为辅。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '独立自主为主，争取外援为辅。 - 葛二小 国企 硕12')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>葛二小 国企 硕12</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 话题卡片3 结束 -->
+
+            </div>
+        </section>
+        <!-- === 模块二：职通时刻・深度话题 结束 === -->
+
+        <!-- 底部日期导航 -->
+        <nav class="w-full mt-12" aria-label="日期导航（底部）">
+            <div class="bento-card p-5">
+                <div class="flex items-center justify-between mb-4">
+                    <button id="prev-day-bottom" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg shadow disabled:bg-gray-200 disabled:text-gray-400 transition-all" aria-label="查看前一天日报">
+                        <i class="fas fa-chevron-left"></i>
+                        <span class="hidden sm:inline">上一天</span>
+                        <span class="sm:hidden">上一天</span>
+                    </button>
+                    <button id="next-day-bottom" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg shadow disabled:bg-gray-200 disabled:text-gray-400 transition-all" aria-label="查看后一天日报">
+                        <span class="hidden sm:inline">下一天</span>
+                        <span class="sm:hidden">下一天</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- === 文件底部 开始 === -->
+        <footer class="w-full mt-16" role="contentinfo">
+            <div class="bento-card p-8">
+                <div class="text-center text-gray-700 space-y-3">
+                    <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-base">
+                        <div class="flex items-center">
+                            <i class="fas fa-database mr-2 text-[#4D6BFE]"></i>
+                            <span>微信群聊记录 - 漫道</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-robot mr-2 text-[#4D6BFE]"></i>
+                            <span id="footer-time">报告生成于 <script>document.write(new Date().toLocaleString('zh-CN', {hour12: false}).replace(/\//g, '-'));</script></span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-500 max-w-2xl mx-auto leading-relaxed">
+                        本报告基于群聊数据自动生成，仅供参考。内容可能包含个人观点，不代表群组官方立场。数据处理过程中已尽量匿名化处理敏感信息。
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <!-- === 文件底部 结束 === -->
+    </div>
+
+    <!-- 页面右下角悬浮按钮集 -->
+    <div class="floating-action-stack" aria-label="页面快捷操作">
+        <div class="toc-floating-container" aria-label="内容导航">
+            <button id="toc-toggle" class="toc-floating-button" onclick="toggleToc(event)" aria-label="打开目录" aria-expanded="false" title="内容导航">
+                <i class="fas fa-list"></i>
+            </button>
+            <div id="toc-panel" class="toc-panel" aria-hidden="true">
+                <div class="toc-panel-header">
+                    <h3 class="toc-panel-title">
+                        <i class="fas fa-list text-green-500"></i>
+                        <span>内容导航</span>
+                    </h3>
+                    <button class="toc-close" onclick="toggleToc(event)" aria-label="关闭目录">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <!-- v3.7: 目录条目（含二级子话题）由 buildToc() 脚本动态生成，请勿在此手写目录链接 -->
+                <nav class="toc-items" id="toc-items" aria-label="内容导航"></nav>
+            </div>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="切换主题" title="切换深色/浅色模式">
+            <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <button class="back-to-top" id="backToTop" aria-label="返回顶部" title="返回顶部">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <script>
+        // 漫道日报：历史汇总与导航
+        // 🔴 漫道日报的线上地址（二维码与上一天/下一天导航都依赖它），必须与实际部署域名一致
+        const GJ_BASE_URL = 'https://md.xinjianhub.cn';
+        const GJ_FILE_PREFIX = '漫道日报_';
+        const GJ_SUFFIX = '.html';
+
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+
+        document.addEventListener('DOMContentLoaded', function() {
+            buildToc();
+            initBackToTop();
+            initThemeToggle();
+            initTocHighlight();
+            
+            const numberElements = document.querySelectorAll('.number-display');
+            numberElements.forEach(element => {
+                const finalValueText = element.textContent.replace(/,/g, '');
+                const finalValue = parseInt(finalValueText, 10);
+
+                if (isNaN(finalValue)) return;
+
+                let currentValue = 0;
+                const duration = 1500;
+                const frameRate = 1000 / 60;
+                const totalFrames = Math.round(duration / frameRate);
+                const increment = finalValue / totalFrames;
+
+                let currentFrame = 0;
+                const timer = setInterval(() => {
+                    currentFrame++;
+                    currentValue += increment;
+
+                    if (currentFrame >= totalFrames) {
+                        currentValue = finalValue;
+                        clearInterval(timer);
+                    }
+                    element.textContent = Math.floor(currentValue).toLocaleString('en-US');
+                }, frameRate);
+            });
+
+            initExpandableContent();
+            
+            try {
+                initDailyNavigation();
+            } catch (e) {
+                console.warn('初始化导航失败', e);
+            }
+        });
+
+        function initDailyNavigation() {
+            const currentDateStr = getCurrentDateFromPage();
+            if (!currentDateStr) return;
+
+            const dt = new Date(currentDateStr);
+            const prev = new Date(dt); prev.setDate(prev.getDate() - 1);
+            const next = new Date(dt); next.setDate(next.getDate() + 1);
+
+            const prevStr = formatDate(prev);
+            const nextStr = formatDate(next);
+
+            const prevButtons = ['prev-day', 'prev-day-bottom']
+                .map(id => document.getElementById(id))
+                .filter(Boolean);
+            const nextButtons = ['next-day', 'next-day-bottom']
+                .map(id => document.getElementById(id))
+                .filter(Boolean);
+
+            if (!prevButtons.length && !nextButtons.length) {
+                return;
+            }
+
+            const updateButtons = (buttons, enabled, handler) => {
+                buttons.forEach(btn => {
+                    btn.disabled = !enabled;
+                    btn.onclick = enabled ? handler : null;
+                });
+            };
+
+            const isLocalFile = window.location.protocol === 'file:';
+            
+            if (isLocalFile) {
+                const prevHandler = () => {
+                    const [year, month] = prevStr.split('-');
+                    window.location.href = `../${year}年${parseInt(month, 10)}月/${GJ_FILE_PREFIX}${prevStr}${GJ_SUFFIX}`;
+                };
+                const nextHandler = () => {
+                    const [year, month] = nextStr.split('-');
+                    window.location.href = `../${year}年${parseInt(month, 10)}月/${GJ_FILE_PREFIX}${nextStr}${GJ_SUFFIX}`;
+                };
+
+                if (prevButtons.length) {
+                    updateButtons(prevButtons, true, prevHandler);
+                }
+                if (nextButtons.length) {
+                    updateButtons(nextButtons, true, nextHandler);
+                }
+            } else {
+                Promise.all([checkExists(prevStr), checkExists(nextStr)]).then(([pe, ne]) => {
+                    const prevHandler = () => window.location.href = pe.url;
+                    const nextHandler = () => window.location.href = ne.url;
+
+                    updateButtons(prevButtons, !!pe.ok, prevHandler);
+                    updateButtons(nextButtons, !!ne.ok, nextHandler);
+                }).catch(()=>{
+                    updateButtons(prevButtons, false, null);
+                    updateButtons(nextButtons, false, null);
+                });
+            }
+        }
+
+        function checkExists(dateStr) {
+            const url = `${GJ_BASE_URL}/${GJ_FILE_PREFIX}${dateStr}${GJ_SUFFIX}`;
+            
+            return fetch(url, { method: 'HEAD', cache: 'no-store' })
+                .then(r => r.ok ? { ok: true, url: url } : 
+                    fetch(url, { method: 'GET', cache: 'no-store' })
+                        .then(r2 => r2.ok ? { ok: true, url: url } : { ok: false })
+                )
+                .catch(() => ({ ok: false }));
+        }
+
+        function pad2(value) {
+            const str = String(value);
+            return str.length < 2 ? '0' + str : str;
+        }
+
+        function getCurrentDateFromPage() {
+            const el = document.getElementById('report-date');
+            if (el) {
+                const m = el.textContent.match(/(\d{4})年(\d{1,2})月(\d{1,2})日/);
+                if (m) return `${m[1]}-${pad2(m[2])}-${pad2(m[3])}`;
+            }
+            const fn = window.location.pathname.match(/漫道日报_(\d{4}-\d{2}-\d{2})\.html/);
+            if (fn) return fn[1];
+            const tm = document.title.match(/(\d{4}-\d{2}-\d{2})/);
+            if (tm) return tm[1];
+            return null;
+        }
+
+        function formatDate(d) {
+            const y = d.getFullYear();
+            const m = pad2(d.getMonth()+1);
+            const dd = pad2(d.getDate());
+            return `${y}-${m}-${dd}`;
+        }
+
+        function toggleToc(event) {
+            if (event) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            const panel = document.getElementById('toc-panel');
+            const button = document.getElementById('toc-toggle');
+            if (!panel || !button) return;
+
+            if (panel.classList.contains('active')) {
+                closeTocPanel();
+            } else {
+                panel.classList.add('active');
+                button.classList.add('active');
+                button.setAttribute('aria-expanded', 'true');
+                panel.setAttribute('aria-hidden', 'false');
+                setTimeout(() => {
+                    document.addEventListener('click', handleTocOutsideClick);
+                }, 0);
+            }
+        }
+
+        function closeTocPanel() {
+            const panel = document.getElementById('toc-panel');
+            const button = document.getElementById('toc-toggle');
+            if (!panel || !button) return;
+
+            panel.classList.remove('active');
+            panel.setAttribute('aria-hidden', 'true');
+            button.classList.remove('active');
+            button.setAttribute('aria-expanded', 'false');
+            document.removeEventListener('click', handleTocOutsideClick);
+        }
+
+        function handleTocOutsideClick(event) {
+            const panel = document.getElementById('toc-panel');
+            const button = document.getElementById('toc-toggle');
+            if (!panel || !button) return;
+
+            if (!panel.contains(event.target) && !button.contains(event.target)) {
+                closeTocPanel();
+            }
+        }
+        
+        function buildToc() {
+            const tocItems = document.getElementById('toc-items');
+            if (!tocItems) return;
+
+            const tocConfigs = [
+                { id: 'section-overview', icon: 'fa-chart-line' },
+                { id: 'section-topics', icon: 'fa-fire' }
+            ];
+
+            tocItems.innerHTML = '';
+
+            tocConfigs.forEach(config => {
+                const section = document.getElementById(config.id);
+                if (!section) return;
+
+                const sectionTitleEl = section.querySelector('.section-title');
+                let sectionTitle = sectionTitleEl ? sectionTitleEl.textContent.trim() : config.id;
+                sectionTitle = sectionTitle.replace(/^[一二三四五六七八九十]+、\s*/, '');
+
+                const group = document.createElement('div');
+                group.className = 'toc-group';
+
+                const mainLink = document.createElement('a');
+                mainLink.href = '#' + config.id;
+                mainLink.className = 'toc-link';
+                mainLink.setAttribute('onclick', "smoothScroll(event, '" + config.id + "')");
+                mainLink.innerHTML = '<i class="fas ' + config.icon + '"></i><span>' + sectionTitle + '</span>';
+                group.appendChild(mainLink);
+
+                const cardHeadings = section.querySelectorAll('.bento-card h4');
+                if (cardHeadings.length > 0) {
+                    const sublist = document.createElement('div');
+                    sublist.className = 'toc-sublist';
+
+                    cardHeadings.forEach((heading, index) => {
+                        const card = heading.closest('.bento-card');
+                        if (!card) return;
+
+                        if (!card.classList.contains('anchor-target')) {
+                            card.classList.add('anchor-target');
+                        }
+                        if (!card.id) {
+                            card.id = config.id + '-item-' + (index + 1);
+                        }
+
+                        const subLink = document.createElement('a');
+                        subLink.href = '#' + card.id;
+                        subLink.className = 'toc-sublink';
+                        subLink.setAttribute('onclick', "smoothScroll(event, '" + card.id + "')");
+                        subLink.textContent = heading.textContent.trim();
+                        sublist.appendChild(subLink);
+                    });
+
+                    if (sublist.children.length > 0) {
+                        group.appendChild(sublist);
+                    }
+                }
+
+                tocItems.appendChild(group);
+            });
+        }
+        
+        function smoothScroll(event, targetId) {
+            event.preventDefault();
+            const target = document.getElementById(targetId);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                document.querySelectorAll('.toc-link, .toc-sublink').forEach(link => link.classList.remove('active'));
+                if (event.currentTarget) {
+                    event.currentTarget.classList.add('active');
+                }
+                closeTocPanel();
+            }
+        }
+        
+        function initBackToTop() {
+            const btn = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+            
+            btn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+        
+        function initThemeToggle() {
+            const btn = document.getElementById('themeToggle');
+            const icon = document.getElementById('themeIcon');
+            
+            document.documentElement.classList.remove('dark-mode-preload');
+            
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+            
+            btn.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                const isDark = document.body.classList.contains('dark-mode');
+                
+                if (isDark) {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+        }
+        
+        function initTocHighlight() {
+            const sections = [];
+            ['section-overview', 'section-topics'].forEach(sectionId => {
+                const section = document.getElementById(sectionId);
+                if (!section) return;
+                sections.push(sectionId);
+                section.querySelectorAll('.bento-card h4').forEach(heading => {
+                    const card = heading.closest('.bento-card');
+                    if (card && card.id) {
+                        sections.push(card.id);
+                    }
+                });
+            });
+            const tocLinks = document.querySelectorAll('.toc-link, .toc-sublink');
+            
+            window.addEventListener('scroll', () => {
+                let current = '';
+                
+                sections.forEach(sectionId => {
+                    const section = document.getElementById(sectionId);
+                    if (section) {
+                        const sectionTop = section.offsetTop;
+                        if (window.pageYOffset >= sectionTop - 100) {
+                            current = sectionId;
+                        }
+                    }
+                });
+                
+                let currentGroup = current;
+                if (current.indexOf('-item-') !== -1) {
+                    currentGroup = current.substring(0, current.indexOf('-item-'));
+                }
+
+                tocLinks.forEach(link => {
+                    link.classList.remove('active');
+                    const href = link.getAttribute('href');
+                    if (href === '#' + current || href === '#' + currentGroup) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        }
+        
+        function copyQuote(button, text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const icon = button.querySelector('i');
+                const originalClass = icon.className;
+                
+                button.classList.add('copied');
+                icon.className = 'fas fa-check';
+                
+                setTimeout(() => {
+                    button.classList.remove('copied');
+                    icon.className = originalClass;
+                }, 2000);
+            }).catch(err => {
+                console.error('复制失败:', err);
+                alert('复制失败，请手动复制');
+            });
+        }
+        
+        function initExpandableContent() {
+            const expandableContents = document.querySelectorAll('.expandable-content');
+            
+            expandableContents.forEach(container => {
+                const charLimit = parseInt(container.getAttribute('data-char-limit')) || 200;
+                const contentPreview = container.querySelector('.content-preview');
+                const expandBtn = container.querySelector('.expand-btn');
+                
+                if (!contentPreview || !expandBtn) return;
+                
+                const fullContent = contentPreview.innerHTML;
+                const fullText = contentPreview.textContent || contentPreview.innerText;
+                
+                if (fullText.length > charLimit) {
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = fullContent;
+                    
+                    let charCount = 0;
+                    
+                    const walker = document.createTreeWalker(
+                        tempDiv,
+                        NodeFilter.SHOW_TEXT,
+                        null,
+                        false
+                    );
+                    
+                    let node;
+                    const textNodes = [];
+                    while (node = walker.nextNode()) {
+                        textNodes.push(node);
+                    }
+                    
+                    for (let textNode of textNodes) {
+                        const text = textNode.textContent;
+                        if (charCount + text.length <= charLimit) {
+                            charCount += text.length;
+                        } else {
+                            const remainingChars = charLimit - charCount;
+                            textNode.textContent = text.substring(0, remainingChars) + '...';
+                            charCount = charLimit;
+                            
+                            let currentNodeToClearAfter = textNode;
+                            while (currentNodeToClearAfter && currentNodeToClearAfter !== tempDiv) {
+                                let sibling = currentNodeToClearAfter.nextSibling;
+                                while (sibling) {
+                                    const nodeToRemove = sibling;
+                                    sibling = sibling.nextSibling;
+                                    nodeToRemove.remove();
+                                }
+                                currentNodeToClearAfter = currentNodeToClearAfter.parentElement;
+                            }
+                            break;
+                        }
+                    }
+                    
+                    const previewContent = tempDiv.innerHTML;
+                    
+                    contentPreview.innerHTML = previewContent;
+                    contentPreview.classList.add('collapsed');
+                    expandBtn.style.display = 'flex';
+                    
+                    expandBtn.addEventListener('click', function() {
+                        const isExpanded = expandBtn.classList.contains('expanded');
+                        
+                        if (isExpanded) {
+                            contentPreview.innerHTML = previewContent;
+                            contentPreview.classList.add('collapsed');
+                            expandBtn.querySelector('.expand-text').textContent = '展开全文';
+                            expandBtn.classList.remove('expanded');
+                        } else {
+                            contentPreview.innerHTML = fullContent;
+                            contentPreview.classList.remove('collapsed');
+                            expandBtn.querySelector('.expand-text').textContent = '收起';
+                            expandBtn.classList.add('expanded');
+                        }
+                    });
+                } else {
+                    expandBtn.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+    <!-- === 截图功能脚本 === -->
+    <script>
+    function initScreenshotButtons() {
+        const screenshotSections = [
+            'section-topics'
+        ];
+
+        screenshotSections.forEach(sectionId => {
+            const section = document.getElementById(sectionId);
+            if (!section) return;
+
+            section.querySelectorAll('.bento-card').forEach(card => {
+                if (card.querySelector(':scope > .screenshot-btn')) return;
+                card.classList.add('relative');
+                card.classList.add('screenshot-title-safe');
+
+                const timeBadge = card.querySelector(':scope > div:first-of-type > span');
+                if (timeBadge && /\d{1,2}:\d{2}/.test(timeBadge.textContent)) {
+                    card.classList.add('screenshot-has-time');
+                    timeBadge.classList.add('topic-time-badge');
+                    const timeIcon = timeBadge.querySelector('i');
+                    if (timeIcon) {
+                        timeIcon.classList.add('topic-time-icon');
+                    }
+                }
+
+                const button = document.createElement('button');
+                button.type = 'button';
+                button.className = 'screenshot-btn';
+                button.title = '截图此话题';
+                button.setAttribute('aria-label', button.title);
+                button.innerHTML = '<i class="fas fa-camera"></i>';
+                button.addEventListener('click', () => captureTopicCard(button));
+                card.insertBefore(button, card.firstChild);
+            });
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initScreenshotButtons);
+    } else {
+        initScreenshotButtons();
+    }
+
+    function extractReportDateIso() {
+        const titleMatch = (document.title || '').match(/(\d{4})[-_.年](\d{1,2})[-_.月](\d{1,2})/);
+        if (titleMatch) {
+            return `${titleMatch[1]}-${titleMatch[2].padStart(2, '0')}-${titleMatch[3].padStart(2, '0')}`;
+        }
+
+        const reportDateEl = document.getElementById('report-date');
+        const reportDateText = reportDateEl ? reportDateEl.textContent.trim() : '';
+        const textMatch = reportDateText.match(/(\d{4})年\s*(\d{1,2})月\s*(\d{1,2})日/);
+        if (textMatch) {
+            return `${textMatch[1]}-${textMatch[2].padStart(2, '0')}-${textMatch[3].padStart(2, '0')}`;
+        }
+
+        const decodedPath = decodeURIComponent(window.location.pathname || '');
+        const urlMatch = decodedPath.match(/(\d{4})[-_.](\d{1,2})[-_.](\d{1,2})/);
+        if (urlMatch) {
+            return `${urlMatch[1]}-${urlMatch[2].padStart(2, '0')}-${urlMatch[3].padStart(2, '0')}`;
+        }
+
+        return '';
+    }
+
+    function formatReportDateCn(dateIso) {
+        const match = (dateIso || '').match(/^(\d{4})-(\d{2})-(\d{2})$/);
+        if (!match) return '';
+        return `${match[1]}年${Number(match[2])}月${Number(match[3])}日`;
+    }
+
+    function getReportPublicUrl(dateIso = extractReportDateIso()) {
+        const baseUrl = (typeof GJ_BASE_URL !== 'undefined') ? GJ_BASE_URL : '';
+        if (!dateIso) return baseUrl;
+        const prefix = (typeof GJ_FILE_PREFIX !== 'undefined') ? GJ_FILE_PREFIX : '漫道日报_';
+        const suffix = (typeof GJ_SUFFIX !== 'undefined') ? GJ_SUFFIX : '.html';
+        const path = `/${prefix}${dateIso}${suffix}`;
+        return baseUrl + encodeURI(path);
+    }
+
+    async function renderReportQr(target, url) {
+        target.innerHTML = '';
+        if (!window.QRCode) {
+            console.warn('[截图] QRCode 库未加载，尝试等待...');
+            await new Promise(resolve => setTimeout(resolve, 500));
+            if (!window.QRCode) {
+                console.error('[截图] QRCode 库加载失败，无法生成二维码');
+                return;
+            }
+        }
+        if (!url) {
+            console.warn('[截图] 无有效日报URL，跳过二维码生成。url=', url);
+            return;
+        }
+        console.log('[截图] 生成二维码，URL:', url, '目标元素尺寸:', target.offsetWidth, 'x', target.offsetHeight);
+        try {
+            new QRCode(target, {
+                text: url,
+                width: 94,
+                height: 94,
+                typeNumber: 0,
+                colorDark: '#1f2937',
+                colorLight: '#ffffff',
+                correctLevel: QRCode.CorrectLevel.L
+            });
+            await new Promise(resolve => setTimeout(resolve, 200));
+            const generated = target.querySelector('canvas') || target.querySelector('img');
+            if (generated) {
+                console.log('[截图] 二维码生成成功，类型:', generated.tagName);
+            } else {
+                console.warn('[截图] QRCode 调用无报错，但未生成 canvas/img 元素');
+            }
+        } catch (qrError) {
+            console.error('[截图] 二维码生成失败:', qrError);
+            target.innerHTML = '';
+        }
+    }
+
+    function showFallbackOverlay(blob, topicTitle) {
+        const oldMask = document.querySelector('.screenshot-fallback-mask');
+        if (oldMask) oldMask.remove();
+
+        const reader = new FileReader();
+        reader.onload = function() {
+            const dataUrl = reader.result;
+            const mask = document.createElement('div');
+            mask.className = 'screenshot-fallback-mask';
+            mask.innerHTML = `
+                <div class="screenshot-fallback-hint">长按图片保存或分享</div>
+                <img class="screenshot-fallback-img" src="${dataUrl}" alt="截图">
+                <button type="button" class="screenshot-fallback-close">关闭</button>
+            `;
+
+            mask.querySelector('.screenshot-fallback-close').addEventListener('click', () => {
+                mask.remove();
+            });
+            mask.addEventListener('click', (e) => {
+                if (e.target === mask) {
+                    mask.remove();
+                }
+            });
+
+            document.body.appendChild(mask);
+        };
+        reader.readAsDataURL(blob);
+    }
+
+    async function captureTopicCard(btnElement) {
+        const card = btnElement.closest('.bento-card');
+        if (!card) return;
+        const section = btnElement.closest('section');
+        const moduleTitles = {
+            'section-topics': '深度话题'
+        };
+        const moduleTitle = section ? (moduleTitles[section.id] || '漫道日报') : '漫道日报';
+        const reportDateIso = extractReportDateIso();
+        const publicUrl = getReportPublicUrl(reportDateIso);
+
+        btnElement.classList.add('capturing');
+        const originalIcon = btnElement.innerHTML;
+        btnElement.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+
+        try {
+            const allChildren = Array.from(card.children);
+            const captureElements = [];
+
+            for (const child of allChildren) {
+                if (child.classList.contains('screenshot-btn')) continue;
+                const conclusionLabel = child.querySelector('p.text-sm.font-semibold');
+                if (conclusionLabel && conclusionLabel.textContent.includes('关键结论')) break;
+                captureElements.push(child);
+            }
+
+            const titleEl = card.querySelector('h4');
+            const topicTitle = titleEl ? titleEl.textContent.trim().substring(0, 20) : '话题';
+            const reportDateEl = document.getElementById('report-date');
+            const reportDate = formatReportDateCn(reportDateIso) || (reportDateEl ? reportDateEl.textContent.trim() : '');
+
+            const expandBtns = card.querySelectorAll('.expand-btn:not(.expanded)');
+            const expandedBtns = [];
+            expandBtns.forEach(btn => {
+                for (const el of captureElements) {
+                    if (el.contains(btn)) {
+                        btn.click();
+                        expandedBtns.push(btn);
+                        break;
+                    }
+                }
+            });
+
+            const wrapper = document.createElement('div');
+            wrapper.className = 'screenshot-wrapper';
+            wrapper.style.position = 'absolute';
+            wrapper.style.left = '0';
+            wrapper.style.top = `${window.scrollY + window.innerHeight + 160}px`;
+            wrapper.style.width = '560px';
+            wrapper.style.zIndex = '-9999';
+            wrapper.style.pointerEvents = 'none';
+            wrapper.style.webkitTextSizeAdjust = '100%';
+            wrapper.style.textSizeAdjust = '100%';
+            wrapper.style.fontSize = '16px';
+
+            const brand = document.createElement('div');
+            brand.className = 'screenshot-brand';
+            brand.innerHTML = `
+                <div class="screenshot-brand-main">
+                    <div class="screenshot-brand-left">
+                        <div class="screenshot-brand-logo"><span></span><span></span><span></span></div>
+                        <span class="screenshot-brand-name">漫道</span>
+                    </div>
+                    <span class="screenshot-brand-date">${reportDate}</span>
+                </div>
+                <div class="screenshot-module-title">${moduleTitle}</div>
+            `;
+            wrapper.appendChild(brand);
+
+            const contentArea = document.createElement('div');
+            contentArea.style.cssText = 'background:#ffffff; border-radius:12px; padding:24px; border:1px solid #e9e9eb; box-sizing:border-box;';
+
+            captureElements.forEach(el => {
+                const clone = el.cloneNode(true);
+
+                const cloneBtns = clone.querySelectorAll('.expand-btn');
+                cloneBtns.forEach(b => b.remove());
+                const collapsedEls = clone.querySelectorAll('.collapsed');
+                collapsedEls.forEach(c => c.classList.remove('collapsed'));
+
+                const cloneClass = clone.className || '';
+                const isHeaderRow = cloneClass.indexOf('flex') !== -1 && cloneClass.indexOf('flex-col') !== -1;
+                const headerRow = isHeaderRow
+                    ? clone
+                    : clone.querySelector('[class*="flex"][class*="flex-col"]');
+                if (headerRow) {
+                    headerRow.style.cssText = 'position:relative; min-height:40px; padding-right:190px; margin-bottom:16px; box-sizing:border-box;';
+                    headerRow.className = '';
+                    const h4 = headerRow.querySelector('h4');
+                    if (h4) {
+                        h4.style.cssText = 'display:block; margin:0; font-size:20px; font-weight:700; color:#000; line-height:40px;';
+                        h4.className = '';
+                    }
+                    const timeSpan = headerRow.querySelector('span');
+                    if (timeSpan) {
+                        const timeText = timeSpan.textContent.trim();
+                        const timeIcon = timeSpan.querySelector('i');
+                        const timeIconClass = timeIcon ? timeIcon.className.replace(/"/g, '') : 'fas fa-clock';
+                        const timeIconHtml = `<svg viewBox="0 0 24 24" style="width:16px;height:16px;display:inline-block;vertical-align:middle;fill:#6b7280;" aria-hidden="true">
+                                <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.2 4.2 2.5-1 1.6-5.2-3.1V6h2v6.2z"></path>
+                            </svg>`;
+                        timeSpan.innerHTML = `
+                            <span style="position:absolute;left:10px;right:10px;top:-3px;height:28px;line-height:28px;white-space:nowrap;">
+                                <span style="position:relative;top:2px;display:inline-block;width:24px;height:28px;line-height:28px;text-align:center;vertical-align:top;">${timeIconHtml}</span>
+                                <span style="position:relative;top:-4px;display:inline-block;height:28px;line-height:28px;vertical-align:top;">${timeText}</span>
+                            </span>
+                        `;
+                        timeSpan.style.cssText = 'position:absolute; right:0; top:10px; display:block; width:180px; height:28px; padding:0 10px; background:#f3f4f6; border-radius:6px; font-size:14px; line-height:0; font-weight:500; color:#4b5563; box-sizing:border-box; overflow:hidden; white-space:nowrap;';
+                        timeSpan.className = '';
+                    }
+                }
+
+                const headings = clone.querySelectorAll('h4, h5');
+                headings.forEach(heading => {
+                    if (heading.closest('[style*="position:relative"]')) return;
+                    heading.style.lineHeight = '30px';
+                    heading.style.marginTop = heading.style.marginTop || '0';
+                });
+
+                const inlineIcons = clone.querySelectorAll('h4 i, h5 i, span i, a i');
+                inlineIcons.forEach(icon => {
+                    icon.style.display = 'inline-block';
+                    icon.style.height = '30px';
+                    icon.style.lineHeight = '30px';
+                    icon.style.verticalAlign = 'top';
+                });
+
+                const tagContainers = clone.querySelectorAll('[class*="flex-wrap"]');
+                tagContainers.forEach(container => {
+                    container.style.cssText = 'font-size:0; line-height:0;';
+                    container.className = '';
+                    const tags = container.querySelectorAll('[class*="tag-item"], span');
+                    tags.forEach(tag => {
+                        const tagText = tag.textContent.trim();
+                        tag.innerHTML = `<span style="position:relative;top:-5px;display:block;height:28px;line-height:28px;">${tagText}</span>`;
+                        tag.style.cssText = 'display:inline-block; vertical-align:top; height:28px; background:rgba(16,185,129,0.10); color:#10b981; padding:0 12px; border-radius:9999px; font-size:13px; font-weight:500; margin-right:8px; margin-bottom:8px; box-sizing:border-box; overflow:hidden;';
+                        tag.className = '';
+                    });
+                });
+
+                contentArea.appendChild(clone);
+            });
+
+            wrapper.appendChild(contentArea);
+
+            const footer = document.createElement('div');
+            footer.className = 'screenshot-footer';
+            footer.innerHTML = `
+                <div class="screenshot-footer-text">
+                    <div class="screenshot-footer-title">扫码查看完整日报</div>
+                    <div class="screenshot-footer-url">${publicUrl}</div>
+                </div>
+                <div class="screenshot-footer-qr-cell">
+                    <div class="screenshot-footer-qr" aria-label="扫码打开日报"></div>
+                </div>
+            `;
+            wrapper.appendChild(footer);
+
+            document.body.appendChild(wrapper);
+
+            await renderReportQr(footer.querySelector('.screenshot-footer-qr'), publicUrl);
+            const qrTargetForDraw = footer.querySelector('.screenshot-footer-qr');
+
+            const qrCanvas = qrTargetForDraw ? qrTargetForDraw.querySelector('canvas') : null;
+            if (qrCanvas) {
+                const qrImg = document.createElement('img');
+                const qrDataUrl = qrCanvas.toDataURL('image/png');
+                qrImg.style.display = 'block';
+                qrImg.style.width = '94px';
+                qrImg.style.height = '94px';
+                qrImg.width = 94;
+                qrImg.height = 94;
+                await new Promise((resolve) => {
+                    qrImg.onload = resolve;
+                    qrImg.onerror = resolve;
+                    qrImg.src = qrDataUrl;
+                });
+                qrTargetForDraw.innerHTML = '';
+                qrTargetForDraw.appendChild(qrImg);
+                console.log('[截图] QR canvas 已转换为 img，src长度:', qrDataUrl.length);
+            } else {
+                const qrTable = qrTargetForDraw ? qrTargetForDraw.querySelector('table') : null;
+                if (qrTable) {
+                    console.log('[截图] QR 为 table 模式，使用 html2canvas 转换');
+                }
+            }
+
+            await new Promise(resolve => setTimeout(resolve, 350));
+
+            const ua = navigator.userAgent;
+            const isMobile = /iPhone|iPad|iPod|Android|Mobile/i.test(ua);
+
+            const canvas = await html2canvas(wrapper, {
+                scale: 2,
+                useCORS: true,
+                backgroundColor: null,
+                logging: false,
+                width: 560,
+                windowWidth: 560
+            });
+
+            document.body.removeChild(wrapper);
+
+            expandedBtns.forEach(btn => btn.click());
+
+            const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
+            if (!blob) throw new Error('图片生成失败');
+
+            let copied = false;
+            if (!isMobile) {
+                try {
+                    if (navigator.clipboard && navigator.clipboard.write) {
+                        await navigator.clipboard.write([
+                            new ClipboardItem({ 'image/png': blob })
+                        ]);
+                        copied = true;
+                    }
+                } catch (clipErr) {
+                    console.warn('[截图] clipboard.write 失败:', clipErr.message);
+                }
+            }
+
+            if (copied) {
+                btnElement.innerHTML = '<i class="fas fa-check"></i>';
+                btnElement.style.color = '#10b981';
+                setTimeout(() => {
+                    btnElement.innerHTML = originalIcon;
+                    btnElement.style.color = '';
+                }, 1500);
+            } else {
+                btnElement.innerHTML = originalIcon;
+                btnElement.style.color = '';
+                showFallbackOverlay(blob, topicTitle);
+            }
+
+        } catch (error) {
+            console.error('截图失败:', error);
+            alert('截图失败，请重试');
+            btnElement.innerHTML = originalIcon;
+            btnElement.style.color = '';
+        } finally {
+            btnElement.classList.remove('capturing');
+        }
+    }
+    </script>
+</body>
+</html>
