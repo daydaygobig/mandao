@@ -1,0 +1,2681 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>漫道日报 2026-09-19</title>
+    
+    <!-- SEO 元数据 -->
+    <meta name="description" content="漫道日报 2026年9月19日 - 月薪一万和五千的真相、跨部门背锅的缓冲带生存法、向上管理如何评价下属等精华讨论">
+    <meta name="keywords" content="职场,漫道日报,跳槽涨幅,向上管理,职场生态位,AI开发">
+    <meta name="author" content="漫道">
+    
+    <!-- Open Graph / 社交媒体分享标签 -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="漫道日报 2026-09-19">
+    <meta property="og:description" content="月薪一万和五千的真相、跨部门背锅的缓冲带生存法、向上管理如何评价下属等精华讨论">
+    <meta property="og:site_name" content="漫道">
+    <meta property="og:locale" content="zh_CN">
+    
+    <!-- Twitter Card 标签 -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="漫道日报 2026-09-19">
+    <meta name="twitter:description" content="月薪一万和五千的真相、跨部门背锅的缓冲带生存法、向上管理如何评价下属等精华讨论">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6C9T7FPDT2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-6C9T7FPDT2');
+    </script>
+    
+    <!-- 深色模式预加载脚本 - 终极防闪烁方案 -->
+    <script>
+        // 在DOM解析前立即执行，最大程度避免闪烁
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                // 方案1：为html元素添加类
+                document.documentElement.classList.add('dark-mode-preload');
+                
+                // 方案2：直接设置body的内联样式（更早生效）
+                const style = document.createElement('style');
+                style.textContent = `
+                    html, body { background-color: #1a1a1a !important; color: #e5e5e5 !important; }
+                `;
+                document.head.appendChild(style);
+            }
+        })();
+    </script>
+    
+    <!-- 正常标题格式应为：漫道日报 yyyy-mm-dd，以便外部链接查看时了解日报日期 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        * {
+            font-family: 'Inter', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .bento-card {
+            background-color: #ffffff;
+            border: 1px solid #e9e9eb;
+            border-radius: 1rem; /* 16px */
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -2px rgba(0,0,0,0.05);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .bento-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.07), 0 4px 6px -4px rgba(0,0,0,0.05);
+            transform: translateY(-3px);
+        }
+
+        .number-display {
+            font-weight: 900; /* black */
+            font-size: 4rem;
+            line-height: 1;
+            /* Color will be set by Tailwind, e.g., text-[#4D6BFE] or text-black */
+        }
+
+        .section-title {
+            font-weight: 800; /* extrabold */
+            font-size: 2.25rem; /* 36px */
+            color: #000000;
+            margin-bottom: 2rem; /* 32px, consistent with Tailwind mb-8 */
+            white-space: nowrap; /* 防止标题换行 */
+        }
+
+        /* 手机端响应式调整 */
+        @media (max-width: 640px) {
+            .section-title {
+                font-size: 1.5rem; /* 24px，手机上使用更小的字体 */
+                margin-bottom: 1.5rem;
+            }
+            
+            /* 大数字显示在手机上缩小 */
+            .number-display {
+                font-size: 3rem; /* 手机上从64px缩小到48px */
+            }
+            
+            /* 卡片内边距在手机上缩小，节省空间 */
+            .bento-card.p-8 {
+                padding: 1.25rem !important; /* 从32px缩小到20px */
+            }
+            
+            .bento-card.p-6 {
+                padding: 1rem !important; /* 从24px缩小到16px */
+            }
+            
+            .bento-card.p-5 {
+                padding: 0.875rem !important; /* 从20px缩小到14px */
+            }
+            
+            /* 主标题在手机上缩小 */
+            h1.text-5xl {
+                font-size: 2rem !important; /* 从48px缩小到32px */
+                margin-bottom: 1.25rem !important;
+            }
+            
+            /* 话题标题在手机上缩小 */
+            h4.text-xl {
+                font-size: 1.125rem !important; /* 从20px缩小到18px */
+            }
+            
+            /* 总消息数量文字在手机上缩小 */
+            p.text-xl {
+                font-size: 1rem !important; /* 从20px缩小到16px */
+            }
+        }
+
+        .tag-item {
+            background-color: rgba(16, 185, 129, 0.10); /* green-500 @ 10% */
+            color: #10b981; /* green-500 */
+            padding: 0.25rem 0.75rem; /* py-1 px-3 */
+            border-radius: 9999px; /* rounded-full */
+            font-size: 0.75rem; /* text-xs */
+            font-weight: 500; /* medium */
+        }
+
+
+        /* HTML注释: 展开功能相关样式 */
+        .expandable-content {
+            position: relative;
+        }
+
+        .content-preview.collapsed {
+            max-height: 11rem; /* 控制预览高度，结合渐变遮罩更紧凑 */
+            overflow: hidden;
+            position: relative;
+        }
+
+        .content-preview.collapsed::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 30px;
+            background: linear-gradient(transparent, rgba(255, 255, 255, 0.9));
+            pointer-events: none;
+        }
+
+        /* 收起态样式优化：收紧段间距，弱化多余换行，避免空白过大 */
+        .content-preview.collapsed p,
+        .content-preview.collapsed ul,
+        .content-preview.collapsed ol,
+        .content-preview.collapsed li,
+        .content-preview.collapsed h1,
+        .content-preview.collapsed h2,
+        .content-preview.collapsed h3,
+        .content-preview.collapsed h4,
+        .content-preview.collapsed h5,
+        .content-preview.collapsed h6 {
+            margin-top: 0.25rem !important;
+            margin-bottom: 0.25rem !important;
+            line-height: 1.5 !important;
+        }
+        /* 多重 <br> 在收起态容易拉大间距，这里统一弱化 */
+        .content-preview.collapsed br {
+            display: none;
+        }
+        /* 允许小标题<b>后的首个换行保留，确保分行 */
+        .content-preview.collapsed b + br {
+            display: inline;
+        }
+
+        .expand-btn {
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            background: none;
+            padding: 0;
+        }
+
+        .expand-btn:hover {
+            transform: translateY(-1px);
+        }
+
+        .expand-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .expand-btn.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+
+        /* === 绿色主题统一样式 === */
+        /* 绿色主题统一样式 */
+        .text-\[\#4D6BFE\] { color: #10b981 !important; }              /* green-500 */
+        .border-\[\#4D6BFE\] { border-color: #10b981 !important; }
+        .border-\[\#93c5fd\] { border-color: #6ee7b7 !important; }    /* green-300 */
+        
+        /* 渐变色统一为绿色 */
+        .from-\[\#4D6BFE\]\/20 { --tw-gradient-from: rgb(16 185 129 / 0.20) !important; }
+        .via-\[\#4D6BFE\]\/10 { --tw-gradient-stops: var(--tw-gradient-from), rgb(16 185 129 / 0.10), var(--tw-gradient-to) !important; }
+        .to-\[\#4D6BFE\]\/5 { --tw-gradient-to: rgb(16 185 129 / 0.05) !important; }
+
+        /* 紫色块（爬楼关键词）替换为绿色 */
+        .bg-purple-50   { background-color: #ecfdf5 !important; }     /* green-50 */
+        .border-purple-200 { border-color: #a7f3d0 !important; }      /* green-200 */
+        .text-purple-700   { color: #047857 !important; }             /* green-700 */
+        .text-purple-600   { color: #059669 !important; }             /* green-600 */
+        
+        /* 交互与背景色 */
+        .hover\:text-blue-700:hover { color: #047857 !important; }
+        .bg-blue-50 { background-color: #ecfdf5 !important; }
+
+        /* HTML注释: 历史日报链接样式，采用绿色主题与整体设计保持统一 */
+        .history-link {
+            background: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .history-link:hover {
+            background: rgba(16, 185, 129, 0.15);
+            transform: translateY(-1px);
+        }
+
+        /* HTML注释: 返回主页按钮样式，链接固定指向漫道主页，样式与整体设计保持统一 */
+        .back-home-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            background: #f8fafc; /* slate-50 */
+            color: #475569; /* slate-600 */
+            border: 1px solid #e2e8f0; /* slate-200 */
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        .back-home-link:hover {
+            background: #f1f5f9; /* slate-100 */
+            color: #10b981;
+            border-color: rgba(16, 185, 129, 0.3);
+            transform: translateY(-1px);
+        }
+
+        /* === 新增功能样式 === */
+        
+        /* 悬浮操作按钮栈 */
+        .floating-action-stack {
+            position: fixed;
+            right: 2rem;
+            bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 0.75rem;
+            z-index: 1000;
+        }
+        
+        .toc-floating-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 0.75rem;
+        }
+        
+        .toc-floating-button {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 9999px;
+            background: #10b981;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .toc-floating-button:hover {
+            background: #059669;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+        }
+        
+        .toc-floating-button.active {
+            background: #059669;
+        }
+        
+        .toc-panel {
+            position: absolute;
+            right: 0;
+            bottom: calc(100% + 0.75rem);
+            width: 20rem;
+            max-width: calc(100vw - 2.5rem);
+            max-height: 70vh;
+            overflow-y: auto;
+            background-color: #ffffff;
+            border: 1px solid #e9e9eb;
+            border-radius: 1rem;
+            box-shadow: 0 12px 30px rgba(16, 185, 129, 0.25);
+            padding: 1.25rem;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .toc-panel.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .toc-panel-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+        
+        .toc-panel-title {
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #000000;
+        }
+        
+        .toc-panel-title i {
+            margin-right: 0.5rem;
+            color: #10b981;
+        }
+        
+        .toc-close {
+            background: transparent;
+            border: none;
+            padding: 0.25rem;
+            border-radius: 0.5rem;
+            color: #9ca3af;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .toc-close:hover {
+            color: #10b981;
+            background: rgba(16, 185, 129, 0.1);
+        }
+        
+        .toc-items {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .toc-link {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.5rem 0.75rem;
+            color: #6b7280;
+            text-decoration: none;
+            font-size: 0.875rem;
+            border-radius: 0.75rem;
+            transition: all 0.2s ease;
+        }
+        
+        .toc-link i {
+            width: 1rem;
+            text-align: center;
+            color: #10b981;
+        }
+        
+        .toc-link:hover {
+            color: #10b981;
+            background-color: #ecfdf5;
+            box-shadow: inset 2px 0 0 0 #10b981;
+        }
+        
+        .toc-link.active {
+            color: #10b981;
+            font-weight: 600;
+            background-color: #ecfdf5;
+            box-shadow: inset 2px 0 0 0 #10b981;
+        }
+
+        /* v3.7: 二级子话题目录样式 */
+        .toc-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.375rem;
+        }
+
+        .toc-sublist {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            margin-left: 1.5rem;
+            padding-left: 0.75rem;
+            border-left: 2px solid rgba(16, 185, 129, 0.25);
+        }
+
+        .toc-sublink {
+            display: block;
+            padding: 0.4rem 0.6rem;
+            color: #6b7280;
+            text-decoration: none;
+            font-size: 0.8125rem;
+            line-height: 1.4;
+            border-radius: 0.5rem;
+            transition: all 0.2s ease;
+        }
+
+        .toc-sublink:hover {
+            color: #10b981;
+            background-color: #ecfdf5;
+            box-shadow: inset 2px 0 0 0 #10b981;
+        }
+
+        .toc-sublink.active {
+            color: #10b981;
+            font-weight: 600;
+            background-color: #ecfdf5;
+            box-shadow: inset 2px 0 0 0 #10b981;
+        }
+
+        /* v3.7: 话题卡片锚点跳转偏移，避免跳转后标题贴顶 */
+        .anchor-target {
+            scroll-margin-top: 5rem;
+        }
+        
+        body.dark-mode .floating-action-stack {
+            gap: 0.75rem;
+        }
+        
+        body.dark-mode .toc-panel {
+            background-color: #2a2a2a;
+            border-color: #3a3a3a;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+        }
+        
+        body.dark-mode .toc-panel-title {
+            color: #f5f5f5;
+        }
+        
+        body.dark-mode .toc-panel-title i {
+            color: #34d399;
+        }
+        
+        body.dark-mode .toc-close {
+            color: #d1d5db;
+        }
+        
+        body.dark-mode .toc-close:hover {
+            background: rgba(16, 185, 129, 0.2);
+            color: #34d399;
+        }
+        
+        body.dark-mode .toc-link {
+            color: #d1d5db !important;
+        }
+        
+        body.dark-mode .toc-link i {
+            color: #34d399;
+        }
+        
+        body.dark-mode .toc-link:hover,
+        body.dark-mode .toc-link.active {
+            color: #34d399 !important;
+            background-color: rgba(16, 185, 129, 0.18) !important;
+            box-shadow: inset 2px 0 0 0 rgba(16, 185, 129, 0.6);
+        }
+
+        /* v3.7: 深色模式下的二级子话题目录 */
+        body.dark-mode .toc-sublist {
+            border-left-color: rgba(16, 185, 129, 0.4);
+        }
+
+        body.dark-mode .toc-sublink {
+            color: #d1d5db !important;
+        }
+
+        body.dark-mode .toc-sublink:hover,
+        body.dark-mode .toc-sublink.active {
+            color: #34d399 !important;
+            background-color: rgba(16, 185, 129, 0.18) !important;
+            box-shadow: inset 2px 0 0 0 rgba(16, 185, 129, 0.6);
+        }
+        
+        /* 返回顶部按钮样式 */
+        .back-to-top {
+            width: 3rem;
+            height: 3rem;
+            background: #10b981;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: #059669;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+        }
+        
+        /* 复制按钮样式 */
+        .copy-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.25rem 0.5rem;
+            background: transparent;
+            color: #10b981;
+            border: 1px solid #10b981;
+            border-radius: 0.375rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .copy-btn:hover {
+            background: #10b981;
+            color: white;
+        }
+        
+        .copy-btn.copied {
+            background: #10b981;
+            border-color: #10b981;
+            color: white;
+        }
+        
+        /* 暗色模式样式 */
+        /* 预加载类：在JavaScript执行前就应用深色模式 */
+        html.dark-mode-preload,
+        html.dark-mode-preload body,
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #e5e5e5;
+        }
+        
+        html.dark-mode-preload .bento-card,
+        body.dark-mode .bento-card {
+            background-color: #2a2a2a;
+            border-color: #3a3a3a;
+        }
+        
+        body.dark-mode .section-title {
+            color: #f5f5f5;
+        }
+        
+        body.dark-mode .text-black {
+            color: #e5e5e5 !important;
+        }
+        
+        body.dark-mode .text-gray-700 {
+            color: #a0a0a0 !important;
+        }
+        
+        body.dark-mode .text-gray-600 {
+            color: #909090 !important;
+        }
+        
+        body.dark-mode .text-gray-800 {
+            color: #c0c0c0 !important;
+        }
+        
+        body.dark-mode .bg-slate-50 {
+            background-color: #2f2f2f !important;
+        }
+        
+        body.dark-mode .bg-gray-50 {
+            background-color: #2f2f2f !important;
+        }
+        
+        body.dark-mode .bg-gray-100 {
+            background-color: #333333 !important;
+        }
+        
+        body.dark-mode .bg-purple-50 {
+            background-color: #1a3d2e !important;
+        }
+        
+        body.dark-mode .bg-amber-50 {
+            background-color: #3d3420 !important;
+        }
+        
+        body.dark-mode .border-gray-200 {
+            border-color: #3a3a3a !important;
+        }
+        
+        body.dark-mode .border-purple-200 {
+            border-color: #2d5a44 !important;
+        }
+        
+        body.dark-mode .bg-blue-50 {
+            background-color: #1a3d2e !important;
+        }
+        
+        body.dark-mode .border-amber-400 {
+            border-color: #d97706 !important;
+        }
+        
+        /* 深色模式下的渐变遮罩 */
+        body.dark-mode .content-preview.collapsed::after {
+            background: linear-gradient(transparent, rgba(26, 26, 26, 0.95));
+        }
+        
+        /* 深色模式下的加粗文字增强 */
+        body.dark-mode b,
+        body.dark-mode strong {
+            color: #f5f5f5 !important;
+            font-weight: 700;
+            text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.3);
+        }
+        
+        /* 深色模式下的链接样式 */
+        body.dark-mode a {
+            color: #6ee7b7;
+        }
+        
+        body.dark-mode a:hover {
+            color: #a7f3d0;
+        }
+        
+        /* 深色模式下的标签样式 */
+        body.dark-mode .tag-item {
+            background-color: rgba(16, 185, 129, 0.2);
+            color: #6ee7b7;
+        }
+        
+        /* 深色模式下的按钮文字 */
+        body.dark-mode .text-green-600 {
+            color: #6ee7b7 !important;
+        }
+        
+        body.dark-mode .text-green-700 {
+            color: #a7f3d0 !important;
+        }
+        
+        body.dark-mode .text-green-700 {
+            color: #86efac !important;
+        }
+        
+        body.dark-mode .text-green-600 {
+            color: #4ade80 !important;
+        }
+        
+        /* 深色模式下的h标签 */
+        body.dark-mode h1,
+        body.dark-mode h2,
+        body.dark-mode h3,
+        body.dark-mode h4,
+        body.dark-mode h5 {
+            color: #f5f5f5 !important;
+        }
+        
+        /* 深色模式下的边框和分隔线 */
+        body.dark-mode .border-l-4 {
+            opacity: 0.8;
+        }
+        
+        /* 深色模式下复制按钮 */
+        body.dark-mode .copy-btn {
+            border-color: #6ee7b7;
+            color: #6ee7b7;
+        }
+        
+        body.dark-mode .copy-btn:hover {
+            background: #6ee7b7;
+            color: #1a1a1a;
+        }
+        
+        /* 深色模式下历史日报链接 */
+        body.dark-mode .history-link {
+            background: rgba(16, 185, 129, 0.18);
+            color: #6ee7b7;
+            border-color: rgba(16, 185, 129, 0.35);
+        }
+        
+        body.dark-mode .history-link:hover {
+            background: rgba(16, 185, 129, 0.28);
+        }
+
+        /* 深色模式下返回主页按钮 */
+        body.dark-mode .back-home-link {
+            background: #2f2f2f;
+            color: #a0a0a0;
+            border-color: #3a3a3a;
+            box-shadow: none;
+        }
+
+        body.dark-mode .back-home-link:hover {
+            background: #333333;
+            color: #34d399;
+            border-color: rgba(16, 185, 129, 0.4);
+        }
+        
+        /* 主题切换按钮 */
+        .theme-toggle {
+            width: 3rem;
+            height: 3rem;
+            background: #10b981;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+        
+        .theme-toggle:hover {
+            background: #059669;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+        }
+        
+        /* === 截图模块样式 === */
+
+        /* HTML注释: 截图快捷按钮样式 */
+        .screenshot-btn {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            width: 28px;
+            height: 28px;
+            line-height: 28px;
+            border-radius: 0.5rem;
+            background: rgba(16, 185, 129, 0.08);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            color: #10b981;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            font-size: 0.78rem;
+        }
+
+        .screenshot-has-time > div:first-of-type {
+            padding-right: 3rem;
+        }
+
+        .screenshot-title-safe > h4:first-of-type,
+        .screenshot-title-safe > h5:first-of-type {
+            padding-right: 3.5rem;
+            box-sizing: border-box;
+        }
+
+        .screenshot-title-safe > div:first-of-type > h4:first-of-type {
+            display: block !important;
+            padding-right: 3.5rem;
+            box-sizing: border-box;
+            line-height: 1.4;
+        }
+
+        .screenshot-title-safe > div:first-of-type > h4:first-of-type > i:first-child {
+            display: inline-block;
+            margin-right: 0.625rem;
+            vertical-align: baseline;
+        }
+
+        .topic-time-badge {
+            display: inline-flex !important;
+            align-items: center !important;
+            height: 28px !important;
+            padding: 0 0.75rem !important;
+            line-height: 28px !important;
+            box-sizing: border-box !important;
+        }
+
+        .topic-time-icon {
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: 1rem;
+            height: 28px;
+            line-height: 28px !important;
+            margin-right: 0.375rem !important;
+            position: relative;
+            top: -1px;
+        }
+
+        .screenshot-btn:hover {
+            background: rgba(16, 185, 129, 0.15);
+            border-color: rgba(16, 185, 129, 0.4);
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+        }
+
+        .screenshot-btn:focus {
+            outline: none;
+        }
+
+        .screenshot-btn:active {
+            transform: scale(0.95);
+        }
+
+        .screenshot-btn.capturing {
+            animation: pulse-capture 1s infinite;
+        }
+
+        @keyframes pulse-capture {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* 截图时的临时容器样式 */
+        .screenshot-wrapper {
+            padding: 40px 40px 32px;
+            background: linear-gradient(160deg, #ffffff 0%, #f6fef9 40%, #ecfdf5 100%);
+            border-radius: 24px;
+            border: 1.5px solid rgba(16, 185, 129, 0.1);
+            box-shadow: 0 12px 40px rgba(16, 185, 129, 0.06);
+            box-sizing: border-box;
+        }
+
+        .screenshot-wrapper,
+        .screenshot-wrapper * {
+            -webkit-text-size-adjust: 100% !important;
+            text-size-adjust: 100% !important;
+        }
+
+        .screenshot-wrapper .screenshot-brand {
+            position: relative;
+            width: 100%;
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(16, 185, 129, 0.08);
+            box-sizing: border-box;
+        }
+
+        .screenshot-wrapper .screenshot-brand-main {
+            position: relative;
+            height: 44px;
+        }
+
+        .screenshot-wrapper .screenshot-brand-left {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 36px;
+            text-align: left;
+        }
+
+        .screenshot-wrapper .screenshot-brand-logo {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 7px;
+            background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+            display: block;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 3px 8px rgba(16, 185, 129, 0.25);
+        }
+
+        .screenshot-wrapper .screenshot-brand-logo span {
+            position: absolute;
+            left: 10px;
+            right: 10px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 2px;
+        }
+
+        .screenshot-wrapper .screenshot-brand-logo span:nth-child(1) {
+            top: 11px;
+        }
+
+        .screenshot-wrapper .screenshot-brand-logo span:nth-child(2) {
+            top: 19px;
+        }
+
+        .screenshot-wrapper .screenshot-brand-logo span:nth-child(3) {
+            top: 27px;
+            right: 16px;
+        }
+
+        .screenshot-wrapper .screenshot-brand-name {
+            font-size: 26px;
+            font-weight: 800;
+            color: #1a1a2e;
+            letter-spacing: 0;
+            display: block;
+            position: absolute;
+            left: 56px;
+            top: -18px;
+            height: 52px;
+            line-height: 52px;
+            white-space: nowrap;
+        }
+
+        .screenshot-wrapper .screenshot-brand-date {
+            position: absolute;
+            right: 0;
+            top: -15px;
+            height: 52px;
+            line-height: 52px;
+            text-align: right;
+            font-size: 18px;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .screenshot-wrapper .screenshot-module-title {
+            margin-top: 12px;
+            height: 26px;
+            line-height: 26px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #6b7280;
+        }
+
+        .screenshot-wrapper .screenshot-footer {
+            margin-top: 18px;
+            padding: 20px 24px;
+            padding-right: 152px;
+            background: rgba(16, 185, 129, 0.06);
+            border: 1px solid rgba(16, 185, 129, 0.12);
+            border-radius: 12px;
+            position: relative;
+            min-height: 140px;
+            box-sizing: border-box;
+        }
+
+        .screenshot-wrapper .screenshot-footer-text {
+            display: block;
+            padding-top: 25px;
+        }
+
+        .screenshot-wrapper .screenshot-footer-title {
+            font-size: 20px;
+            line-height: 28px;
+            font-weight: 800;
+            color: #1f2937;
+        }
+
+        .screenshot-wrapper .screenshot-footer-url {
+            margin-top: 2px;
+            font-size: 11px;
+            line-height: 16px;
+            color: #6b7280;
+            word-break: break-all;
+            display: none;
+        }
+
+        .screenshot-wrapper .screenshot-footer-qr-cell {
+            position: absolute;
+            right: 16px;
+            top: 14px;
+            width: 112px;
+            height: 112px;
+            padding: 8px;
+            background: #ffffff;
+            border: 1px solid rgba(16, 185, 129, 0.14);
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .screenshot-wrapper .screenshot-footer-qr {
+            display: block;
+            width: 94px;
+            height: auto;
+            min-height: 0;
+            padding: 0;
+            background: transparent;
+            border: 0;
+            border-radius: 0;
+            box-sizing: border-box;
+        }
+
+        .screenshot-wrapper .screenshot-footer-qr canvas,
+        .screenshot-wrapper .screenshot-footer-qr img,
+        .screenshot-wrapper .screenshot-footer-qr svg,
+        .screenshot-wrapper .screenshot-footer-qr table {
+            display: block;
+            width: 94px !important;
+            height: 94px !important;
+        }
+
+        /* 截图失败降级：图片浮层（移动端长按保存） */
+        .screenshot-fallback-mask {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(15, 23, 42, 0.7);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            box-sizing: border-box;
+        }
+
+        .screenshot-fallback-hint {
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .screenshot-fallback-img {
+            max-width: min(90vw, 600px);
+            max-height: 70vh;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            background: #ffffff;
+        }
+
+        .screenshot-fallback-close {
+            margin-top: 20px;
+            padding: 10px 28px;
+            border-radius: 8px;
+            border: none;
+            background: #ffffff;
+            color: #1f2937;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* 打印样式 */
+        @media print {
+            .floating-action-stack, nav, .copy-btn, .expand-btn, .screenshot-btn, .screenshot-fallback-mask {
+                display: none !important;
+            }
+            
+            body {
+                background: white;
+                color: black;
+            }
+            
+            .bento-card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                page-break-inside: avoid;
+            }
+            
+            .content-preview.collapsed {
+                max-height: none !important;
+            }
+            
+            .content-preview.collapsed::after {
+                display: none;
+            }
+        }
+        
+        /* 移动端优化 */
+        @media (max-width: 640px) {
+            .floating-action-stack {
+                right: 1rem;
+                bottom: 1rem;
+                gap: 0.5rem;
+            }
+
+            .floating-action-stack .toc-floating-button,
+            .floating-action-stack .theme-toggle,
+            .floating-action-stack .back-to-top {
+                width: 2.75rem;
+                height: 2.75rem;
+            }
+
+            .toc-panel {
+                width: calc(100vw - 2rem);
+                max-width: calc(100vw - 2rem);
+                max-height: 60vh;
+                padding: 1rem;
+            }
+
+            /* v3.7: 移动端二级子话题字号 */
+            .toc-sublink {
+                font-size: 0.75rem;
+            }
+        }
+
+        /* 页面淡入效果 - 让切换更平滑 */
+        body {
+            animation: fadeIn 0.3s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body class="bg-white text-black min-h-screen">
+    <!-- HTML注释: 整体宽度通过 max-w-4xl 控制，实现日报宽度调小并保持响应式。-->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+        <!-- === 返回主页按钮 === -->
+        <!-- HTML注释: 返回主页按钮，链接固定指向漫道主页 https://md.xinjianhub.cn/ ，直接写死在 href 中，不得修改或省略 -->
+        <div class="w-full mb-4 flex justify-start">
+            <a href="https://md.xinjianhub.cn/" class="back-home-link">
+                <i class="fas fa-arrow-left text-xs"></i> 返回漫道主页
+            </a>
+        </div>
+
+        <!-- === "群聊日报" 文件头区域 开始 === -->
+        <!-- HTML注释: 此模块作为单独一行，占据整行宽度。包含日报主标题、报告日期和时间范围。 -->
+        <!-- HTML注释: 新增了"群聊历史日报"链接，样式与整体设计保持统一协调 -->
+        <header class="w-full mb-8" role="banner">
+            <div class="bento-card p-8">
+                <div class="text-center">
+                    <h1 class="text-5xl font-black text-black mb-6">
+                        漫道
+                    </h1>
+                    <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-lg mb-4">
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-calendar-alt mr-2 text-[#4D6BFE]"></i>
+                            <span id="report-date">2026年9月19日</span>
+                        </div>
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-clock mr-2 text-[#4D6BFE]"></i>
+                            <span>11:18 - 01:56(次日)</span>
+                        </div>
+                    </div>
+                    <!-- HTML注释: 漫道历史日报链接，样式与绿色主题统一，链接固定指向历史日报汇总页，不得修改或省略 -->
+                    <div class="flex justify-center">
+                        <a id="history-link" href="https://md.xinjianhub.cn/" class="history-link">
+                            <i class="fas fa-history"></i>
+                            漫道历史日报
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- 导航与历史入口 -->
+        <nav class="w-full mb-8" aria-label="日期导航">
+            <div class="bento-card p-5">
+                <!-- 日期导航 -->
+                <div class="flex items-center justify-between mb-4">
+                    <button id="prev-day" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg shadow disabled:bg-gray-200 disabled:text-gray-400 transition-all" aria-label="查看前一天日报">
+                        <i class="fas fa-chevron-left"></i>
+                        <span class="hidden sm:inline">上一天</span>
+                        <span class="sm:hidden">上一天</span>
+                    </button>
+                    <button id="next-day" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg shadow disabled:bg-gray-200 disabled:text-gray-400 transition-all" aria-label="查看后一天日报">
+                        <span class="hidden sm:inline">下一天</span>
+                        <span class="sm:hidden">下一天</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <!-- === "群聊日报" 文件头区域 结束 === -->
+
+        <!-- === 内容目录导航（通过右下角悬浮按钮呈现） === -->
+
+        <!-- === 模块一：总消息概览 开始 === -->
+        <!-- HTML注释: 此模块作为单独一行，占据整行宽度。显示当日群聊总消息数量。 -->
+        <section id="section-overview" class="w-full mb-12" aria-labelledby="section-overview-title">
+            <h2 id="section-overview-title" class="section-title">
+                一、今日群聊速览
+            </h2>
+            <div class="bento-card p-8 bg-gradient-to-br from-[#10b981]/20 via-[#10b981]/10 to-[#10b981]/5 text-center rounded-2xl">
+                <div class="number-display text-[#4D6BFE]">
+                    666
+                </div>
+                <p class="text-xl font-semibold text-black mt-3">总消息数量</p>
+            </div>
+        </section>
+        <!-- === 模块一：总消息概览 结束 === -->
+
+        <!-- === 模块二：职通时刻・深度话题 开始 === -->
+        <!-- HTML注释: 此模块作为单独一行，占据整行宽度。承载全部深度内容：深度讨论、小会专题、有问必答、每日精选四类，统一为深度话题卡片呈现，不增设其他模块。 -->
+        <section id="section-topics" class="w-full mb-12" aria-labelledby="section-topics-title">
+            <h2 id="section-topics-title" class="section-title">
+                二、职通时刻・深度话题
+            </h2>
+            <!-- 列表容器: 讨论话题 -->
+            <div class="space-y-8">
+
+                <!-- 深度话题卡片 1 开始 -->
+                <div class="bento-card p-6 rounded-xl"> 
+                    <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
+                        <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
+                            跳槽涨薪低于30%，你等于白跳了
+                        </h4>
+                        <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
+                            <i class="fas fa-clock mr-1.5 text-gray-500"></i>
+                            12:17 - 12:20
+                        </span>
+                    </div>
+
+                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
+                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
+                        <p class="text-sm text-purple-600 italic">
+                            王小全 退休财税专家 北京：今天看到一个热搜「月薪一万是月薪五千的六倍」哈哈哈
+                        </p>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag-item">职场跳槽</span>
+                            <span class="tag-item">可支配收入</span>
+                            <span class="tag-item">副业变现</span>
+                            <span class="tag-item">精力分配</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">详细内容</p>
+                        <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
+                            <div class="expandable-content" data-char-limit="200">
+                                <div class="content-preview">
+                                    <b>一、话题背景与起因</b><br><b>王小全 退休财税专家 北京</b>在群里分享了一个热搜话题“月薪一万是月薪五千的六倍”，指出这涉及可支配收入和恩格尔系数这两个经济学常识。这引发了大家对于生活成本与职场收入提升策略的深入探讨。<br><br><b>二、核心焦点与深层议题挖掘</b><br>表面的热搜数学题，背后揭示的是“可支配收入”的残酷现实：在固定的吃喝拉撒成本（出水管）下，稍微提升一点进水管（工资），能攒下的钱（利润）就会成倍增加。但这只是算账，更深层的议题是：<b>面对职场的天花板，打工人应该如何分配精力来实现利益最大化？</b><br><br><b>三、多方观点与讨论详情</b><br>1. <b>跳槽的真实成本</b>：<b>前PM年100退休十年</b>指出，跳槽本质上应该追求“升学”而非“平调转学”。一个人合理加薪大约是每年15%，跳槽会打断当前会计年度，消耗掉两次加薪机会。因此，“跳槽涨幅如果不到30%，假如只看钱，其实是亏了。”<br>2. <b>高薪人群的瓶颈与破局</b>：当主业年薪达到二三十万时，往往已经触及传统行业的玻璃天花板，再往上需要靠运气和背景。与其在主业死卷（从95分提到100分），不如抽出时间去发展副业（从0分提到80分），比如做自媒体、小生意，反而更容易实现总收入的跃升。<br>3. <b>低薪人群的突破口</b>：如果月薪尚低且主业有空间，应该“专心致志琢磨工作”，在群里多抛问题，强行征用群友这群“外脑”帮你参谋升职加薪。如果主业确实毫无指望，同样可以早早开启副业，心态上会比高薪人群更轻松，因为副业赚一点点钱，对自己也是巨大提升。<br><br><b>四、解决方案与启发</b><br>职场人需要认清自己所处的阶段：跳槽时要敢于要价，涨幅低于30%且无职务、行业提升的跳槽毫无意义。当主业遭遇瓶颈时，不要陷入无意义的内卷，果断开启副业是提升总收入最具性价比的路径。核心启发是：<b>不要用线性思维去规划职业，要像经营企业一样经营自己，算清楚自己的“利润”在哪。</b>
+                                </div>
+                                <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
+                                    <span class="expand-text">展开全文</span>
+                                    <i class="fas fa-chevron-down ml-1 expand-icon"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
+                        <div class="space-y-6">
+                            <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                                <div class="mb-4">
+                                    <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
+                                    <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
+                                        <p class="text-black text-base">
+                                            <b>跳槽涨薪底线是30%</b>，否则不足以抵消打断会计年度所损失的两次内部加薪机会。<br>
+                                            当主业触及天花板时，把卷的精力转移到副业上，整体分数的提升远比死磕主业容易得多。
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-700 mb-2"><strong>金句时刻</strong></p>
+                                    <div class="space-y-2">
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    跳槽尽量要做小学升初中，初中升高中的事情，不要不停的在同一个阶段比如说小学里面来回转学。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this)" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>前PM年100退休十年</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    不能任由别人用西方那套经验来评价我们的生活。还是要具体问题具体分析。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this)" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>王小全 退休财税专家 北京</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    你要么直接换行业了，从一个夕阳行业换到了新兴行业，有机会变成坐在风口上的猪。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this)" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>前PM年100退休十年</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 深度话题卡片 1 结束 -->
+
+                <!-- 深度话题卡片 2 开始 -->
+                <div class="bento-card p-6 rounded-xl"> 
+                    <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
+                        <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
+                            被派去现场当靶子，怎么全身而退？
+                        </h4>
+                        <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
+                            <i class="fas fa-clock mr-1.5 text-gray-500"></i>
+                            13:15 - 15:48
+                        </span>
+                    </div>
+
+                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
+                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
+                        <p class="text-sm text-purple-600 italic">
+                            青花椒 土建  本7：+1一直比较护着底下的人。我入职之后一直只做份内工作
+                        </p>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag-item">职场生态位</span>
+                            <span class="tag-item">跨部门沟通</span>
+                            <span class="tag-item">向上管理</span>
+                            <span class="tag-item">充当客服</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">详细内容</p>
+                        <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
+                            <div class="expandable-content" data-char-limit="200">
+                                <div class="content-preview">
+                                    <b>一、话题背景与起因</b><br><b>青花椒 土建  本7</b>在工作中遇到了麻烦：现场施工方为了偷懒，不断要求设计方（青花椒所在团队）违规修改图纸。在她的+1帮她怼回现场后，现场和更高层领导依然要求青花椒去现场常驻解决问题。她对此深感恐惧，害怕自己被架在现场强迫改图。<br><br><b>二、核心焦点与深层议题挖掘</b><br>表面上看，这是“我被派去背锅了怎么办”的焦虑。但深层议题是：<b>当领导把你放在一个没有决策权却充满冲突的位置上，其真正的战略意图是什么？</b>青花椒之所以恐惧，是因为她误以为自己要去“解决问题”，而实际上，领导只是派她去当“泥石流拦截坝”，吸收对方的情绪。<br><br><b>三、多方观点与讨论详情</b><br>群友们一致认为，青花椒大可不必内耗，只需扮演好特定角色：<br>1. <b>认清自己的“吉祥物”定位</b>：<b>阿南 互联网运营 本 10</b>和<b>向阳 幕墙技术负责人 本 12</b>指出，去现场的本质就是当“客服”。对方发火、施压，你只需要拿出小本子认真记录，表达理解，然后回复“我没有权限，我回去向领导汇报”。不生气、不对抗、也不做决策。<br>2. <b>看懂+1的战略意图</b>：<b>前PM年100退休十年</b>深度剖析了这一招数：+1派一个“包子”过去，既没有直接跟现场撕破脸，又坚守了不改图的底线。青花椒把原本激烈的矛盾拖延成了流程上的反馈，这就是对+1最大的帮助。<br>3. <b>操作细节与演练</b>：群友甚至帮她设计了具体的道具和动作——带个不太好写的笔慢慢记，对方一问三不知，只提供“情绪价值”而不提供“工作结果”。<b>瓜瓜 医院&高校 博9 重庆</b>也建议，假装记录，把时间磨过去，把球踢回给上面。<br><br><b>四、解决方案与启发</b><br>实操SOP：去现场后，态度必须温和且诚恳，但行动上坚守“我没权限，要等领导批”。对方有任何意见，只负责记下来并表示会反馈，绝不当场承诺。更深层的启发是：<b>职场中，软弱有时候是一种武器。</b>当你被派去面对不讲理的跨部门客户时，你不需要证明自己多专业，你只需要“态度极好、坚决不办”，就能完美贯彻己方领导的意图，同时保护自己不受伤。
+                                </div>
+                                <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
+                                    <span class="expand-text">展开全文</span>
+                                    <i class="fas fa-chevron-down ml-1 expand-icon"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
+                        <div class="space-y-6">
+                            <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                                <div class="mb-4">
+                                    <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
+                                    <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
+                                        <p class="text-black text-base">
+                                            面对无理的跨部门要求，没有决策权的人应当化身“情绪缓冲带”，<b>坚决执行“态度极好、绝不办事、一切等领导批”的策略</b>。<br>
+                                            看懂领导的布局：派你去前线挨骂，不是让你去解决难题，而是用流程把尖锐的矛盾拖成疲劳战。
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-700 mb-2"><strong>金句时刻</strong></p>
+                                    <div class="space-y-2">
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    把你派过去，就是当泥石流拦截坝的。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this)" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>前PM年100退休十年</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    态度上你站在对方那一边的，行动上你是自己+1的，对方也能接受，你也不受伤。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this)" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>阿南 互联网运营 本 10</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    把自己当客服，客服是什么样的，句句有回应，事情就是没法解决。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this)" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>向阳 幕墙技术负责人 本 12</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 深度话题卡片 2 结束 -->
+
+                <!-- 深度话题卡片 3 开始 -->
+                <div class="bento-card p-6 rounded-xl"> 
+                    <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
+                        <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
+                            领导问下属行不行，你敢直接说“不行”吗？
+                        </h4>
+                        <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
+                            <i class="fas fa-clock mr-1.5 text-gray-500"></i>
+                            21:22 - 23:25
+                        </span>
+                    </div>
+
+                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
+                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
+                        <p class="text-sm text-purple-600 italic">
+                            电饭煲 x+y+z=51：我又犯了错，求开小会闭环我。
+                        </p>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag-item">向上管理</span>
+                            <span class="tag-item">职场话术</span>
+                            <span class="tag-item">下属评价</span>
+                            <span class="tag-item">SOP复盘</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">详细内容</p>
+                        <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
+                            <div class="expandable-content" data-char-limit="200">
+                                <div class="content-preview">
+                                    <b>一、话题背景与起因</b><br><b>电饭煲</b>在有+1和+2在场的会议上，被+2突击询问自己的下属“熬夜哥”的管理能力行不行。电饭煲本意是关心熬夜哥总是自己扛压力加班，却在回答中给出了负面评价，导致+2认为她觉得熬夜哥“不行”。事后她后悔莫及，想在群内请教如何撤回这张“否决票”。<br><br><b>二、核心焦点与深层议题挖掘</b><br>问题的焦点看似是“我说错了一句话如何找补”，实则是中层管理者缺乏“政治敏感度”和向上管理SOP的典型。深层议题在于：<b>当被跨级领导询问对下属的评价时，真正的答题逻辑是什么？</b>这考验的不仅是口才，更是你是否能在瞬间判断出领导发问的真实目的、评估同场其他人的立场，并给出能保护自己团队的答案。<br><br><b>三、多方观点与讨论详情</b><br>1. <b>公开场合切忌踩自己人</b>：<b>A1「锂电储能 海外 IE PM 30」</b>一针见血地指出，在公开会议上已经投了否决票，再去私下找补不仅无效，还会被认为是两面派。<b>转念-即将退休-猛猛搞副业</b>也强调，做管理者必须保自己人，否则队伍没法带。<br>2. <b>职场评价的基本原则</b>：<b>A1「锂电储能 海外 IE PM 30」</b>总结了一个极其硬核的SOP：“人家问你同级，你说好话；人家问你上级，你闭嘴不说话；人家问你下级，你选择性说实话。”<b>子蟹</b>补充道，平时就应该在心里给下属“写传记”，等到领导问时，根据领导的倾向性来“按需回答”。<br>3. <b>临场反应来自日常千万次复盘</b>：<b>前PM年100退休十年</b>用“王者荣耀刺客换名刀”的案例进行降维打击，说明高手的每一次神来之笔，背后都是对整个战场全要素的极度熟悉。没有日常建立起来的SOP，遇到突发询问必然卡壳。<br><br><b>四、解决方案与启发</b><br>应对跨级询问的SOP：首先，绝不可在公开或有外人的场合给下属负面评价；其次，如果发现下属有瑕疵但本质不错，要学会“反话正说”（如把“他不懂管理逼人加班”包装为“他责任心太强，遇到问题总是自己默默扛”）；最后，平时就要给团队每个人画好人物侧写，准备好应对不同领导的几套话术。核心启发是：<b>职场上每一次开口都必须带着明确的目的。不要试图用临场发挥去解决问题，要用体系化的思维去预判问题。</b>
+                                </div>
+                                <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
+                                    <span class="expand-text">展开全文</span>
+                                    <i class="fas fa-chevron-down ml-1 expand-icon"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
+                        <div class="space-y-6">
+                            <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                                <div class="mb-4">
+                                    <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
+                                    <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
+                                        <p class="text-black text-base">
+                                            在公开场合或有外人在场时，<b>绝不对自己团队的人给出负面评价</b>，这是管理者的基本盘。<br>
+                                            高情商的临场反应不存在，它本质上是经过无数次复盘和沙盘推演后形成的肌肉记忆（SOP）。
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-700 mb-2"><strong>金句时刻</strong></p>
+                                    <div class="space-y-2">
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    人家问你同级，你说好话；人家问你上级，你闭嘴不说话；人家问你下级，你选择性说实话。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this)" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>A1「锂电储能 海外 IE PM 30」</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    你要做事儿，得有自己人；自己人捅了篓子，你肯定要保的。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this)" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>转念-即将退休-猛猛搞副业</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    在职场开口，一定有目的。思考，这话能否实现目的。别跟人瞎说，别跟着人瞎说。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this)" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>前PM年100退休十年</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 深度话题卡片 3 结束 -->
+
+                <!-- 深度话题卡片 4 开始 -->
+                <div class="bento-card p-6 rounded-xl"> 
+                    <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
+                        <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
+                            写代码求人不如求AI，文科生也能手搓APP
+                        </h4>
+                        <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
+                            <i class="fas fa-clock mr-1.5 text-gray-500"></i>
+                            20:57 - 21:05
+                        </span>
+                    </div>
+
+                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
+                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
+                        <p class="text-sm text-purple-600 italic">
+                            蚂蚁窝 退休 电子厂采购 硕11：大家好，受同志们启发，拿AI搓了一个打卡记录小工具，也来分享一下
+                        </p>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag-item">AI辅助开发</span>
+                            <span class="tag-item">工具自制</span>
+                            <span class="tag-item">效率提升</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">详细内容</p>
+                        <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
+                            <div class="expandable-content" data-char-limit="200">
+                                <div class="content-preview">
+                                    <b>一、话题背景与起因</b><br><b>蚂蚁窝 退休 电子厂采购 硕11</b>在群内分享了一个自己用AI手搓的“打卡记录小工具”。由于市面上找不到完全契合自己习惯的APP，他在群友的启发下，决定借助大模型自己动手写一个网页工具来记录睡眠、运动和时间块。<br><br><b>二、核心焦点与深层议题挖掘</b><br>表面上看，这是一次小工具的成果展示，实质上反映了AI时代个人生产力的巨大释放。深层议题是：<b>当技术门槛被AI大幅拉低后，个体的执行力和“将需求转化为具体Prompt”的能力成为了新的核心竞争力。</b>不会写代码不再是阻碍，关键是你是否能理清逻辑并清晰地指挥AI干活。<br><br><b>三、多方观点与讨论详情</b><br><b>蚂蚁窝 退休 电子厂采购 硕11</b>详细分享了开发心得：他首先参考了原先在Notion里的表格逻辑，然后利用AI加入时间块记录、秒表计时以及报表统计功能。在UI方面，他吸收了群友<b>咖喱多 互联网产品 硕5 北京</b>和<b>糕糕 自媒体 广告/媒体/互联网/医疗</b>的建议，将“Apple Design风格”提示词和精心配色的图片丢给AI。他坦言，在与AI多轮对话、不断修改bug的过程中，自己不仅学到了很多，也获得了极大的成就感，甚至“对软件bug的宽容度都高了很多”。群友们对此表现出极大兴趣并纷纷点赞。<br><br><b>四、解决方案与启发</b><br>普通人利用AI手搓工具的SOP：明确个人痛点与需求逻辑 → 收集优秀的UI参考图和风格提示词 → 用清晰的语言要求AI生成代码 → 针对不满意或bug部分，精准提问要求AI反复迭代 → 导出代码后利用手机浏览器“添加到主屏幕”伪装成本地应用。核心启发：<b>在AI加持下，人人都可以是产品经理和全栈工程师</b>，把抱怨“工具不好用”的时间用来和AI对话，你能创造出最懂自己的生产力神器。
+                                </div>
+                                <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
+                                    <span class="expand-text">展开全文</span>
+                                    <i class="fas fa-chevron-down ml-1 expand-icon"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
+                        <div class="space-y-6">
+                            <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                                <div class="mb-4">
+                                    <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
+                                    <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
+                                        <p class="text-black text-base">
+                                            AI彻底打破了编程的技术壁垒，让非技术人员也能根据自身需求量身定制生产力工具。<br>
+                                            与AI结对编程的过程，本质上是对自身需求逻辑的重新梳理和精确表达。
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-700 mb-2"><strong>金句时刻</strong></p>
+                                    <div class="space-y-2">
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    这样自己搞完一次，我感觉我对软件bug的宽容度高了很多哈哈
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this)" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>蚂蚁窝 退休 电子厂采购 硕11</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    排班好看，我也在 work buddy 手搓类似的，特别方便
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this)" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>阿南 互联网运营 本 10</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    这个过程还挺有意思的，中途要来回去跟AI确认数据和功能到底怎么做。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this)" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>蚂蚁窝 退休 电子厂采购 硕11</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 深度话题卡片 4 结束 -->
+
+            </div>
+            <!-- 列表容器结束: 讨论话题 -->
+        </section>
+        <!-- === 模块二：职通时刻・深度话题 结束 === -->
+
+        <!-- 底部日期导航 -->
+        <nav class="w-full mt-12" aria-label="日期导航（底部）">
+            <div class="bento-card p-5">
+                <div class="flex items-center justify-between mb-4">
+                    <button id="prev-day-bottom" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg shadow disabled:bg-gray-200 disabled:text-gray-400 transition-all" aria-label="查看前一天日报">
+                        <i class="fas fa-chevron-left"></i>
+                        <span class="hidden sm:inline">上一天</span>
+                        <span class="sm:hidden">上一天</span>
+                    </button>
+                    <button id="next-day-bottom" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg shadow disabled:bg-gray-200 disabled:text-gray-400 transition-all" aria-label="查看后一天日报">
+                        <span class="hidden sm:inline">下一天</span>
+                        <span class="sm:hidden">下一天</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- === 文件底部 开始 === -->
+        <footer class="w-full mt-16" role="contentinfo">
+            <div class="bento-card p-8">
+                <div class="text-center text-gray-700 space-y-3">
+                    <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-base">
+                        <div class="flex items-center">
+                            <i class="fas fa-database mr-2 text-[#4D6BFE]"></i>
+                            <span>微信群聊记录 - 漫道</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-robot mr-2 text-[#4D6BFE]"></i>
+                            <span>报告生成于 2026-09-19 12:00:00</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-500 max-w-2xl mx-auto leading-relaxed">
+                        本报告基于群聊数据自动生成，仅供参考。内容可能包含个人观点，不代表群组官方立场。数据处理过程中已尽量匿名化处理敏感信息。
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <!-- === 文件底部 结束 === -->
+    </div>
+
+    <!-- 页面右下角悬浮按钮集 -->
+    <div class="floating-action-stack" aria-label="页面快捷操作">
+        <div class="toc-floating-container" aria-label="内容导航">
+            <button id="toc-toggle" class="toc-floating-button" onclick="toggleToc(event)" aria-label="打开目录" aria-expanded="false" title="内容导航">
+                <i class="fas fa-list"></i>
+            </button>
+            <div id="toc-panel" class="toc-panel" aria-hidden="true">
+                <div class="toc-panel-header">
+                    <h3 class="toc-panel-title">
+                        <i class="fas fa-list text-green-500"></i>
+                        <span>内容导航</span>
+                    </h3>
+                    <button class="toc-close" onclick="toggleToc(event)" aria-label="关闭目录">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <!-- v3.7: 目录条目（含二级子话题）由 buildToc() 脚本动态生成，请勿在此手写目录链接 -->
+                <nav class="toc-items" id="toc-items" aria-label="内容导航"></nav>
+            </div>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="切换主题" title="切换深色/浅色模式">
+            <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <button class="back-to-top" id="backToTop" aria-label="返回顶部" title="返回顶部">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <script>
+        // 漫道日报：历史汇总与导航
+        // 🔴 漫道日报的线上地址（二维码与上一天/下一天导航都依赖它），必须与实际部署域名一致
+        const GJ_BASE_URL = 'https://md.xinjianhub.cn';
+        const GJ_FILE_PREFIX = '漫道日报_';
+        const GJ_SUFFIX = '.html';
+
+
+        // 页面加载时滚动到顶部（避免保留上一页的滚动位置）
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+        
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始化所有新功能（buildToc 必须先于 initTocHighlight 调用，先为话题卡片分配锚点 id）
+            buildToc();
+            initBackToTop();
+            initThemeToggle();
+            initTocHighlight();
+            
+            // Bento card hover effect is handled by CSS :hover pseudo-class
+
+            // Number animation effect
+            const numberElements = document.querySelectorAll('.number-display');
+            numberElements.forEach(element => {
+                const finalValueText = element.textContent.replace(/,/g, '');
+                const finalValue = parseInt(finalValueText, 10);
+
+                if (isNaN(finalValue)) return;
+
+                let currentValue = 0;
+                const duration = 1500; // Animation duration in ms
+                const frameRate = 1000 / 60; // 60fps
+                const totalFrames = Math.round(duration / frameRate);
+                const increment = finalValue / totalFrames;
+
+                let currentFrame = 0;
+                const timer = setInterval(() => {
+                    currentFrame++;
+                    currentValue += increment;
+
+                    if (currentFrame >= totalFrames) {
+                        currentValue = finalValue;
+                        clearInterval(timer);
+                    }
+                    // Format number with commas for display
+                    element.textContent = Math.floor(currentValue).toLocaleString('en-US');
+                }, frameRate);
+            });
+
+
+            // HTML注释: 初始化展开功能
+            initExpandableContent();
+            
+            // 初始化日报导航
+            try {
+                initDailyNavigation();
+            } catch (e) {
+                console.warn('初始化导航失败', e);
+            }
+        });
+
+        function initDailyNavigation() {
+            const currentDateStr = getCurrentDateFromPage();
+            if (!currentDateStr) return;
+
+            const dt = new Date(currentDateStr);
+            const prev = new Date(dt); prev.setDate(prev.getDate() - 1);
+            const next = new Date(dt); next.setDate(next.getDate() + 1);
+
+            const prevStr = formatDate(prev);
+            const nextStr = formatDate(next);
+
+            const prevButtons = ['prev-day', 'prev-day-bottom']
+                .map(id => document.getElementById(id))
+                .filter(Boolean);
+            const nextButtons = ['next-day', 'next-day-bottom']
+                .map(id => document.getElementById(id))
+                .filter(Boolean);
+
+            if (!prevButtons.length && !nextButtons.length) {
+                return;
+            }
+
+            const updateButtons = (buttons, enabled, handler) => {
+                buttons.forEach(btn => {
+                    btn.disabled = !enabled;
+                    btn.onclick = enabled ? handler : null;
+                });
+            };
+
+            const isLocalFile = window.location.protocol === 'file:';
+            
+            if (isLocalFile) {
+                const prevHandler = () => {
+                    const [year, month] = prevStr.split('-');
+                    window.location.href = `../${year}年${parseInt(month, 10)}月/${GJ_FILE_PREFIX}${prevStr}${GJ_SUFFIX}`;
+                };
+                const nextHandler = () => {
+                    const [year, month] = nextStr.split('-');
+                    window.location.href = `../${year}年${parseInt(month, 10)}月/${GJ_FILE_PREFIX}${nextStr}${GJ_SUFFIX}`;
+                };
+
+                if (prevButtons.length) {
+                    updateButtons(prevButtons, true, prevHandler);
+                }
+                if (nextButtons.length) {
+                    updateButtons(nextButtons, true, nextHandler);
+                }
+            } else {
+                // 线上模式：使用fetch检查文件是否存在
+                Promise.all([checkExists(prevStr), checkExists(nextStr)]).then(([pe, ne]) => {
+                    const prevHandler = () => window.location.href = pe.url;
+                    const nextHandler = () => window.location.href = ne.url;
+
+                    updateButtons(prevButtons, !!pe.ok, prevHandler);
+                    updateButtons(nextButtons, !!ne.ok, nextHandler);
+                }).catch(()=>{
+                    updateButtons(prevButtons, false, null);
+                    updateButtons(nextButtons, false, null);
+                });
+            }
+        }
+
+        function checkExists(dateStr) {
+            // 线上为扁平结构：漫道日报_YYYY-MM-DD.html 直接位于域名根目录
+            const url = `${GJ_BASE_URL}/${GJ_FILE_PREFIX}${dateStr}${GJ_SUFFIX}`;
+            
+            return fetch(url, { method: 'HEAD', cache: 'no-store' })
+                .then(r => r.ok ? { ok: true, url: url } : 
+                    fetch(url, { method: 'GET', cache: 'no-store' })
+                        .then(r2 => r2.ok ? { ok: true, url: url } : { ok: false })
+                )
+                .catch(() => ({ ok: false }));
+        }
+
+        function pad2(value) {
+            const str = String(value);
+            return str.length < 2 ? '0' + str : str;
+        }
+
+        function getCurrentDateFromPage() {
+            // 1) 从报告日期
+            const el = document.getElementById('report-date');
+            if (el) {
+                const m = el.textContent.match(/(\d{4})年(\d{1,2})月(\d{1,2})日/);
+                if (m) return `${m[1]}-${pad2(m[2])}-${pad2(m[3])}`;
+            }
+            // 2) 从 URL 文件名
+            const fn = window.location.pathname.match(/漫道日报_(\d{4}-\d{2}-\d{2})\.html/);
+            if (fn) return fn[1];
+            // 3) 从标题
+            const tm = document.title.match(/(\d{4}-\d{2}-\d{2})/);
+            if (tm) return tm[1];
+            return null;
+        }
+
+        function formatDate(d) {
+            const y = d.getFullYear();
+            const m = pad2(d.getMonth()+1);
+            const dd = pad2(d.getDate());
+            return `${y}-${m}-${dd}`;
+        }
+
+        // === 新增功能函数 ===
+        
+        // 目录浮动按钮展开/收起
+        function toggleToc(event) {
+            if (event) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            const panel = document.getElementById('toc-panel');
+            const button = document.getElementById('toc-toggle');
+            if (!panel || !button) return;
+
+            if (panel.classList.contains('active')) {
+                closeTocPanel();
+            } else {
+                panel.classList.add('active');
+                button.classList.add('active');
+                button.setAttribute('aria-expanded', 'true');
+                panel.setAttribute('aria-hidden', 'false');
+                setTimeout(() => {
+                    document.addEventListener('click', handleTocOutsideClick);
+                }, 0);
+            }
+        }
+
+        function closeTocPanel() {
+            const panel = document.getElementById('toc-panel');
+            const button = document.getElementById('toc-toggle');
+            if (!panel || !button) return;
+
+            panel.classList.remove('active');
+            panel.setAttribute('aria-hidden', 'true');
+            button.classList.remove('active');
+            button.setAttribute('aria-expanded', 'false');
+            document.removeEventListener('click', handleTocOutsideClick);
+        }
+
+        function handleTocOutsideClick(event) {
+            const panel = document.getElementById('toc-panel');
+            const button = document.getElementById('toc-toggle');
+            if (!panel || !button) return;
+
+            if (!panel.contains(event.target) && !button.contains(event.target)) {
+                closeTocPanel();
+            }
+        }
+        
+        // v3.7: 构建二级内容目录（一级为模块，二级为模块下每张深度话题卡片标题，全部由脚本自动生成）
+        function buildToc() {
+            const tocItems = document.getElementById('toc-items');
+            if (!tocItems) return;
+
+            const tocConfigs = [
+                { id: 'section-overview', icon: 'fa-chart-line' },
+                { id: 'section-topics', icon: 'fa-fire' }
+            ];
+
+            tocItems.innerHTML = '';
+
+            tocConfigs.forEach(config => {
+                const section = document.getElementById(config.id);
+                if (!section) return;
+
+                const sectionTitleEl = section.querySelector('.section-title');
+                let sectionTitle = sectionTitleEl ? sectionTitleEl.textContent.trim() : config.id;
+                // 模块标题自带中文序号（如"一、"），目录一级条目去掉序号，与原目录样式保持一致
+                sectionTitle = sectionTitle.replace(/^[一二三四五六七八九十]+、\s*/, '');
+
+                const group = document.createElement('div');
+                group.className = 'toc-group';
+
+                const mainLink = document.createElement('a');
+                mainLink.href = '#' + config.id;
+                mainLink.className = 'toc-link';
+                mainLink.setAttribute('onclick', "smoothScroll(event, '" + config.id + "')");
+                mainLink.innerHTML = '<i class="fas ' + config.icon + '"></i><span>' + sectionTitle + '</span>';
+                group.appendChild(mainLink);
+
+                // 二级子话题：扫描该模块下每张话题卡片的 h4 标题，自动分配锚点 id
+                const cardHeadings = section.querySelectorAll('.bento-card h4');
+                if (cardHeadings.length > 0) {
+                    const sublist = document.createElement('div');
+                    sublist.className = 'toc-sublist';
+
+                    cardHeadings.forEach((heading, index) => {
+                        const card = heading.closest('.bento-card');
+                        if (!card) return;
+
+                        if (!card.classList.contains('anchor-target')) {
+                            card.classList.add('anchor-target');
+                        }
+                        if (!card.id) {
+                            card.id = config.id + '-item-' + (index + 1);
+                        }
+
+                        const subLink = document.createElement('a');
+                        subLink.href = '#' + card.id;
+                        subLink.className = 'toc-sublink';
+                        subLink.setAttribute('onclick', "smoothScroll(event, '" + card.id + "')");
+                        subLink.textContent = heading.textContent.trim();
+                        sublist.appendChild(subLink);
+                    });
+
+                    if (sublist.children.length > 0) {
+                        group.appendChild(sublist);
+                    }
+                }
+
+                tocItems.appendChild(group);
+            });
+        }
+        
+        // 平滑滚动
+        function smoothScroll(event, targetId) {
+            event.preventDefault();
+            const target = document.getElementById(targetId);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                // 更新目录激活状态（v3.7: 同时覆盖一级模块条目与二级子话题条目）
+                document.querySelectorAll('.toc-link, .toc-sublink').forEach(link => link.classList.remove('active'));
+                if (event.currentTarget) {
+                    event.currentTarget.classList.add('active');
+                }
+                closeTocPanel();
+            }
+        }
+        
+        // 返回顶部功能
+        function initBackToTop() {
+            const btn = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+            
+            btn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+        
+        // 主题切换功能
+        function initThemeToggle() {
+            const btn = document.getElementById('themeToggle');
+            const icon = document.getElementById('themeIcon');
+            
+            // 将预加载类转换为正式的dark-mode类
+            document.documentElement.classList.remove('dark-mode-preload');
+            
+            // 检查本地存储的主题设置
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+            
+            btn.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                const isDark = document.body.classList.contains('dark-mode');
+                
+                if (isDark) {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+        }
+        
+        // 目录高亮功能（滚动时自动高亮当前章节；v3.7 起支持二级子话题高亮）
+        function initTocHighlight() {
+            // 动态收集监听目标：两个模块 + 模块下每张话题卡片（须在 buildToc 之后调用，卡片才有锚点 id）
+            const sections = [];
+            ['section-overview', 'section-topics'].forEach(sectionId => {
+                const section = document.getElementById(sectionId);
+                if (!section) return;
+                sections.push(sectionId);
+                section.querySelectorAll('.bento-card h4').forEach(heading => {
+                    const card = heading.closest('.bento-card');
+                    if (card && card.id) {
+                        sections.push(card.id);
+                    }
+                });
+            });
+            const tocLinks = document.querySelectorAll('.toc-link, .toc-sublink');
+            
+            window.addEventListener('scroll', () => {
+                let current = '';
+                
+                sections.forEach(sectionId => {
+                    const section = document.getElementById(sectionId);
+                    if (section) {
+                        const sectionTop = section.offsetTop;
+                        if (window.pageYOffset >= sectionTop - 100) {
+                            current = sectionId;
+                        }
+                    }
+                });
+                
+                // 当前阅读到某张话题卡片时，同时高亮其所属模块的一级条目
+                let currentGroup = current;
+                if (current.indexOf('-item-') !== -1) {
+                    currentGroup = current.substring(0, current.indexOf('-item-'));
+                }
+
+                tocLinks.forEach(link => {
+                    link.classList.remove('active');
+                    const href = link.getAttribute('href');
+                    if (href === '#' + current || href === '#' + currentGroup) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        }
+        
+        // 复制金句功能：复制内容自动取自本条金句卡片的文本（金句+昵称），不经 onclick 传参，避免金句含引号时破坏 HTML
+        function copyQuote(button) {
+            const quoteCard = button.closest('.bg-amber-50');
+            let text = '';
+            if (quoteCard) {
+                const quoteEl = quoteCard.querySelector('p.text-gray-800');
+                const authorEl = quoteCard.querySelector('p.text-gray-600');
+                const quoteText = quoteEl ? quoteEl.textContent.trim() : '';
+                const authorText = authorEl ? authorEl.textContent.trim().replace(/^-\s*/, '') : '';
+                text = authorText ? quoteText + ' - ' + authorText : quoteText;
+            }
+            if (!text) return;
+            navigator.clipboard.writeText(text).then(() => {
+                const icon = button.querySelector('i');
+                const originalClass = icon.className;
+                
+                // 更改按钮状态
+                button.classList.add('copied');
+                icon.className = 'fas fa-check';
+                
+                // 2秒后恢复
+                setTimeout(() => {
+                    button.classList.remove('copied');
+                    icon.className = originalClass;
+                }, 2000);
+            }).catch(err => {
+                console.error('复制失败:', err);
+                alert('复制失败，请手动复制');
+            });
+        }
+        
+        // HTML注释: 初始化展开功能
+        function initExpandableContent() {
+            const expandableContents = document.querySelectorAll('.expandable-content');
+            
+            expandableContents.forEach(container => {
+                const charLimit = parseInt(container.getAttribute('data-char-limit')) || 200;
+                const contentPreview = container.querySelector('.content-preview');
+                const expandBtn = container.querySelector('.expand-btn');
+                
+                if (!contentPreview || !expandBtn) return;
+                
+                const fullContent = contentPreview.innerHTML;
+                const fullText = contentPreview.textContent || contentPreview.innerText;
+                
+                // HTML注释: 如果内容长度超过限制，则显示展开按钮
+                if (fullText.length > charLimit) {
+                    // HTML注释: 创建一个临时元素来正确截取HTML内容
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = fullContent;
+                    
+                    // HTML注释: 截取文本内容到指定长度
+                    const truncatedText = fullText.substring(0, charLimit);
+                    
+                    // HTML注释: 使用更简单可靠的方法截取内容
+                    let truncatedContent = '';
+                    let charCount = 0;
+                    
+                    // HTML注释: 逐字符遍历，保持简单的HTML结构
+                    const walker = document.createTreeWalker(
+                        tempDiv,
+                        NodeFilter.SHOW_TEXT,
+                        null,
+                        false
+                    );
+                    
+                    let node;
+                    const textNodes = [];
+                    while (node = walker.nextNode()) {
+                        textNodes.push(node);
+                    }
+                    
+                    // HTML注释: 计算需要保留的文本内容
+                    for (let textNode of textNodes) {
+                        const text = textNode.textContent;
+                        if (charCount + text.length <= charLimit) {
+                            charCount += text.length;
+                        } else {
+                            const remainingChars = charLimit - charCount;
+                            textNode.textContent = text.substring(0, remainingChars) + '...';
+                            charCount = charLimit;
+                            
+                            // HTML注释: 新的、更干净的移除后续所有节点的逻辑
+                            let currentNodeToClearAfter = textNode;
+                            while (currentNodeToClearAfter && currentNodeToClearAfter !== tempDiv) {
+                                let sibling = currentNodeToClearAfter.nextSibling;
+                                while (sibling) {
+                                    const nodeToRemove = sibling;
+                                    sibling = sibling.nextSibling;
+                                    nodeToRemove.remove();
+                                }
+                                currentNodeToClearAfter = currentNodeToClearAfter.parentElement;
+                            }
+                            break; // 完成截断和清理，跳出 textNodes 循环
+                        }
+                    }
+                    
+                    const previewContent = tempDiv.innerHTML;
+                    
+                    contentPreview.innerHTML = previewContent;
+                    contentPreview.classList.add('collapsed');
+                    expandBtn.style.display = 'flex';
+                    
+                    // HTML注释: 绑定展开/收起事件
+                    expandBtn.addEventListener('click', function() {
+                        const isExpanded = expandBtn.classList.contains('expanded');
+                        
+                        if (isExpanded) {
+                            // HTML注释: 收起内容
+                            contentPreview.innerHTML = previewContent;
+                            contentPreview.classList.add('collapsed');
+                            expandBtn.querySelector('.expand-text').textContent = '展开全文';
+                            expandBtn.classList.remove('expanded');
+                        } else {
+                            // HTML注释: 展开内容
+                            contentPreview.innerHTML = fullContent;
+                            contentPreview.classList.remove('collapsed');
+                            expandBtn.querySelector('.expand-text').textContent = '收起';
+                            expandBtn.classList.add('expanded');
+                        }
+                    });
+                } else {
+                    // HTML注释: 内容较短，隐藏展开按钮
+                    expandBtn.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+    <!-- === 截图功能脚本 === -->
+    <script>
+    function initScreenshotButtons() {
+        const screenshotSections = [
+            'section-topics'
+        ];
+
+        screenshotSections.forEach(sectionId => {
+            const section = document.getElementById(sectionId);
+            if (!section) return;
+
+            section.querySelectorAll('.bento-card').forEach(card => {
+                if (card.querySelector(':scope > .screenshot-btn')) return;
+                card.classList.add('relative');
+                card.classList.add('screenshot-title-safe');
+
+                const timeBadge = card.querySelector(':scope > div:first-of-type > span');
+                if (timeBadge && /\d{1,2}:\d{2}/.test(timeBadge.textContent)) {
+                    card.classList.add('screenshot-has-time');
+                    timeBadge.classList.add('topic-time-badge');
+                    const timeIcon = timeBadge.querySelector('i');
+                    if (timeIcon) {
+                        timeIcon.classList.add('topic-time-icon');
+                    }
+                }
+
+                const button = document.createElement('button');
+                button.type = 'button';
+                button.className = 'screenshot-btn';
+                button.title = '截图此话题';
+                button.setAttribute('aria-label', button.title);
+                button.innerHTML = '<i class="fas fa-camera"></i>';
+                button.addEventListener('click', () => captureTopicCard(button));
+                card.insertBefore(button, card.firstChild);
+            });
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initScreenshotButtons);
+    } else {
+        initScreenshotButtons();
+    }
+
+    function extractReportDateIso() {
+        const titleMatch = (document.title || '').match(/(\d{4})[-_.年](\d{1,2})[-_.月](\d{1,2})/);
+        if (titleMatch) {
+            return `${titleMatch[1]}-${titleMatch[2].padStart(2, '0')}-${titleMatch[3].padStart(2, '0')}`;
+        }
+
+        const reportDateEl = document.getElementById('report-date');
+        const reportDateText = reportDateEl ? reportDateEl.textContent.trim() : '';
+        const textMatch = reportDateText.match(/(\d{4})年\s*(\d{1,2})月\s*(\d{1,2})日/);
+        if (textMatch) {
+            return `${textMatch[1]}-${textMatch[2].padStart(2, '0')}-${textMatch[3].padStart(2, '0')}`;
+        }
+
+        const decodedPath = decodeURIComponent(window.location.pathname || '');
+        const urlMatch = decodedPath.match(/(\d{4})[-_.](\d{1,2})[-_.](\d{1,2})/);
+        if (urlMatch) {
+            return `${urlMatch[1]}-${urlMatch[2].padStart(2, '0')}-${urlMatch[3].padStart(2, '0')}`;
+        }
+
+        return '';
+    }
+
+    function formatReportDateCn(dateIso) {
+        const match = (dateIso || '').match(/^(\d{4})-(\d{2})-(\d{2})$/);
+        if (!match) return '';
+        return `${match[1]}年${Number(match[2])}月${Number(match[3])}日`;
+    }
+
+    function getReportPublicUrl(dateIso = extractReportDateIso()) {
+        const baseUrl = (typeof GJ_BASE_URL !== 'undefined') ? GJ_BASE_URL : '';
+        if (!dateIso) return baseUrl;
+        const prefix = (typeof GJ_FILE_PREFIX !== 'undefined') ? GJ_FILE_PREFIX : '漫道日报_';
+        const suffix = (typeof GJ_SUFFIX !== 'undefined') ? GJ_SUFFIX : '.html';
+        // 线上为扁平结构：漫道日报_YYYY-MM-DD.html 直接位于域名根目录
+        // 🔴 中文路径必须用 encodeURI 转为纯ASCII再传给二维码库：qrcodejs 无法编码
+        //    中文路径，会抛 "code length overflow" 异常（被catch吞掉后二维码空白）
+        const path = `/${prefix}${dateIso}${suffix}`;
+        return baseUrl + encodeURI(path);
+    }
+
+    async function renderReportQr(target, url) {
+        target.innerHTML = '';
+        if (!window.QRCode) {
+            console.warn('[截图] QRCode 库未加载，尝试等待...');
+            await new Promise(resolve => setTimeout(resolve, 500));
+            if (!window.QRCode) {
+                console.error('[截图] QRCode 库加载失败，无法生成二维码');
+                return;
+            }
+        }
+        if (!url) {
+            console.warn('[截图] 无有效日报URL，跳过二维码生成。url=', url);
+            return;
+        }
+        console.log('[截图] 生成二维码，URL:', url, '目标元素尺寸:', target.offsetWidth, 'x', target.offsetHeight);
+        try {
+            new QRCode(target, {
+                text: url,
+                width: 94,
+                height: 94,
+                typeNumber: 0,
+                colorDark: '#1f2937',
+                colorLight: '#ffffff',
+                correctLevel: QRCode.CorrectLevel.L
+            });
+            // 等待 QRCode 渲染完成
+            await new Promise(resolve => setTimeout(resolve, 200));
+            const generated = target.querySelector('canvas') || target.querySelector('img');
+            if (generated) {
+                console.log('[截图] 二维码生成成功，类型:', generated.tagName);
+            } else {
+                console.warn('[截图] QRCode 调用无报错，但未生成 canvas/img 元素');
+            }
+        } catch (qrError) {
+            console.error('[截图] 二维码生成失败:', qrError);
+            target.innerHTML = '';
+        }
+    }
+
+    function showFallbackOverlay(blob, topicTitle) {
+        const oldMask = document.querySelector('.screenshot-fallback-mask');
+        if (oldMask) oldMask.remove();
+
+        // 用 data URL 代替 blob URL，解决微信 WebView 长按保存失败的问题
+        const reader = new FileReader();
+        reader.onload = function() {
+            const dataUrl = reader.result;
+            const mask = document.createElement('div');
+            mask.className = 'screenshot-fallback-mask';
+            mask.innerHTML = `
+                <div class="screenshot-fallback-hint">长按图片保存或分享</div>
+                <img class="screenshot-fallback-img" src="${dataUrl}" alt="截图">
+                <button type="button" class="screenshot-fallback-close">关闭</button>
+            `;
+
+            mask.querySelector('.screenshot-fallback-close').addEventListener('click', () => {
+                mask.remove();
+            });
+            mask.addEventListener('click', (e) => {
+                if (e.target === mask) {
+                    mask.remove();
+                }
+            });
+
+            document.body.appendChild(mask);
+        };
+        reader.readAsDataURL(blob);
+    }
+
+    async function captureTopicCard(btnElement) {
+        const card = btnElement.closest('.bento-card');
+        if (!card) return;
+        const section = btnElement.closest('section');
+        const moduleTitles = {
+            'section-topics': '深度话题'
+        };
+        const moduleTitle = section ? (moduleTitles[section.id] || '漫道日报') : '漫道日报';
+        const reportDateIso = extractReportDateIso();
+        const publicUrl = getReportPublicUrl(reportDateIso);
+
+        // 标记按钮为截取中状态
+        btnElement.classList.add('capturing');
+        const originalIcon = btnElement.innerHTML;
+        btnElement.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+
+        try {
+            // 收集要截图的内容：从标题到"关键结论与金句时刻"之前的所有内容
+            const allChildren = Array.from(card.children);
+            const captureElements = [];
+
+            for (const child of allChildren) {
+                // 跳过截图按钮本身
+                if (child.classList.contains('screenshot-btn')) continue;
+                // 遇到"关键结论与金句时刻"区域就停止
+                const conclusionLabel = child.querySelector('p.text-sm.font-semibold');
+                if (conclusionLabel && conclusionLabel.textContent.includes('关键结论')) break;
+                captureElements.push(child);
+            }
+
+            // 获取话题标题和日期
+            const titleEl = card.querySelector('h4');
+            const topicTitle = titleEl ? titleEl.textContent.trim().substring(0, 20) : '话题';
+            const reportDateEl = document.getElementById('report-date');
+            const reportDate = formatReportDateCn(reportDateIso) || (reportDateEl ? reportDateEl.textContent.trim() : '');
+
+            // 如果内容是收起状态，临时展开
+            const expandBtns = card.querySelectorAll('.expand-btn:not(.expanded)');
+            const expandedBtns = [];
+            expandBtns.forEach(btn => {
+                for (const el of captureElements) {
+                    if (el.contains(btn)) {
+                        btn.click();
+                        expandedBtns.push(btn);
+                        break;
+                    }
+                }
+            });
+
+            // 创建临时截图容器（560px 宽度，配合 scale 2 保证手机端可读性和清晰度）
+            const wrapper = document.createElement('div');
+            wrapper.className = 'screenshot-wrapper';
+            wrapper.style.position = 'absolute';
+            wrapper.style.left = '0';
+            wrapper.style.top = `${window.scrollY + window.innerHeight + 160}px`;
+            wrapper.style.width = '560px';
+            wrapper.style.zIndex = '-9999';
+            wrapper.style.pointerEvents = 'none';
+            wrapper.style.webkitTextSizeAdjust = '100%';
+            wrapper.style.textSizeAdjust = '100%';
+            wrapper.style.fontSize = '16px';
+
+            // 品牌头部
+            const brand = document.createElement('div');
+            brand.className = 'screenshot-brand';
+            brand.innerHTML = `
+                <div class="screenshot-brand-main">
+                    <div class="screenshot-brand-left">
+                        <div class="screenshot-brand-logo"><span></span><span></span><span></span></div>
+                        <span class="screenshot-brand-name">漫道</span>
+                    </div>
+                    <span class="screenshot-brand-date">${reportDate}</span>
+                </div>
+                <div class="screenshot-module-title">${moduleTitle}</div>
+            `;
+            wrapper.appendChild(brand);
+
+            // 内容区域
+            const contentArea = document.createElement('div');
+            contentArea.style.cssText = 'background:#ffffff; border-radius:12px; padding:24px; border:1px solid #e9e9eb; box-sizing:border-box;';
+
+            // 克隆要截图的元素
+            captureElements.forEach(el => {
+                const clone = el.cloneNode(true);
+
+                // 移除展开按钮
+                const cloneBtns = clone.querySelectorAll('.expand-btn');
+                cloneBtns.forEach(b => b.remove());
+                // 移除 collapsed 样式
+                const collapsedEls = clone.querySelectorAll('.collapsed');
+                collapsedEls.forEach(c => c.classList.remove('collapsed'));
+
+                // html2canvas 对 flex 垂直居中支持不稳定，截图 DOM 使用固定像素布局。
+                const cloneClass = clone.className || '';
+                const isHeaderRow = cloneClass.indexOf('flex') !== -1 && cloneClass.indexOf('flex-col') !== -1;
+                const headerRow = isHeaderRow
+                    ? clone
+                    : clone.querySelector('[class*="flex"][class*="flex-col"]');
+                if (headerRow) {
+                    headerRow.style.cssText = 'position:relative; min-height:40px; padding-right:190px; margin-bottom:16px; box-sizing:border-box;';
+                    headerRow.className = '';
+                    const h4 = headerRow.querySelector('h4');
+                    if (h4) {
+                        h4.style.cssText = 'display:block; margin:0; font-size:20px; font-weight:700; color:#000; line-height:40px;';
+                        h4.className = '';
+                    }
+                    const timeSpan = headerRow.querySelector('span');
+                    if (timeSpan) {
+                        const timeText = timeSpan.textContent.trim();
+                        const timeIcon = timeSpan.querySelector('i');
+                        const timeIconClass = timeIcon ? timeIcon.className.replace(/"/g, '') : 'fas fa-clock';
+                        const timeIconHtml = `<svg viewBox="0 0 24 24" style="width:16px;height:16px;display:inline-block;vertical-align:middle;fill:#6b7280;" aria-hidden="true">
+                                <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.2 4.2 2.5-1 1.6-5.2-3.1V6h2v6.2z"></path>
+                            </svg>`;
+                        timeSpan.innerHTML = `
+                            <span style="position:absolute;left:10px;right:10px;top:-3px;height:28px;line-height:28px;white-space:nowrap;">
+                                <span style="position:relative;top:2px;display:inline-block;width:24px;height:28px;line-height:28px;text-align:center;vertical-align:top;">${timeIconHtml}</span>
+                                <span style="position:relative;top:-4px;display:inline-block;height:28px;line-height:28px;vertical-align:top;">${timeText}</span>
+                            </span>
+                        `;
+                        timeSpan.style.cssText = 'position:absolute; right:0; top:10px; display:block; width:180px; height:28px; padding:0 10px; background:#f3f4f6; border-radius:6px; font-size:14px; line-height:0; font-weight:500; color:#4b5563; box-sizing:border-box; overflow:hidden; white-space:nowrap;';
+                        timeSpan.className = '';
+                    }
+                }
+
+                const headings = clone.querySelectorAll('h4, h5');
+                headings.forEach(heading => {
+                    if (heading.closest('[style*="position:relative"]')) return;
+                    heading.style.lineHeight = '30px';
+                    heading.style.marginTop = heading.style.marginTop || '0';
+                });
+
+                const inlineIcons = clone.querySelectorAll('h4 i, h5 i, span i, a i');
+                inlineIcons.forEach(icon => {
+                    icon.style.display = 'inline-block';
+                    icon.style.height = '30px';
+                    icon.style.lineHeight = '30px';
+                    icon.style.verticalAlign = 'top';
+                });
+
+                // 修复标签容器：固定高度和行高，避免标签底部参差不齐。
+                const tagContainers = clone.querySelectorAll('[class*="flex-wrap"]');
+                tagContainers.forEach(container => {
+                    container.style.cssText = 'font-size:0; line-height:0;';
+                    container.className = '';
+                    const tags = container.querySelectorAll('[class*="tag-item"], span');
+                    tags.forEach(tag => {
+                        const tagText = tag.textContent.trim();
+                        tag.innerHTML = `<span style="position:relative;top:-5px;display:block;height:28px;line-height:28px;">${tagText}</span>`;
+                        tag.style.cssText = 'display:inline-block; vertical-align:top; height:28px; background:rgba(16,185,129,0.10); color:#10b981; padding:0 12px; border-radius:9999px; font-size:13px; font-weight:500; margin-right:8px; margin-bottom:8px; box-sizing:border-box; overflow:hidden;';
+                        tag.className = '';
+                    });
+                });
+
+                contentArea.appendChild(clone);
+            });
+
+            wrapper.appendChild(contentArea);
+
+            const footer = document.createElement('div');
+            footer.className = 'screenshot-footer';
+            footer.innerHTML = `
+                <div class="screenshot-footer-text">
+                    <div class="screenshot-footer-title">扫码查看完整日报</div>
+                    <div class="screenshot-footer-url">${publicUrl}</div>
+                </div>
+                <div class="screenshot-footer-qr-cell">
+                    <div class="screenshot-footer-qr" aria-label="扫码打开日报"></div>
+                </div>
+            `;
+            wrapper.appendChild(footer);
+
+            document.body.appendChild(wrapper);
+
+            await renderReportQr(footer.querySelector('.screenshot-footer-qr'), publicUrl);
+            const qrTargetForDraw = footer.querySelector('.screenshot-footer-qr');
+
+            // 将 QR canvas 转换为 img，解决 html2canvas 无法渲染嵌套 canvas 的问题
+            const qrCanvas = qrTargetForDraw ? qrTargetForDraw.querySelector('canvas') : null;
+            if (qrCanvas) {
+                const qrImg = document.createElement('img');
+                const qrDataUrl = qrCanvas.toDataURL('image/png');
+                qrImg.style.display = 'block';
+                qrImg.style.width = '94px';
+                qrImg.style.height = '94px';
+                qrImg.width = 94;
+                qrImg.height = 94;
+                // 等待 img 加载完成
+                await new Promise((resolve) => {
+                    qrImg.onload = resolve;
+                    qrImg.onerror = resolve;
+                    qrImg.src = qrDataUrl;
+                });
+                // 清空容器后只放我们的 img（QRCode.js 会同时生成 canvas + img）
+                qrTargetForDraw.innerHTML = '';
+                qrTargetForDraw.appendChild(qrImg);
+                console.log('[截图] QR canvas 已转换为 img，src长度:', qrDataUrl.length);
+            } else {
+                // 如果是 table 模式生成的 QR，尝试用 table 转 canvas 再转 img
+                const qrTable = qrTargetForDraw ? qrTargetForDraw.querySelector('table') : null;
+                if (qrTable) {
+                    console.log('[截图] QR 为 table 模式，使用 html2canvas 转换');
+                }
+            }
+
+            // 等待渲染
+            await new Promise(resolve => setTimeout(resolve, 350));
+
+            // 检测环境
+            const ua = navigator.userAgent;
+            const isMobile = /iPhone|iPad|iPod|Android|Mobile/i.test(ua);
+
+            // 使用 html2canvas 生成图片
+            const canvas = await html2canvas(wrapper, {
+                scale: 2,
+                useCORS: true,
+                backgroundColor: null,
+                logging: false,
+                width: 560,
+                windowWidth: 560
+            });
+
+            // 清理临时容器
+            document.body.removeChild(wrapper);
+
+            // 恢复收起状态
+            expandedBtns.forEach(btn => btn.click());
+
+            const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
+            if (!blob) throw new Error('图片生成失败');
+
+            // 移动端（含微信）直接走浮层，桌面端尝试 clipboard
+            let copied = false;
+            if (!isMobile) {
+                try {
+                    if (navigator.clipboard && navigator.clipboard.write) {
+                        await navigator.clipboard.write([
+                            new ClipboardItem({ 'image/png': blob })
+                        ]);
+                        copied = true;
+                    }
+                } catch (clipErr) {
+                    console.warn('[截图] clipboard.write 失败:', clipErr.message);
+                }
+            }
+
+            if (copied) {
+                // 成功：按钮变绿✓
+                btnElement.innerHTML = '<i class="fas fa-check"></i>';
+                btnElement.style.color = '#10b981';
+                setTimeout(() => {
+                    btnElement.innerHTML = originalIcon;
+                    btnElement.style.color = '';
+                }, 1500);
+            } else {
+                // 移动端或 clipboard 失败：弹出图片浮层让用户长按保存
+                btnElement.innerHTML = originalIcon;
+                btnElement.style.color = '';
+                showFallbackOverlay(blob, topicTitle);
+            }
+
+        } catch (error) {
+            console.error('截图失败:', error);
+            alert('截图失败，请重试');
+            btnElement.innerHTML = originalIcon;
+            btnElement.style.color = '';
+        } finally {
+            // 恢复按钮状态
+            btnElement.classList.remove('capturing');
+        }
+    }
+    </script>
+</body>
+</html>
