@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="BzYSmYDulyctud5z5TBrwC">
+<head data-page-node-id="Rqdr2Z3GIpm4fORA9prOn4">
+<meta charset="UTF-8" data-page-node-id="7hANbZGTBIrW5HE8BoqdSM">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" data-page-node-id="h2tgYWVPdEeqMAaSWycWsq">
+<meta name="theme-color" content="#E0492F" data-page-node-id="q5BNlVGNeXsZUTPqJwxMZO">
+<title>提问前置信息卡</title>
+<style>
+  :root{
+    --red:#E0492F;
+    --red-deep:#C0391F;
+    --gold:#F2B03D;
+    --bg:#F5F1EA;
+    --card:#FFFFFF;
+    --ink:#1B1B1B;
+    --muted:#8C877E;
+    --line:#ECE7DD;
+    --ok:#1E9E5A;
+    --no:#B0A99D;
+    --radius:18px;
+    --shadow:0 10px 30px rgba(60,40,20,.08);
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:"DengXian","等线",-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:calc(84px + env(safe-area-inset-bottom));
+  }
+  .wrap{max-width:520px;margin:0 auto;padding:0 16px;}
+
+  /* Header */
+  .hero{
+    background:linear-gradient(135deg,#E0492F 0%,#F2B03D 100%);
+    color:#fff;
+    padding:22px 20px 26px;
+    border-radius:0 0 26px 26px;
+    box-shadow:var(--shadow);
+  }
+  .hero .brand{display:flex;align-items:center;gap:10px;}
+  .hero .logo{
+    width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.18);
+    display:flex;align-items:center;justify-content:center;font-size:22px;flex:0 0 auto;
+    backdrop-filter:blur(4px);
+  }
+  .hero h1{font-size:21px;margin:0;font-weight:700;letter-spacing:.5px;}
+  .hero .sub{font-size:12.5px;opacity:.92;margin-top:3px;}
+  .hero .rule{
+    margin-top:14px;background:rgba(255,255,255,.14);
+    border-radius:12px;padding:10px 13px;font-size:12.5px;line-height:1.6;
+    display:flex;gap:8px;backdrop-filter:blur(4px);
+  }
+  .hero .rule b{flex:0 0 auto;}
+
+  /* Tabs */
+  .tabs{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;
+    background:rgba(255,255,255,.92);backdrop-filter:blur(14px);
+    border-top:1px solid var(--line);
+    padding:6px 0 calc(6px + env(safe-area-inset-bottom));
+    display:flex;justify-content:space-around;
+  }
+  .tabs .t{
+    flex:1;text-align:center;padding:8px 0;color:var(--muted);
+    font-size:12px;display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;
+  }
+  .tabs .t .ic{font-size:20px;line-height:1;}
+  .tabs .t.on{color:var(--red);font-weight:700;}
+  .tabs .t .dot{
+    position:absolute;top:6px;right:50%;transform:translateX(28px);
+    background:var(--red);color:#fff;font-size:10px;min-width:16px;height:16px;
+    border-radius:8px;display:none;align-items:center;justify-content:center;padding:0 4px;
+  }
+  .tabs .t{position:relative;}
+
+  /* Card block */
+  .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;margin-top:16px;}
+  .card + .card{margin-top:16px;}
+  .sec-title{
+    display:flex;align-items:center;gap:9px;margin:0 0 6px;
+    font-size:15px;font-weight:700;
+  }
+  .sec-num{
+    flex:0 0 auto;width:26px;height:26px;border-radius:8px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:13px;font-weight:800;color:#fff;
+  }
+  .sec-num.n0{background:linear-gradient(135deg,#E0492F,#F2B03D);}
+  .sec-num.n1{background:#3B6FE0;}
+  .sec-num.n2{background:#7A5AF8;}
+  .sec-num.n3{background:#B23AA0;}
+  .sec-num.n4{background:#0FA47A;}
+  .sec-num.n5{background:#5A6472;}
+  .sec-num.n6{background:#E8862E;}
+  .sec-num.n7{background:#37474F;}
+  .sec-hint{font-size:12px;color:var(--muted);margin:0 0 14px;font-weight:400;}
+  .field{margin-bottom:14px;}
+  .field:last-child{margin-bottom:0;}
+  .field label{display:block;font-size:14px;color:var(--ink);font-weight:600;margin-bottom:7px;letter-spacing:.2px;}
+  .field label .req, .sec-title .req{color:var(--red);}
+  /* 填写说明：统一放在输入框"上方"，紧跟在项目名后面。
+     字体更小更浅，与项目名（深色加粗）形成明确层级，不混在一起。 */
+  .field-hint{
+    font-size:12px;line-height:1.7;color:#A8A29A;font-weight:400;
+    margin:-2px 0 9px;padding-left:10px;
+    border-left:2px solid #E2DDD3;
+  }
+  /* 带示例的多行说明：加浅底，跟单行说明区分 */
+  .field-hint.long{
+    padding:9px 12px;background:#F7F5F0;border-radius:10px;
+    border-left:3px solid #E2DDD3;color:#9A948B;
+  }
+
+  input[type=text],textarea,select{
+    width:100%;border:1px solid var(--line);border-radius:12px;
+    padding:11px 13px;font-size:15px;font-family:inherit;color:var(--ink);
+    background:#FBFAF7;outline:none;transition:border .15s;
+  }
+  input[type=text]:focus,textarea:focus,select:focus{border-color:var(--red);background:#fff;}
+  textarea{resize:none;min-height:64px;line-height:1.5;}
+
+  .pill-group{display:flex;flex-wrap:wrap;gap:9px;}
+  .pill{
+    flex:1;min-width:76px;text-align:center;padding:10px 8px;border-radius:12px;
+    border:1.5px solid var(--line);background:#FBFAF7;font-size:14px;cursor:pointer;
+    color:var(--ink);transition:all .12s;user-select:none;-webkit-user-select:none;
+    font-weight:500;touch-action:manipulation;-webkit-tap-highlight-color:rgba(0,0,0,0);
+    font-family:inherit;line-height:1.4;appearance:none;-webkit-appearance:none;
+  }
+  .pill.on{background:#E8542D;border:2px solid #C93D1B;color:#fff;font-weight:800;box-shadow:none;}
+  .pill.on.ok{background:var(--ok);border:2px solid #127A45;color:#fff;font-weight:800;box-shadow:none;}
+
+  /* 性别 2 选项：在半宽容器里也必须同行，故放开 min-width */
+  .pill-group[data-field="gender"] .pill{min-width:0;}
+  /* 年龄：单列时不必占满整行 */
+  #age{max-width:180px;}
+
+  /* 带单位输入框：单位固定在右侧，只填数字 */
+  .unit-input{position:relative;flex:1;display:flex;align-items:center;}
+  .unit-input input{width:100%;padding-right:38px;}
+  .unit-input .unit{
+    position:absolute;right:14px;font-size:13.5px;color:var(--muted);
+    font-weight:600;pointer-events:none;user-select:none;
+  }
+  /* 发烧情况：整行文本框 */
+
+  .row2{display:flex;gap:10px;}
+  .row2 .field{flex:1;}
+
+  /* Buttons */
+  .btn{
+    display:block;width:100%;padding:15px;border:none;border-radius:14px;
+    font-size:16px;font-weight:700;cursor:pointer;text-align:center;transition:transform .06s, opacity .2s;
+    font-family:inherit;letter-spacing:1px;
+  }
+  .btn:active{transform:scale(.985);}
+  .btn-primary{background:linear-gradient(135deg,#E0492F,#D9381E);color:#fff;box-shadow:0 8px 20px rgba(224,73,47,.3);}
+  .btn-ghost{background:transparent;color:var(--muted);border:1px solid var(--line);}
+  .btn-row{display:flex;gap:10px;margin-top:14px;}
+  .btn-row .btn{flex:1;}
+
+  /* Result */
+  .result-view{display:none;}
+  .result-view.show{display:block;}
+  .result-text{white-space:pre-wrap;word-break:break-word;font-size:14px;line-height:1.95;color:var(--ink);background:#F7F5F0;border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;max-height:56vh;overflow:auto;-webkit-user-select:text;user-select:text;margin-bottom:12px;}
+  .tip{font-size:12.5px;color:var(--muted);text-align:center;margin:12px 2px 0;line-height:1.6;}
+
+  /* History */
+  .hist-view{display:none;}
+  .hist-view.show{display:block;}
+  .search{
+    width:100%;border:1px solid var(--line);border-radius:12px;padding:11px 13px;
+    font-size:15px;background:#fff;outline:none;font-family:inherit;margin-top:16px;
+  }
+  .hist-item{
+    background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);
+    padding:15px 16px;margin-top:12px;cursor:pointer;
+  }
+  .hist-top{display:flex;align-items:center;justify-content:space-between;}
+  .hist-name{font-size:15px;font-weight:700;}
+  .hist-time{font-size:11.5px;color:var(--muted);}
+  .hist-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px;}
+  .tag{font-size:11.5px;background:#F3EEE5;color:#7A7164;border-radius:7px;padding:3px 8px;}
+  .tag.red{background:#FBE4DE;color:var(--red-deep);}
+  .tag.gold{background:#FCF0D8;color:#B07A16;}
+  .hist-actions{display:flex;gap:8px;margin-top:10px;}
+  .mini-btn{font-size:12.5px;padding:7px 12px;border-radius:9px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;font-family:inherit;}
+  .mini-btn.danger{color:var(--red);border-color:#F0C6BC;}
+  .empty{text-align:center;color:var(--muted);padding:48px 20px;font-size:14px;}
+  .empty .big{font-size:42px;display:block;margin-bottom:12px;}
+
+  /* Modal */
+  .modal-mask{
+    position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:100;
+    display:none;align-items:flex-end;justify-content:center;
+  }
+  .modal-mask.show{display:flex;}
+  .modal{
+    width:100%;max-width:520px;background:#fff;border-radius:24px 24px 0 0;
+    padding:20px 20px calc(20px + env(safe-area-inset-bottom));max-height:82vh;overflow:auto;
+  }
+  .modal img{width:100%;border-radius:12px;display:block;}
+  .modal .m-title{font-size:16px;font-weight:700;margin:0 0 14px;text-align:center;}
+  .miss-item{background:#FBE9E6;border:1px solid #F3C9C0;color:#A63A22;border-radius:10px;padding:9px 12px;font-size:14px;margin-bottom:8px;font-weight:500;}
+  .miss-item:last-child{margin-bottom:0;}
+  .miss-flash{outline:2px solid var(--red);outline-offset:3px;animation:missFlash .5s ease 3;}
+  @keyframes missFlash{0%,100%{outline-color:var(--red);}50%{outline-color:var(--gold);outline-width:3px;}}
+
+  .toast{
+    position:fixed;left:50%;bottom:110px;transform:translateX(-50%) translateY(20px);
+    background:rgba(20,20,20,.92);color:#fff;font-size:13px;padding:10px 18px;border-radius:20px;
+    opacity:0;transition:all .25s;pointer-events:none;z-index:200;white-space:nowrap;
+  }
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+</style>
+</head>
+<body data-page-node-id="ZZFDEYyUPoIwEj7MD9v2vO">
+
+<div class="hero" data-page-node-id="sdo58KI5vQN0mhY4w83mrE">
+  <div class="brand" data-page-node-id="Zomb1TkSevYkeurxcLpRlj">
+    <div class="logo" data-page-node-id="zSuNLEyxBWvbvvoMFupCvU">🧾</div>
+    <div data-page-node-id="G7LuYrx5YmBXurwneTCCVH">
+      <h1 data-page-node-id="7N2luKjxGG72yk6N5kIin7">提问前置信息卡</h1>
+      <div class="sub" data-page-node-id="CxKz6tMFKsG1Jgdp6kWRQL">进群先填 · 发群可读 · 随时回溯</div>
+    </div>
+  </div>
+  <div class="rule" data-page-node-id="qxJFAiFz52HltX2aG1z8Iw"><b data-page-node-id="yoNWJTraQDKTwG0nVvXFv5">📋</b><span data-page-node-id="zqXvTScEH3YaYjIGjtJbfB">事物是普遍联系的，需回答的问题来自于历史经验总结，填完后有些困惑甚至能够不言自明。请要提问的朋友真诚填写。</span></div>
+</div>
+
+<div class="wrap" data-page-node-id="XBb8toLDwaXq2NcNQU9nJi">
+
+  <!-- ============ 填写视图 ============ -->
+  <div id="formView" class="form-view" data-page-node-id="rD6DTz9hZhZ7vCU1hB0DKa">
+    <div class="card" data-page-node-id="XG5zXsCGJxmIHNZ4VH58tH">
+      <div class="field" data-page-node-id="Dm92nM8BTaR8ppK2ssGFOW">
+        <label data-page-node-id="3pPkfueLnhPmQSPb9DZh7j">你的称呼 / 群昵称 <span class="req" data-page-node-id="SblLbOkbBuWJqTO07EBvjY">*</span>（用于回溯识别）</label>
+        <input type="text" id="nickname" placeholder="例：群里的老王" maxlength="20" data-page-node-id="w1ecufhXUy6jtDx2CPjL9S">
+      </div>
+    </div>
+
+    <div class="card" data-page-node-id="6zFMhfBzqMO2Wi0KScJ4EV">
+      <p class="sec-title" data-page-node-id="5kTSRYHxWrYFg2nyDBU8YN"><span class="sec-num n0" data-page-node-id="ct8VaHP1zLfRwRd2Q7u9gr">0</span>发红包没？ <span class="req">*</span></p>
+      <p class="sec-hint" data-page-node-id="9x3FTOPmEs0ba1LV5JWTQt">规矩第一问，请如实作答。</p>
+      <div class="pill-group" data-field="q0" data-page-node-id="QHuvnSQSLesSOj7YNdEeVO">
+        <button type="button" class="pill" onclick="pickPill(this)" data-v="已发" data-page-node-id="U34MfwsHKfVmXVym2fScOO">🧧 发了</button>
+        <button type="button" class="pill" onclick="pickPill(this)" data-v="没发" data-page-node-id="HeDCiTPqD3p4TWDoNzMCtD">😅 没发</button>
+      </div>
+    </div>
+
+    <div class="card" data-page-node-id="oO0DemoCard">
+      <p class="sec-title" data-page-node-id="oO0DemoT"><span class="sec-num n1" data-page-node-id="oO0DemoN">1</span>基本信息（人口统计）</p>
+      <p class="sec-hint" data-page-node-id="oO0DemoH">先把人的属性说清楚：性别、性取向、年龄、婚姻状态。这四项决定了问题的基本盘，别漏。</p>
+      <div class="row2" data-page-node-id="oO0DemoRowA">
+        <div class="field" data-page-node-id="oO0GenderF">
+          <label data-page-node-id="oO0GenderL">性别 <span class="req">*</span></label>
+          <div class="pill-group" data-field="gender" data-page-node-id="oO0GenderG">
+            <button type="button" class="pill" onclick="pickPill(this)" data-v="男" data-page-node-id="oO0GenderM">男</button>
+            <button type="button" class="pill" onclick="pickPill(this)" data-v="女" data-page-node-id="oO0GenderFe">女</button>
+          </div>
+        </div>
+        <div class="field" data-page-node-id="oO0OrientF">
+          <label data-page-node-id="oO0OrientL">性取向 <span class="req">*</span></label>
+          <select id="orient" data-page-node-id="oO0OrientS">
+            <option value="" data-page-node-id="oO0Orient0">请选择</option>
+            <option data-page-node-id="oO0Orient1">异性恋</option>
+            <option data-page-node-id="oO0Orient2">同性恋</option>
+            <option data-page-node-id="oO0Orient3">双性恋</option>
+          </select>
+        </div>
+      </div>
+      <div class="row2" data-page-node-id="oO0DemoRowB">
+        <div class="field" data-page-node-id="oO0AgeF">
+          <label data-page-node-id="oO0AgeL">年龄 <span class="req">*</span></label>
+          <input type="text" id="age" inputmode="numeric" placeholder="例：28" maxlength="2" data-page-node-id="oO0AgeI">
+        </div>
+      </div>
+      <div class="field" style="margin-bottom:0;" data-page-node-id="oO0MarryF">
+        <label data-page-node-id="oO0MarryL">结婚了吗 <span class="req">*</span></label>
+        <p class="field-hint" data-page-node-id="oO0MarryHint">写清当前状态。例：未婚单身 / 恋爱中，同居 1 年 / 已婚 2 年 / 离异，无孩 / 丧偶</p>
+        <input type="text" id="marry" placeholder="例：未婚单身 / 已婚 / 离异" maxlength="50" data-page-node-id="oO0MarryI">
+      </div>
+    </div>
+
+    <div class="card" data-page-node-id="yAw6Gq2PinwRPNXBw4R3vc">
+      <p class="sec-title" data-page-node-id="sZ3sjiVNQZcabhOk6mxq2Y"><span class="sec-num n1" data-page-node-id="f4Yv6RrC0UGgeDWanElMEu">2</span>工作情况</p>
+      <p class="sec-hint" data-page-node-id="ZtyGJmehEtLKDYgV5aQXPf">城市（现在在哪、将来去哪、能接受哪）、工作经历、收入、存款情况、房产情况。</p>
+      <div class="field" data-page-node-id="oO0CityNowF">
+        <label data-page-node-id="oO0CityNowL">现在在哪座城市 <span class="req">*</span></label>
+        <p class="field-hint long" data-page-node-id="oO0CityNowHint">写城市名，加一句你和这里的关系：本地人 / 外地来的待了几年 / 在外地但家在这边。户口、房、钱不用重复写，下面有专门的栏。<br>
+          北上深广看着像，实际是四种活法——本地人和外地人，在同一座城里根本不是一个身份。<br>
+          　· 深圳，外地来的，待了 5 年<br>
+          　· 北京，外地来的，家在河北，父母兄弟都在北京<br>
+          　· 广州，本地人，从小在这，讲粤语<br>
+          　· 上海，外地来的，待了 8 年，一个人<br>
+          　· 成都，本地人，父母也在，一直没离开过</p>
+        <input type="text" id="cityNow" placeholder="比如：深圳，外地来的，待了 5 年" maxlength="60" data-page-node-id="oO0CityNowS">
+      </div>
+      <div class="field" data-page-node-id="oO0CityTgF">
+        <label data-page-node-id="oO0CityTgL">将来打算去哪 <span class="req">*</span></label>
+        <p class="field-hint long" data-page-node-id="oO0CityTgHint">想去哪，加一句为什么、拦路的是什么：能不能落户、工作机会够不够、家里同意不同意。<br>
+          想留就写「不换，原因」；想换就写清目标和顾虑，不用写钱和房，那些下面会问。<br>
+          　· 不打算换，就在深圳待着<br>
+          　· 想回老家省城，离父母近，工作机会少点但能接受<br>
+          　· 想去上海，主要顾虑是落户难<br>
+          　· 广州来的，想留北京，家里不太同意<br>
+          　· 不确定，看对方在哪</p>
+        <input type="text" id="cityTarget" placeholder="不换就写「不换」，想换就写去哪、卡在哪" maxlength="60" data-page-node-id="oO0CityTgS">
+      </div>
+      <div class="field" data-page-node-id="oO0CareerF">
+        <label data-page-node-id="oO0CareerL">工作经历 <span class="req">*</span></label>
+        <p class="field-hint long" data-page-node-id="oO0CareerHint">总的做了几年、都做过什么、现在在做什么。换过几份工作就写几句，按时间顺序。<br>
+          　· 3 年产品经理<br>
+          　· 5 年项目经理<br>
+          　· 做了 6 年：前 3 年程序员，后 3 年转产品经理，现在在一家电商公司<br>
+          　· 应届毕业，没工作过<br>
+          　· 工作 4 年，中间空窗半年在考研，之后一直做运营</p>
+        <textarea id="career" rows="3" maxlength="200" placeholder="比如：做了 5 年，前 2 年做测试，后 3 年转产品经理，现在在互联网公司" data-page-node-id="oO0CareerI"></textarea>
+      </div>
+      <div class="field" data-page-node-id="EdleD8kDUCyxkQ9wtz2wQU">
+        <label data-page-node-id="fUaatpm7YgRlB1RUxO9oIH">收入 <span class="req">*</span></label>
+        <input type="text" id="income" placeholder="例：税后30w/年" maxlength="20" data-page-node-id="tLsFQ2mscjbIReoGZv7eYP">
+      </div>
+      <div class="field" data-page-node-id="oO0SavingHolderF">
+        <label data-page-node-id="oO0SavingHolderL">存款情况 <span class="req">*</span></label>
+        <p class="field-hint long" data-page-node-id="oO0SavingHolderHint">一共多少钱、在谁名下、存在哪。<br>
+          　· 40 万，都在自己手里<br>
+          　· 30 万：自己 20 万、父母 10 万<br>
+          　· 15 万，都在伴侣名下<br>
+          　· 10 万存款 + 5 万理财，自己名下<br>
+          　· 没有存款</p>
+        <textarea id="savingHolder" rows="2" maxlength="150" placeholder="比如：40 万，自己 30 万、父母 10 万" data-page-node-id="oO0SavingHolderI"></textarea>
+      </div>
+      <div class="field" data-page-node-id="oO0HouseF">
+        <label data-page-node-id="oO0HouseL">房产情况 <span class="req">*</span></label>
+        <p class="field-hint long" data-page-node-id="oO0HouseHint">有几套、什么时候买的、多大面积、谁出的钱、写在谁名下。<br>
+          　· 无房<br>
+          　· 1套，婚前买的，80平方米，父母出钱，写在我名下<br>
+          　· 2套：婚前买的那套两人共同出钱；婚后买的那套我自己还贷。都写两人名字</p>
+        <textarea id="houseDesc" rows="3" maxlength="200" placeholder="按上面格式照着自己的情况写，没有房就写「无房」" data-page-node-id="oO0HouseI"></textarea>
+      </div>
+      <div class="field" style="margin-bottom:0;" data-page-node-id="oO0BigCityF">
+        <label data-page-node-id="oO0BigCityL">对方在哪个城市你能接受 <span class="req">*</span></label>
+        <p class="field-hint long" data-page-node-id="oO0BigCityHint">别笼统写「一线」「大城市」——北上深广是四种活法，得分开说。写清哪几座能接受、哪几座不行。<br>
+          只谈城市，理由可以说，但不用写户口和房那些条件，下面有专门的栏。<br>
+          　· 只接受北京<br>
+          　· 上海、深圳都行，北京不行<br>
+          　· 只接受广深，广州优先<br>
+          　· 江浙沪都行，其他不考虑<br>
+          　· 哪都能去，跟着对方走<br>
+          　· 必须留老家省会，不接受异地</p>
+        <textarea id="acceptBigCity" rows="2" maxlength="150" placeholder="写清具体哪几座城市能接受、哪几座不行" data-page-node-id="oO0BigCityG"></textarea>
+      </div>
+    </div>
+
+    <div class="card" data-page-node-id="FTVDqFZfhlCMNfouB0DizO">
+      <p class="sec-title" data-page-node-id="jtDOd4cImpy7j2zrMJT9vS"><span class="sec-num n2" data-page-node-id="27Hz9JQOi1wCmBmL7jMlOt">3</span>家庭背景</p>
+      <p class="sec-hint" data-page-node-id="x9FUDCCiZSdFdpjMZrwvPI">背景、老家、父母情况、兜底能力、兄弟姐妹、宠物。</p>
+      <div class="field" data-page-node-id="WGpW10rI4dpd8fkfH79qyn">
+        <label data-page-node-id="GzK1C8iprzqv5i29zbp2A3">家庭背景 <span class="req">*</span></label>
+        <input type="text" id="family" placeholder="例：普通工薪 / 经商 / 体制内" maxlength="30" data-page-node-id="b9mwHdZ8xS4V3veWNhfdW2">
+      </div>
+      <div class="field" data-page-node-id="oO0HomeF">
+        <label data-page-node-id="oO0HomeL">老家在哪 <span class="req">*</span></label>
+        <input type="text" id="familyHome" placeholder="例：南方小县城 / 北方省会" maxlength="20" data-page-node-id="oO0HomeI">
+      </div>
+        <div class="field" data-page-node-id="AKo4QuLNOxHLzHL6BAOzZQ">
+          <label data-page-node-id="zlZGtQfIC4Ae7txxZE7GsO">爹妈能兜底吗 <span class="req">*</span></label>
+          <p class="field-hint" data-page-node-id="oO0BottomHint">写清能兜到什么程度。例：能出首付约 100 万 / 能出部分首付，具体看情况 / 只能帮带孩子 / 完全靠自己</p>
+        <input type="text" id="bottom" placeholder="兜不了就写「不能」，能兜就写清形式" maxlength="60" data-page-node-id="5GWOF9oYw7QgN3ipPLtCAU">
+        </div>
+      <div class="field" data-page-node-id="oO0ParentF">
+        <label data-page-node-id="oO0ParentL">父母是否健在 <span class="req">*</span></label>
+        <input type="text" id="parents" placeholder="例：都健在 / 父亲已故 / 都不在了" maxlength="30" data-page-node-id="oO0ParentI">
+      </div>
+      <div class="field" data-page-node-id="vMOoJO5RIDYO8klGAB4Exa">
+        <label data-page-node-id="OBGwapaxXsfOjstfFPnfDI">有兄弟姐妹吗 <span class="req">*</span></label>
+        <input type="text" id="sibling" placeholder="例：独生 / 1弟1妹" maxlength="20" data-page-node-id="E15K8Mw4pjKHDJdYQas0Fl">
+      </div>
+      <div class="field" style="margin-bottom:0;" data-page-node-id="oO0PetF">
+        <label data-page-node-id="oO0PetL">有没有宠物 <span class="req">*</span></label>
+        <p class="field-hint long" data-page-node-id="oO0PetHint">写清养几只、什么、谁照顾、换城市怎么办。数量要看——一只正常陪伴，好几只往往是精神状态或生活失控的信号。<br>
+          　· 没有<br>
+          　· 有：一只猫，5 年，自己照顾，换城市肯定带走<br>
+          　· 有：一只狗，跟父母住，主要父母照顾<br>
+          　· 有：4 只猫 2 只狗，越养越多，自己也不知道为什么<br>
+          　· 想养但租房不让，等买了房再说<br>
+          　· 没有，家里催着养，但不想负责</p>
+        <input type="text" id="pet" placeholder="没有就写「没有」，有就写清养什么、谁照顾、换城市怎么办" maxlength="60" data-page-node-id="oO0PetI">
+      </div>
+    </div>
+
+    <div class="card" data-page-node-id="oO0Sec6">
+      <p class="sec-title" data-page-node-id="oO0Sec6T"><span class="sec-num n3" data-page-node-id="oO0Sec6N">4</span>健康状态</p>
+      <p class="sec-hint" data-page-node-id="oO0Sec6H">身体状况、身高体重、最近发烧情况、家族遗传病。</p>
+      <div class="field" data-page-node-id="oO0HealthF">
+        <label data-page-node-id="oO0HealthL">身体健康吗 <span class="req">*</span></label>
+        <p class="field-hint" data-page-node-id="oO0HealthHint">没什么问题就写「健康」；有慢性病、结节、三高之类写具体。例：健康 / 慢性胃炎，长期吃药 / 甲状腺结节，每年复查</p>
+        <input type="text" id="health" placeholder="健康就写「健康」，有情况就写清" maxlength="60" data-page-node-id="oO0HealthG">
+      </div>
+      <div class="field" data-page-node-id="oO0HWF">
+        <label data-page-node-id="oO0HWL">身高 / 体重 <span class="req">*</span></label>
+        <div class="row2" data-page-node-id="oO0HWBRow">
+          <div class="unit-input" data-page-node-id="oO0HgtBox">
+            <input type="text" id="height" inputmode="numeric" placeholder="175" maxlength="3" data-page-node-id="oO0Hgt">
+            <span class="unit" data-page-node-id="oO0HgtU">cm</span>
+          </div>
+          <div class="unit-input" data-page-node-id="oO0WgtBox">
+            <input type="text" id="weight" inputmode="numeric" placeholder="70" maxlength="3" data-page-node-id="oO0Wgt">
+            <span class="unit" data-page-node-id="oO0WgtU">kg</span>
+          </div>
+        </div>
+      </div>
+      <div class="field" data-page-node-id="oO0FeverSelfF">
+        <label data-page-node-id="oO0FeverSelfL">最近发烧情况 <span class="req">*</span></label>
+        <p class="field-hint long" data-page-node-id="oO0FeverSelfHint">写清近一年自己和同住家人各发烧几次、大概什么时候、什么原因。<br>
+          一年一两次、有明确原因（受凉、流感）属正常；一年多次、反复不明原因发烧，多半是家里防疫或环境出了问题，要具体写。<br>
+          　· 我自己 0 次，家人 0 次<br>
+          　· 我 1 次，去年 11 月受凉感冒，家人 0 次<br>
+          　· 我 3 次，2 月、5 月、9 月各一次，家人也差不多，都不清楚原因<br>
+          　· 不记得了，印象里挺频繁的</p>
+        <textarea id="fever" rows="2" maxlength="150" placeholder="比如：我 1 次，去年 11 月受凉；家人 0 次" data-page-node-id="oO0FeverI"></textarea>
+      </div>
+      <div class="field" style="margin-bottom:0;" data-page-node-id="oO0GeneticF">
+        <label data-page-node-id="oO0GeneticL">家族有没有遗传病 <span class="req">*</span></label>
+        <p class="field-hint long" data-page-node-id="oO0GeneticHint">自己和直系亲属（父母、兄弟姐妹、祖父母）都算，写清是谁、什么病、现在什么情况。<br>
+          没有就写「没有」，不确定就写「不清楚」，别含糊过去——同一种病在不同亲属身上，对下一代的含义差很远。<br>
+          　· 没有<br>
+          　· 有：父亲高血压、糖尿病，60 岁后确诊，目前吃药控制<br>
+          　· 有：奶奶和姑姑都有过乳腺癌<br>
+          　· 有：家族里多人有精神类疾病，具体不确定<br>
+          　· 不清楚，家里人不太提这些</p>
+        <textarea id="genetic" rows="2" maxlength="150" placeholder="没有就写「没有」，有就写清是谁、什么病" data-page-node-id="oO0GeneticI"></textarea>
+      </div>
+    </div>
+
+    <div class="card" data-page-node-id="oO0Sec3">
+      <p class="sec-title" data-page-node-id="oO0Sec3T"><span class="sec-num n4" data-page-node-id="oO0Sec3N">5</span>学历</p>
+      <p class="sec-hint" data-page-node-id="oO0Sec3H">自己 / 伴侣学历，写清层次 + 专业，层次本身说明不了什么。</p>
+      <div class="field" data-page-node-id="oO0EduF">
+        <label data-page-node-id="oO0EduL">自己的学历 <span class="req">*</span></label>
+        <p class="field-hint long" data-page-node-id="oO0EduHint">写到「层次 + 专业」，学校有辨识度也可以带上。<br>
+          　· 本科·会计<br>
+          　· 硕士·计算机，某 985<br>
+          　· 大专·机电，后来自考了本科<br>
+          　· 高中毕业，没上大学<br>
+          　· 本科·临床医学，5 年制</p>
+        <input type="text" id="edu" maxlength="60" placeholder="比如：本科·会计" data-page-node-id="oO0EduS">
+      </div>
+      <div class="field" style="margin-bottom:0;" data-page-node-id="oO0PEduF">
+        <label data-page-node-id="oO0PEduL">伴侣的学历 <span class="req">*</span></label>
+        <p class="field-hint long" data-page-node-id="oO0PEduHint">写法同上。没有伴侣就写「无伴侣」；不清楚就写「不清楚」。<br>
+          　· 无伴侣<br>
+          　· 本科·金融<br>
+          　· 硕士·法学，同校<br>
+          　· 大专·护理，后来专升本<br>
+          　· 不清楚，没细问过</p>
+        <input type="text" id="partnerEdu" maxlength="60" placeholder="没有就写「无伴侣」" data-page-node-id="oO0PEduS">
+      </div>
+    </div>
+
+    <div class="card" data-page-node-id="9NFxN03xnXbR6iHwanHjMZ">
+      <p class="sec-title" data-page-node-id="wcCpLDmx5HkPq2R4VcDjYf"><span class="sec-num n5" data-page-node-id="DKEopvidaHLPltprEQzzkC">6</span>钱有没有被打水漂的地方？</p>
+      <p class="sec-hint" data-page-node-id="UxX3U8wRRefsEgM4ztGvFY">三样都得答：家里赌、追星打赏、被诈骗。这三件事的共同点是钱不明不白地没了，而且基本都瞒着人。</p>
+      <div class="field" data-page-node-id="oO0Q3F">
+        <label data-page-node-id="oO0Q3L">家里有没有赌狗 <span class="req">*</span></label>
+        <p class="field-hint long" data-page-node-id="oO0Q3Hint">直系和近亲都算（父母、兄弟姐妹、叔伯舅姨）。没有就写「没有」；有就写清是谁、赌什么、欠了多少、现在还赌不赌。<br>
+          　· 没有<br>
+          　· 有：亲哥，网上赌球，前后欠了 60 多万，家里帮还过两次，现在说戒了但没底<br>
+          　· 有：舅舅爱打麻将，输赢不大，不影响生活<br>
+          　· 有：父亲早年赌过，欠债已还清，现已戒十多年<br>
+          　· 不太清楚，家里人不愿提</p>
+        <textarea id="q3" rows="2" maxlength="150" placeholder="没有就写「没有」，有就写清是谁、赌什么、欠多少、戒没戒" data-page-node-id="oO0Q3I"></textarea>
+      </div>
+      <div class="field" data-page-node-id="oO0FandomF">
+        <label data-page-node-id="oO0FandomL">有没有追星 / 直播打赏的习惯 <span class="req">*</span></label>
+        <p class="field-hint long" data-page-node-id="oO0FandomHint">本人和对方都写。有就写清追谁、打赏多少、花了几年、现在还在不在花——这个比金额重要，因为它是长期习惯，不是一次性损失。<br>
+          没兴趣就写「没有」；只是看看不花钱也写清楚，别跟花钱的混在一起。<br>
+          　· 没有，不追星也不看直播<br>
+          　· 我看看但不花钱，不刷礼物<br>
+          　· 我追星，买专辑和周边，一年几千，不影响生活<br>
+          　· 对象追星，平时还好，演唱会会花上万，说过但没改<br>
+          　· 有段时间上头，给主播刷过几万，已经停了</p>
+        <textarea id="fandom" rows="2" maxlength="150" placeholder="没有就写「没有」，有就写清追谁、花多少、还在不在花" data-page-node-id="oO0FandomI"></textarea>
+      </div>
+      <div class="field" style="margin-bottom:0;" data-page-node-id="oO0FraudF">
+        <label data-page-node-id="oO0FraudL">有没有被诈骗 / 敲诈过 <span class="req">*</span></label>
+        <p class="field-hint long" data-page-node-id="oO0FraudHint">本人经历过就写，家人经历过的也可以写。写清什么事、损失多少、追回没有、现在处理完了没。<br>
+          「被骗过」本身就是重要信息——栽过一次的人容易被同一套话术再骗一次，不丢人，但得知道。<br>
+          　· 没有<br>
+          　· 有：刷单被骗 3 万多，报警了，没追回<br>
+          　· 有：买理财被卷走 20 万，家里帮垫了一半，还在打官司<br>
+          　· 有：差点被冒充客服骗，最后没转钱<br>
+          　· 有：父亲接过诈骗电话，被骗 8 万，已经瞒着人借过钱<br>
+          　· 不确定，家里人可能没跟我说</p>
+        <textarea id="fraud" rows="2" maxlength="150" placeholder="没有就写「没有」，有就写清什么事、损失多少、追回没" data-page-node-id="oO0FraudI"></textarea>
+      </div>
+    </div>
+
+    <div class="card" data-page-node-id="oO0Sec5">
+      <p class="sec-title" data-page-node-id="oO0Sec5T"><span class="sec-num n6" data-page-node-id="oO0Sec5N">7</span>信仰</p>
+      <p class="sec-hint" data-page-node-id="oO0Sec5H">本人及身边亲近的人。</p>
+      <div class="field" style="margin-bottom:0;" data-page-node-id="oO0FaithF">
+        <label data-page-node-id="oO0FaithL">有什么方面的信仰 <span class="req">*</span></label>
+        <input type="text" id="faith" placeholder="例：无 / 本人无，家里老人信佛" maxlength="40" data-page-node-id="oO0FaithI">
+      </div>
+    </div>
+
+    <div class="card" data-page-node-id="UrUWWOI3Yge9LFiF21GGn8">
+      <p class="sec-title" data-page-node-id="0JVL6bfRD3XGg8q98bXkMs"><span class="sec-num n7" data-page-node-id="vHGogHKZa8gcamaHSpvyX9">8</span>是不是本人提问？ <span class="req">*</span></p>
+      <p class="sec-hint" data-page-node-id="E17fiPYibnrAFyH3CJrrjA">本人还是代问。</p>
+      <div class="pill-group" data-field="q4" data-page-node-id="ZuOy3btHeK88yY8lIdjOl0">
+        <button type="button" class="pill" onclick="pickPill(this)" data-v="是" data-page-node-id="E7jPQPfmllXmYJk7yHN61n">是，本人</button>
+        <button type="button" class="pill" onclick="pickPill(this)" data-v="不是" data-page-node-id="mSMwlN87SLJAnAunSmmpER">不是，代问</button>
+      </div>
+    </div>
+
+    <div class="card" style="box-shadow:none;background:transparent;" data-page-node-id="9Qd09lpsrfxzhXWRAMFQ3f">
+      <button class="btn btn-primary" onclick="generate()" data-page-node-id="3XX1WjW1NoG5tTPMcXv4cY">生成信息卡</button>
+    </div>
+  </div>
+
+  <!-- ============ 结果视图 ============ -->
+  <div id="resultView" class="result-view" data-page-node-id="rtYVz0mkTHVGL0U0gmJNom">
+    <div class="card" data-page-node-id="U7Lgi1sREM3HP84sKRXpgF">
+      <p class="sec-title" style="margin-bottom:12px;" data-page-node-id="3JQW5LBVkvqA1PqgNcsuy4">✅ 文字版已生成</p>
+      <div class="result-text" id="resultText" data-page-node-id="V0GiOglBmv0mSMvEHGcD2G"></div>
+      <p class="tip" data-page-node-id="y0P4EhOiX5qCG76wdsdJeI">点「复制文字」，然后去群里粘贴发送即可。</p>
+      <div class="btn-row" data-page-node-id="Lxoj3mz5SBVJGTEBj0cZ7N">
+        <button class="btn btn-primary" id="copyBtn" onclick="copyText()" data-page-node-id="gnpRS894mmkpamvjVl7ryg">复制文字</button>
+      </div>
+      <div class="btn-row" data-page-node-id="sSs75OBwdzszsmChcKp9HL">
+        <button class="btn btn-ghost" onclick="backToForm()" data-page-node-id="pWLHyWguXcISgVZGEp4c1B">再填一张</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 回溯视图 ============ -->
+  <div id="histView" class="hist-view" data-page-node-id="ejFiHh6XdR99be4RnnafhH">
+    <div style="background:#F4F1EA;border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-size:12.5px;line-height:1.7;color:var(--muted);margin-bottom:12px;" data-page-node-id="oO0HistPriv">🔒 这里只存你自己填过的记录，保存在本机浏览器里，<b>7 天后自动清除</b>。<br>别人打开这个链接看不到你的记录，你也看不到别人的。</div>
+    <input class="search" id="searchBox" placeholder="🔍 按昵称搜索回溯记录" oninput="renderHistory()" data-page-node-id="CL8UOAdkK7RoZVjwGe11iX">
+    <div id="histList" data-page-node-id="xwX6pTxE6QwJYeGebMZzVi"></div>
+  </div>
+</div>
+
+<!-- 底部导航 -->
+<div class="tabs" data-page-node-id="T3LsvLo5LlEqPZWuyLR8ST">
+  <div class="t on" id="tabForm" onclick="switchTab('form')" data-page-node-id="1j9VFQDWiYFEId7Z0Z2RJZ"><span class="ic" data-page-node-id="TmO6TU9Jlib6Q9GMkhIgZp">✍️</span><span data-page-node-id="b4S8EVBdDl5egLFNYm86EV">填写</span></div>
+  <div class="t" id="tabHist" onclick="switchTab('hist')" data-page-node-id="w4oqp8yoZtNbSa3DVrsU6e"><span class="ic" data-page-node-id="uFB7qFF4IJoavWyPMUPL92">🗂️</span><span data-page-node-id="HkZBGZF54I8CODcHDgS7WB">回溯</span><span class="dot" id="histBadge" data-page-node-id="3VaugkQiOynUZN3EWWWUn5">0</span></div>
+</div>
+
+<div class="toast" id="toast" data-page-node-id="KtINoCd2h5BDbb4h9rugMC"></div>
+
+<!-- 导出文字前的隐私提醒 modal -->
+<div class="modal-mask" id="privacyModal" onclick="if(event.target===this)closePrivacyModal()" data-page-node-id="oO0PrivMask">
+  <div class="modal" style="text-align:center;" data-page-node-id="oO0PrivModal">
+    <div style="font-size:54px;margin:6px 0 14px;" data-page-node-id="oO0PrivEmoji">🔒</div>
+    <p style="color:var(--ink);font-size:16px;line-height:2;margin:0 8px 26px;text-align:center;font-weight:500;" data-page-node-id="oO0PrivP">
+      含隐私信息，注意传播范围
+    </p>
+    <div class="btn-row" data-page-node-id="oO0PrivBR1">
+      <button class="btn btn-primary" onclick="confirmPrivacy()" data-page-node-id="oO0PrivOK">好的</button>
+    </div>
+  </div>
+</div>
+
+<!-- 红包提醒 modal -->
+<div class="modal-mask" id="redModal" onclick="if(event.target===this)closeRedModal()" data-page-node-id="oO0RedModalMask">
+  <div class="modal" style="text-align:center;" data-page-node-id="oO0RedModal">
+    <div style="font-size:54px;margin:6px 0 14px;" data-page-node-id="oO0RedEmoji">🧧</div>
+    <p style="color:var(--ink);font-size:16px;line-height:2;margin:0 8px 26px;text-align:center;font-weight:500;" data-page-node-id="oO0RedP">
+      红包是让大家参与讨论的工具<br>
+      发的是诚意，不是金额
+    </p>
+    <div class="btn-row" data-page-node-id="oO0RedBR1">
+      <button class="btn btn-primary" onclick="closeRedModal()" data-page-node-id="oO0RedOK">知道了</button>
+    </div>
+  </div>
+</div>
+
+<!-- 代问说明 modal -->
+<div class="modal-mask" id="proxyModal" onclick="if(event.target===this)closeProxyModal()" data-page-node-id="oO0ProxyMask">
+  <div class="modal" style="text-align:center;" data-page-node-id="oO0Proxy">
+    <div style="font-size:54px;margin:6px 0 10px;" data-page-node-id="oO0ProxyEmoji">🚫</div>
+    <p class="m-title" style="color:var(--red-deep);font-size:18px;" data-page-node-id="oO0ProxyT">代问无法生成卡片</p>
+    <p style="color:var(--ink);font-size:15px;line-height:1.9;margin:6px 8px 22px;text-align:center;" data-page-node-id="oO0ProxyP">
+      代问意味着<br>
+      · 信息可能失真<br>
+      · 群友无法核实<br>
+      · 意见难以参考<br><br>
+      <b>请真诚对待愿意帮助你的群友。</b>
+    </p>
+    <div class="btn-row" data-page-node-id="oO0ProxyBR">
+      <button class="btn btn-primary" onclick="closeProxyModal()" data-page-node-id="oO0ProxyOK">知道了</button>
+    </div>
+  </div>
+</div>
+
+<!-- 漏填提醒 modal -->
+<div class="modal-mask" id="missModal" onclick="if(event.target===this)closeMissModal()" data-page-node-id="oO0MissMask">
+  <div class="modal" data-page-node-id="oO0Miss">
+    <div style="font-size:44px;text-align:center;margin:4px 0 10px;" data-page-node-id="oO0MissEmoji">📋</div>
+    <p class="m-title" style="color:var(--red-deep);font-size:18px;" data-page-node-id="oO0MissT">还有几项没填，补一下</p>
+    <div id="missList" data-page-node-id="oO0MissList"></div>
+    <div class="btn-row" data-page-node-id="oO0MissBR">
+      <button class="btn btn-primary" onclick="closeMissModal();scrollToFirstMiss()" data-page-node-id="oO0MissOK">去补填</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ================= 数据 ================= */
+const LS_KEY = 'precheck_records';
+/* 隐私保护：本地存档只保留 7 天，到期自动清除（数据本来就只在本机，过期是为减少长期留存面） */
+const RETENTION_DAYS = 7;
+const RETENTION_MS = RETENTION_DAYS*24*60*60*1000;
+let currentData = null;
+let currentText = null;
+
+/* ================= 交互：pills ================= */
+function pickPill(pill){
+  const group = pill.closest('.pill-group');
+  if(!group) return;
+  group.querySelectorAll('.pill').forEach(p=>p.classList.remove('on'));
+  pill.classList.add('on');
+  // 选「没发」时立即弹窗提醒（而非等到生成卡片）
+  if(group.getAttribute('data-field')==='q0' && pill.getAttribute('data-v')==='没发'){
+    document.getElementById('redModal').classList.add('show');
+  }
+}
+/* 兜底：事件委托（内联 onclick 之外的二次保障） */
+document.addEventListener('click', function(e){
+  const pill = e.target.closest('.pill');
+  if(pill) pickPill(pill);
+});
+
+function getPill(field){
+  const g = document.querySelector('.pill-group[data-field="'+field+'"] .pill.on');
+  return g ? g.getAttribute('data-v') : '';
+}
+
+/* ================= 收集 ================= */
+function collect(){
+  return {
+    nickname: document.getElementById('nickname').value.trim() || '匿名',
+    q0: getPill('q0'),
+    age: document.getElementById('age').value.trim(),
+    gender: getPill('gender'),
+    orient: document.getElementById('orient').value,
+    marry: document.getElementById('marry').value.trim(),
+    cityNow: document.getElementById('cityNow').value.trim(),
+    cityTarget: document.getElementById('cityTarget').value.trim(),
+    acceptBigCity: document.getElementById('acceptBigCity').value.trim(),
+    career: document.getElementById('career').value.trim(),
+    income: document.getElementById('income').value.trim(),
+    savingHolder: document.getElementById('savingHolder').value.trim(),
+    houseDesc: document.getElementById('houseDesc').value.trim(),
+    family: document.getElementById('family').value.trim(),
+    familyHome: document.getElementById('familyHome').value.trim(),
+    bottom: document.getElementById('bottom').value.trim(),
+    parents: document.getElementById('parents').value.trim(),
+    sibling: document.getElementById('sibling').value.trim(),
+    pet: document.getElementById('pet').value.trim(),
+    health: document.getElementById('health').value.trim(),
+    height: document.getElementById('height').value.trim(),
+    weight: document.getElementById('weight').value.trim(),
+    fever: document.getElementById('fever').value.trim(),
+    genetic: document.getElementById('genetic').value.trim(),
+    edu: document.getElementById('edu').value.trim(),
+    partnerEdu: document.getElementById('partnerEdu').value.trim(),
+    q3: document.getElementById('q3').value.trim(),
+    fandom: document.getElementById('fandom').value.trim(),
+    fraud: document.getElementById('fraud').value.trim(),
+    faith: document.getElementById('faith').value.trim(),
+    q4: getPill('q4'),
+    time: null
+  };
+}
+
+/* ================= 校验（一次列出所有漏填项） ================= */
+// 各节必填清单：check=单项是否漏；fields=该节内多项（列具体漏了哪个）
+const MISS_RULES = [
+  {num:0, title:'发红包没?',        check: ()=>!collect().q0,                                  groupSel:'.pill-group[data-field="q0"]'},
+  {num:1, title:'基本信息（人口统计）', fields:[
+      {k:'gender',  l:'性别',       sel:'.pill-group[data-field="gender"]'},
+      {k:'orient',  l:'性取向',     sel:'#orient'},
+      {k:'age',     l:'年龄',       sel:'#age'},
+      {k:'marry',   l:'结婚了吗',   sel:'#marry'}
+  ]},
+  {num:2, title:'工作情况',         fields:[
+      {k:'cityNow',       l:'现在在哪座城市', sel:'#cityNow'},
+      {k:'cityTarget',    l:'将来打算去哪',   sel:'#cityTarget'},
+      {k:'career',        l:'工作经历',       sel:'#career'},
+      {k:'income',        l:'收入',           sel:'#income'},
+      {k:'savingHolder',  l:'存款情况',       sel:'#savingHolder'},
+      {k:'houseDesc',     l:'房产情况',       sel:'#houseDesc'},
+      {k:'acceptBigCity', l:'对方在哪个城市能接受', sel:'#acceptBigCity'}
+  ]},
+  {num:3, title:'家庭背景',         fields:[
+      {k:'family',     l:'家庭背景',   sel:'#family'},
+      {k:'familyHome', l:'老家在哪',   sel:'#familyHome'},
+      {k:'bottom',     l:'爹妈能兜底', sel:'#bottom'},
+      {k:'parents',    l:'父母是否健在', sel:'#parents'},
+      {k:'sibling',    l:'兄弟姐妹',   sel:'#sibling'},
+      {k:'pet',        l:'有没有宠物', sel:'#pet'}
+  ]},
+  {num:4, title:'健康状态',         fields:[
+      {k:'health',       l:'身体健康',   sel:'#health'},
+      {k:'height',       l:'身高(cm)',   sel:'#height'},
+      {k:'weight',       l:'体重(kg)',   sel:'#weight'},
+      {k:'fever',        l:'最近发烧情况',   sel:'#fever'},
+      {k:'genetic',      l:'家族遗传病',   sel:'#genetic'}
+  ]},
+  {num:5, title:'学历',             fields:[
+      {k:'edu',        l:'自己学历',   sel:'#edu'},
+      {k:'partnerEdu', l:'伴侣学历',   sel:'#partnerEdu'}
+  ]},
+  {num:6, title:'钱有没有被打水漂?',  fields:[
+      {k:'q3',     l:'家里有没有赌狗',       sel:'#q3'},
+      {k:'fandom', l:'追星/直播打赏',        sel:'#fandom'},
+      {k:'fraud',  l:'被诈骗/敲诈经历',      sel:'#fraud'}
+  ]},
+  {num:7, title:'信仰',             fields:[
+      {k:'faith', l:'有什么方面的信仰', sel:'#faith'}
+  ]},
+  {num:8, title:'是不是本人提问?',  check: ()=>!collect().q4,                                  groupSel:'.pill-group[data-field="q4"]'}
+];
+
+function validate(d){
+  const miss = [];
+  // 称呼：必填且不能为默认「匿名」
+  if(d.nickname==='匿名') miss.push({label:'你的称呼 / 群昵称', sel:'#nickname'});
+  for(const s of MISS_RULES){
+    if(s.check){
+      if(s.check()) miss.push({label:'第 '+s.num+' 问 '+s.title, fields:[s.title], sel:s.groupSel});
+    } else if(s.fields){
+      const missFields = s.fields.filter(f=>!d[f.k]).map(f=>f.l);
+      if(missFields.length){
+        miss.push({label:'第 '+s.num+' 问 '+s.title, fields:missFields, sel:s.fields.find(f=>!d[f.k]).sel});
+      }
+    }
+  }
+  if(miss.length){
+    showMissModal(miss);
+    return false;
+  }
+  return true;
+}
+function showMissModal(miss){
+  document.getElementById('missList').innerHTML = miss.map(function(m){
+    if(m.fields && m.fields.length){
+      return '<div class="miss-item"><b>'+esc(m.label)+'</b>：' + m.fields.map(esc).join(' / ') + '</div>';
+    }
+    return '<div class="miss-item"><b>'+esc(m.label)+'</b></div>';
+  }).join('');
+  document.getElementById('missModal').classList.add('show');
+}
+function closeMissModal(){
+  document.getElementById('missModal').classList.remove('show');
+}
+function firstMissEl(){
+  const nick = document.getElementById('nickname');
+  if(!nick.value.trim()) return nick;
+  const d = collect();
+  for(const s of MISS_RULES){
+    if(s.check){
+      if(s.check()) return document.querySelector(s.groupSel);
+    } else if(s.fields){
+      for(const f of s.fields){
+        if(!d[f.k]){ const el = document.querySelector(f.sel); if(el) return el; }
+      }
+    }
+  }
+  return null;
+}
+function scrollToFirstMiss(){
+  const el = firstMissEl();
+  if(!el) return;
+  el.scrollIntoView({behavior:'smooth', block:'center'});
+  el.classList.add('miss-flash');
+  setTimeout(()=>el.classList.remove('miss-flash'), 1800);
+}
+
+/* ================= 生成主流程 ================= */
+let pendingData = null;
+
+function generate(){
+  const d = collect();
+  if(!validate(d)) return;
+  // 代问门控：代问不生成
+  if(d.q4 === '不是'){
+    document.getElementById('proxyModal').classList.add('show');
+    return;
+  }
+  // 隐私门控：先提醒传播范围，点「好的」之后才真正导出
+  pendingData = d;
+  document.getElementById('privacyModal').classList.add('show');
+}
+
+function closeRedModal(){
+  document.getElementById('redModal').classList.remove('show');
+}
+function closeProxyModal(){
+  document.getElementById('proxyModal').classList.remove('show');
+}
+function closePrivacyModal(){
+  document.getElementById('privacyModal').classList.remove('show');
+  pendingData = null;
+}
+function confirmPrivacy(){
+  document.getElementById('privacyModal').classList.remove('show');
+  const d = pendingData;
+  pendingData = null;
+  if(d) doGenerate(d);
+}
+
+function doGenerate(d){
+  d.time = fmtTime(new Date());
+  // 保存记录（回溯）
+  saveRecord({id: Date.now(), data: d});
+
+  // 只导出文字版
+  currentData = d;
+  currentText = buildText(d);
+  document.getElementById('resultText').textContent = currentText;
+  switchTab('result');
+  updateBadge();
+}
+
+/* ================= 文字版 ================= */
+function buildText(d){
+  // 只输出填过的内容，未填项与空章节一律不出现（与填表结构保持一致）
+  const has = v => v != null && String(v).trim() !== '';
+  const L = [];
+  L.push('【提问前置信息卡】');
+  L.push('称呼：'+d.nickname);
+  L.push('时间：'+d.time);
+  L.push('');
+
+  const sec = (no, title, pairs)=>{
+    const rows = pairs.filter(p => has(p[1]));
+    if(!rows.length) return;          // 整节没填 → 连标题一起不出现
+    L.push(no+' '+title);
+    rows.forEach(p => L.push('　· '+p[0]+'：'+p[1]));
+  };
+
+  if(has(d.q0)) L.push('0️⃣ 发红包：'+d.q0);
+
+  sec('1️⃣', '基本信息（人口统计）', [
+    ['性别', d.gender],
+    ['性取向', d.orient],
+    ['年龄', has(d.age) ? d.age+'岁' : ''],
+    ['结婚了吗', d.marry]
+  ]);
+
+  sec('2️⃣', '工作情况', [
+    ['现在城市', d.cityNow],
+    ['将来打算', d.cityTarget],
+    ['能接受的城市', d.acceptBigCity],
+    ['工作经历', d.career],
+    ['收入', d.income],
+    ['存款情况', d.savingHolder],
+    ['房产情况', d.houseDesc]
+  ]);
+
+  sec('3️⃣', '家庭背景', [
+    ['背景', d.family],
+    ['老家', d.familyHome],
+    ['爹妈兜底', d.bottom],
+    ['父母是否健在', d.parents],
+    ['兄弟姐妹', d.sibling],
+    ['宠物', d.pet]
+  ]);
+
+  sec('4️⃣', '健康状态', [
+    ['身体健康', d.health],
+    ['身高', has(d.height) ? d.height+'cm' : ''],
+    ['体重', has(d.weight) ? d.weight+'kg' : ''],
+    ['最近发烧情况', d.fever],
+    ['家族遗传病', d.genetic]
+  ]);
+
+  sec('5️⃣', '学历', [
+    ['自己学历', d.edu],
+    ['伴侣学历', d.partnerEdu]
+  ]);
+
+  sec('6️⃣', '钱有没有被打水漂', [
+    ['家里赌狗', d.q3],
+    ['追星/打赏', d.fandom],
+    ['被诈骗/敲诈', d.fraud]
+  ]);
+  if(has(d.faith)) L.push('7️⃣ 信仰：'+d.faith);
+  if(has(d.q4)) L.push('8️⃣ 本人提问：'+d.q4);
+
+  L.push('');
+  L.push('🔒 含隐私信息，注意传播范围');
+  return L.join('\n');
+}
+
+/* ================= 转义（历史列表 / 提示文案用）================= */
+function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+/* ================= 复制文字 ================= */
+function copyText(){
+  if(!currentText){ toast('先填写并生成文字版'); return; }
+  const done = ()=>toast('✅ 已复制，去群里粘贴吧');
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(currentText).then(done).catch(()=>fallbackCopy(currentText, done));
+  } else {
+    fallbackCopy(currentText, done);
+  }
+}
+function fallbackCopy(text, cb){
+  const ta = document.createElement('textarea');
+  ta.value = text; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.select();
+  try{ document.execCommand('copy'); cb(); }catch(e){ toast('复制失败，请手动长按选择'); }
+  ta.remove();
+}
+
+/* ================= 回溯 / 存储 ================= */
+function loadRecords(){
+  try{
+    const all = JSON.parse(localStorage.getItem(LS_KEY)) || [];
+    // 过期清理：超过 RETENTION_DAYS 的记录读的时候顺手删掉
+    const cutoff = Date.now() - RETENTION_MS;
+    const kept = all.filter(r => r && typeof r.id === 'number' && r.id >= cutoff);
+    if(kept.length !== all.length){
+      localStorage.setItem(LS_KEY, JSON.stringify(kept));
+    }
+    return kept;
+  }
+  catch(e){ return []; }
+}
+function saveRecord(rec){
+  const list = loadRecords();
+  list.unshift(rec);
+  // 最多保留 200 条
+  localStorage.setItem(LS_KEY, JSON.stringify(list.slice(0,200)));
+}
+function deleteRecord(id){
+  let list = loadRecords().filter(r=>r.id!==id);
+  localStorage.setItem(LS_KEY, JSON.stringify(list));
+  renderHistory(); updateBadge();
+}
+
+function fmtTime(dt){
+  const p = n=>String(n).padStart(2,'0');
+  return dt.getFullYear()+'-'+p(dt.getMonth()+1)+'-'+p(dt.getDate())+' '+p(dt.getHours())+':'+p(dt.getMinutes());
+}
+
+function renderHistory(){
+  const list = loadRecords();
+  const kw = document.getElementById('searchBox').value.trim();
+  const filtered = kw ? list.filter(r=>r.data.nickname.includes(kw)) : list;
+  const box = document.getElementById('histList');
+  if(!filtered.length){
+    box.innerHTML = '<div class="empty"><span class="big">🗂️</span>'+(list.length?'没有匹配的记录':'还没有记录，先去「填写」生成第一张吧')+'</div>';
+    return;
+  }
+  box.innerHTML = filtered.map(r=>{
+    const d = r.data;
+    const tags = [
+      d.career?`<span class="tag red">${esc(d.career.length>12?d.career.slice(0,12)+'…':d.career)}</span>`:'',
+      d.cityNow?`<span class="tag">${esc(d.cityNow.length>14?d.cityNow.slice(0,14)+'…':d.cityNow)}</span>`:'',
+      d.gender?`<span class="tag">${esc(d.gender)}</span>`:'',
+      d.age?`<span class="tag">${esc(d.age)}岁</span>`:'',
+      d.marry?`<span class="tag">${esc(d.marry)}</span>`:'',
+      d.q0==='已发'?`<span class="tag gold">🧧已发</span>`:`<span class="tag">🧧未发</span>`,
+      /^(没有|无|没有赌狗|无赌狗|不清楚)$/.test((d.q3||'').trim())?'':`<span class="tag red">⚠️有赌狗</span>`,
+      /^(没有|无|否|不追星|没有，不追星也不看直播|看看但不花钱.*)$/.test((d.fandom||'').trim())?'':(d.fandom?`<span class="tag red">⚠️追星打赏</span>`:''),
+      /^(没有|无|否)$/.test((d.fraud||'').trim())?'':(d.fraud?`<span class="tag red">⚠️被诈骗过</span>`:''),
+      d.q4==='是'?'':'<span class="tag">代问</span>',
+    ].join('');
+    return '<div class="hist-item" onclick="viewRecord('+r.id+')">'+
+      '<div class="hist-top"><span class="hist-name">'+esc(d.nickname)+'</span><span class="hist-time">'+esc(d.time)+'</span></div>'+
+      '<div class="hist-tags">'+tags+'</div>'+
+      '<div class="hist-actions">'+
+        '<button class="mini-btn" onclick="event.stopPropagation();viewRecord('+r.id+')">查看文字</button>'+
+        '<button class="mini-btn" onclick="event.stopPropagation();copyRecordText('+r.id+')">复制文字</button>'+
+        '<button class="mini-btn danger" onclick="event.stopPropagation();removeRecord('+r.id+')">删除</button>'+
+      '</div>'+
+    '</div>';
+  }).join('');
+}
+
+function findRecord(id){
+  return loadRecords().find(r=>r.id===id);
+}
+function viewRecord(id){
+  const r = findRecord(id); if(!r) return;
+  currentData = r.data;
+  currentText = buildText(r.data);
+  document.getElementById('resultText').textContent = currentText;
+  switchTab('result');
+}
+function copyRecordText(id){
+  const r = findRecord(id); if(!r) return;
+  currentText = buildText(r.data);
+  copyText();
+}
+function removeRecord(id){
+  if(confirm('确定删除这条记录？')) deleteRecord(id);
+}
+
+/* ================= 视图切换 ================= */
+function switchTab(tab){
+  document.getElementById('formView').style.display = (tab==='form')?'block':'none';
+  document.getElementById('histView').classList.toggle('show', tab==='hist');
+  document.getElementById('resultView').classList.toggle('show', tab==='result');
+  if(tab==='hist') renderHistory();
+
+  document.getElementById('tabForm').classList.toggle('on', tab==='form'||tab==='result');
+  document.getElementById('tabHist').classList.toggle('on', tab==='hist');
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+function resetForm(){
+  // 每次重新填表，给一张空表：清空所有输入/下拉 + 取消所有 pill 选中
+  document.querySelectorAll('#formView input, #formView select, #formView textarea').forEach(el=>el.value='');
+  document.querySelectorAll('#formView .pill').forEach(p=>p.classList.remove('on'));
+}
+function backToForm(){
+  resetForm();
+  switchTab('form');
+}
+
+/* ================= toast / badge ================= */
+let toastTimer=null;
+function toast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>t.classList.remove('show'), 1800);
+}
+function updateBadge(){
+  const n = loadRecords().length;
+  const b = document.getElementById('histBadge');
+  b.style.display = n>0?'flex':'none';
+  b.textContent = n>99?'99+':n;
+}
+
+/* ================= 初始化 ================= */
+(function init(){
+  // 记住上次昵称
+  const last = loadRecords()[0];
+  if(last && last.data.nickname && last.data.nickname!=='匿名'){
+    document.getElementById('nickname').value = last.data.nickname;
+  }
+  updateBadge();
+})();
+</script>
+</body>
+</html>
